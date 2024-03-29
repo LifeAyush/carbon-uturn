@@ -1,60 +1,61 @@
 .resources-blogs-heading {
-    font-family: "Florencesans-Black";
-    text-transform: uppercase;
-    font-size: 6rem;
-    padding: 0 5vw;
-    color: #014d4a;
+  font-family: "Florencesans-Black";
+  text-transform: uppercase;
+  font-size: 6rem;
+  padding: 0 5vw;
+  color: #014d4a;
 }
 .resources-blogs-subheading {
-    padding: 0 5vw;
-    font-size: 2rem;
-    color: #303030;
+  padding: 0 5vw;
+  font-size: 2rem;
+  color: #303030;
 }
 .blogs-scroll {
-    display: flex;
-    gap: 5vw;
-    overflow-x: scroll;
-    padding: 2vh 0;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+  display: flex;
+  gap: 40px;
+  overflow-x: scroll;
+  padding: 2vh 0;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 .blogs-scroll::-webkit-scrollbar {
-    display: none;
-  }
+  display: none;
+}
 .blogs-btn {
-    background-color: #014d4a;
-    border: 0px;
-    border-radius: 40px;
-    margin-left: 5vw;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 20px;
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
+  background-color: #014d4a;
+  border: 0px;
+  border-radius: 40px;
+  margin-left: 5vw;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .blogs-btn img {
-    transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 @media screen and (max-width: 768px) {
-    .resources-blogs-heading {
-        font-size: 3rem;
-        padding: 0 7vw;
-    }
-    .resources-blogs-subheading {
-        font-size: 1.2rem;
-        padding: 0 7vw;
-    }
-    .blogs-scroll {
-        flex-direction: column;
-        padding: 0 7vw;
-        overflow: hidden;
-        gap: 5vh;
-        margin: 2vh 0;
-        padding-bottom: 2vh;
-    }
+  .resources-blogs-heading {
+    font-size: 3rem;
+    padding: 0 7vw;
+  }
+  .resources-blogs-subheading {
+    font-size: 1.2rem;
+    padding: 0 7vw;
+  }
+  .blogs-scroll {
+    flex-direction: column;
+    padding: 0 7vw;
+    overflow: hidden;
+    gap: 5vh;
+    margin: 2vh 0;
+    padding-bottom: 2vh;
+  }
 }
