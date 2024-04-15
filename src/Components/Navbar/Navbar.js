@@ -32,6 +32,11 @@ const Navbar = () => {
     //console.log(visible);
     const navItems = [
         {
+            id: 0,
+            name: "Home",
+            url: "/",
+        },
+        {
             id: 1,
             name: "Services",
             url: "/services",

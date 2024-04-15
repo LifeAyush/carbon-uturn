@@ -1,0 +1,37 @@
+.services-hero {
+    background: url("../../Assets/Images/services-hero.png");
+    height: 100vh;
+    background-size: cover;
+    padding: 10vh 10vw;
+    display: flex;
+    align-items: center;
+}
+
+.services-hero .content {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.services-hero h1 {
+    color: #e3fbf7;
+    font-family: Florencesans-Black;
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+
+.services-hero hr {
+    width: 40%;
+    border: none;
+    border-top: 8px solid #e3fbf7;
+}
+
+.services-hero p {
+    font-size: 2rem;
+    font-family: Milliard;
+    color: #fff;
+}
+
+.services-hero span {
+    font-family: MilliardBold;
+}

@@ -3,36 +3,44 @@
     align-items: center;
     justify-content: center;
     background-color: #ffffff;
-    padding: 100px 74px 74px;
+    padding: 10vh 5vw;
     height: 100vh;
+    gap: 20px;
 }
 .about-hero-main {
     width: 100%;
     height: 100%;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 44px;
-    border-radius: 45px;
-    background: url(../../Assets//Images/aboutHeroBg.png);
+    flex-basis: 10%;
+    border-radius: 8px;
     background-position: center center;
     background-size: cover;
-    padding: 100px 64px;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+}
+.active-panel {
+    flex-basis: 70%;
+    position: relative;
+}
+.about-hero-text {
+    position: absolute;
+    opacity: 0;
+    transition: 0s;
+    left: 20px;
+    bottom: 20px;
+    width: 80%;
+}
+.active-panel > .about-hero-text {
+    opacity: 1;
+    transition: 0.5s 0.5s;
 }
 .about-hero-main-title {
     color: var(--white, #fbfcf8);
-    text-align: center;
     font-family: "Florencesans-Black";
     font-size: 64px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     text-transform: capitalize;
-}
-.about-hero-main-hr {
-    width: 8%;
-    height: 8px;
-    background: #fff;
 }
 .about-hero-main-subtitle {
     color: #fff;

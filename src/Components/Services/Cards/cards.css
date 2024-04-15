@@ -1,0 +1,102 @@
+.services-cards-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+    padding: 10vh 0;
+    background: linear-gradient(
+        117deg,
+        #e7fffe 5.4%,
+        #fff 49.4%,
+        #dffdfc 96.4%
+    );
+}
+
+.services-card-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.services-card-container > div {
+    z-index: 2;
+    width: 80vw;
+    margin: 0 5vw;
+}
+
+.cont-opp {
+    justify-content: flex-end;
+}
+
+.cont-opp > div {
+    left: unset;
+    right: 5vw;
+}
+
+.services-card-num {
+    font-family: Florencesans-Black;
+    font-size: 6rem;
+    color: rgb(1, 77, 74, 0.38);
+}
+
+.cont-opp .services-card-num {
+    text-align: right;
+}
+
+.services-card {
+    display: flex;
+    align-items: center;
+    z-index: 5;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    gap: 3vw;
+    padding-right: 5vw;
+}
+
+.services-card > img {
+    box-shadow: 4px 0 15px rgb(0, 0, 0, 0.25);
+    border-radius: 16px;
+}
+
+.flex-opp {
+    flex-direction: row-reverse;
+    padding-right: unset;
+    padding-left: 5vw;
+}
+
+.flex-opp > img {
+    box-shadow: -4px 0 15px rgb(0, 0, 0, 0.25);
+}
+
+.flex-opp > .services-card-content {
+    text-align: right;
+}
+
+.services-card-content {
+    width: 80%;
+}
+
+.services-card-head {
+    font-family: MilliardBold;
+    font-size: 3.5rem;
+    color: #02353c;
+}
+
+.services-card-para {
+    font-family: Milliard;
+    font-size: 1.2rem;
+}
+
+.services-card-container-bg {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-40%);
+}
+
+.cont-opp > .services-card-container-bg {
+    transform: translateY(-40%) rotateZ(180deg);
+    left: 0;
+    right: unset;
+}
