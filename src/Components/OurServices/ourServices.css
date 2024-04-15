@@ -185,4 +185,10 @@
     .our-services-content {
         align-items: center;
     }
+    .service-card:hover .our-services-card {
+        transform: none;
+    }
+    .service-card:hover .our-services-card-back {
+        display: none;
+    }
 }
