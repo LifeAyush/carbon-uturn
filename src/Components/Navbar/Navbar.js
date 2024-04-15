@@ -85,14 +85,6 @@ const Navbar = () => {
                         onClick={() => setMobileNav(false)}
                     />
                     <div className="mobile-nav-links">
-                        <Link
-                            to="/"
-                            className={
-                                active === "/" ? "nav-item-active" : "nav-item"
-                            }
-                        >
-                            Home
-                        </Link>
                         {navItems.map((item) => {
                             return (
                                 <Link
