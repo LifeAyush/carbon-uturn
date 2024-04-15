@@ -169,7 +169,6 @@
         place-items: center;
         column-gap: 5vw;
         row-gap: 5vh;
-        padding: 0 5vw;
     }
     .service-card {
         width: unset;
@@ -182,5 +181,8 @@
     }
     .our-services-card-text {
         font-size: 1rem;
+    }
+    .our-services-content {
+        align-items: center;
     }
 }
