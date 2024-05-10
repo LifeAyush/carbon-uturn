@@ -9,6 +9,16 @@ export default function Blogs() {
     const [width, setWidth] = useState(0)
     useEffect(() => {
         setWidth(window.innerWidth)
+        try {
+            fetch("https://api.medium.com/v1/me", {
+                method: "GET",
+                headers: {
+                    Authorization: `Bearer ${process.env.REACT_MEDIUM_API}`,
+                },
+            }).then((res) => console.log(res))
+        } catch (err) {
+            console.log(err)
+        }
     }, [])
 
     return (
