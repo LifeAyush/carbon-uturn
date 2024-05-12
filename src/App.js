@@ -7,6 +7,7 @@ import AboutUs from "./Pages/AboutUs/AboutUs"
 import Careers from "./Pages/Career/Career"
 import Partners from "./Pages/Partners/Partners"
 import ComingSoon from "./Pages/ComingSoon/ComingSoon"
+import PartnerID from "./Pages/Partners/PartnerID/PartnerID"
 
 function App() {
     return (
@@ -17,7 +18,8 @@ function App() {
                     <Route exact path="/services" element={<Services />} />
                     <Route exact path="/resources" element={<Resources />} />
                     <Route exact path="/about-us" element={<AboutUs />} />
-                    <Route exact path="/partners" element={<ComingSoon />} />
+                    <Route exact path="/partners" element={<Partners />} />
+                    <Route exact path="/partners/:id" element={<PartnerID />} />
                     <Route exact path="/careers" element={<ComingSoon />} />
                 </Routes>
             </Router>

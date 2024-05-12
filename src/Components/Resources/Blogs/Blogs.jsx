@@ -4,22 +4,18 @@ import Arrow from "../../../Assets/Images/Arrow.svg"
 import "./blogs.css"
 import { useEffect } from "react"
 import { useState } from "react"
+import { fetchMedium } from "mediumpostscard"
 
 export default function Blogs() {
     const [width, setWidth] = useState(0)
+    const [posts, setPosts] = useState()
+
     useEffect(() => {
         setWidth(window.innerWidth)
-        try {
-            fetch("https://api.medium.com/v1/me", {
-                method: "GET",
-                headers: {
-                    Authorization: `Bearer ${process.env.REACT_APP_MEDIUM_API}`,
-                },
-            }).then((res) => console.log(res))
-        } catch (err) {
-            console.log(err)
-        }
+        const dataMedium = fetchMedium("manish.yadav_39731")
+        dataMedium.then((res) => setPosts(res))
     }, [])
+    console.log(posts)
 
     return (
         <section className="resources-blogs">
@@ -31,9 +27,22 @@ export default function Blogs() {
 
             <div className="blogs-scroll">
                 {width > 768
-                    ? blogs.map((blog) => <BlogCards {...blog} />)
-                    : blogs.map(
-                          (blog, index) => index < 3 && <BlogCards {...blog} />
+                    ? posts?.dataMedium?.map((blog) => (
+                          <BlogCards
+                              title={blog.title}
+                              img={blog.image}
+                              link={blog.link}
+                          />
+                      ))
+                    : posts?.dataMedium?.map(
+                          (blog, index) =>
+                              index < 3 && (
+                                  <BlogCards
+                                      title={blog.title}
+                                      img={blog.image}
+                                      link={blog.link}
+                                  />
+                              )
                       )}
             </div>
 

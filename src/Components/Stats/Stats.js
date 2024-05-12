@@ -37,7 +37,7 @@ const Stats = () => {
         {
             id: 5,
             img: stats5,
-            name: "2-3 °C",
+            name: "1.5-2 °C",
             val: "Rise in temperature as early as 2030",
         },
     ]
