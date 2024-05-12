@@ -1,0 +1,26 @@
+.partner-card {
+    background-image: linear-gradient(135deg, #e6fff9, #ffffff);
+    display: grid;
+    place-items: center;
+    height: 30vh;
+    box-shadow: 3px 8px 15px 0 rgba(0 0 0 / 0.2);
+    border-radius: 20px;
+    /* border: 1px solid; */
+    /* border-image-slice: 1;
+    border-image-source: linear-gradient(
+        135deg,
+        rgb(115 115 115) 0%,
+        rgb(211 211 211) 50%,
+        rgb(115 115 115 / 0) 100%
+    ); */
+}
+
+.partner-card img {
+    height: 15vh;
+}
+
+.partner-card p {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #2eaf7d;
+}
