@@ -1,46 +1,20 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import "./stats.css"
-import Scard from "../Scard/Scard"
 import stats2 from "../../Assets/Images/stats-2.svg"
 import stats1 from "../../Assets/Images/stats-1.svg"
 import stats3 from "../../Assets/Images/stats-3.svg"
 import stats4 from "../../Assets/Images/stats-4.svg"
 import stats5 from "../../Assets/Images/stats-5.svg"
 import bg from "../../Assets/Images/statsbg.png"
+import AnimatedNumber from "animated-number-react"
+import ScrollTrigger from "react-scroll-trigger"
 
 const Stats = () => {
-    const sData = [
-        {
-            id: 1,
-            img: stats1,
-            name: "0.5-1 m",
-            val: "Rise in global sea level ",
-        },
-        {
-            id: 2,
-            img: stats2,
-            name: "$ 1.6 trillion",
-            val: "Damage by river flooding",
-        },
-        {
-            id: 3,
-            img: stats3,
-            name: "50%",
-            val: "Increase in CO2 emissions",
-        },
-        {
-            id: 4,
-            img: stats4,
-            name: "15x",
-            val: "Increase in death rate due to extreme weather events",
-        },
-        {
-            id: 5,
-            img: stats5,
-            name: "1.5-2 °C",
-            val: "Rise in temperature as early as 2030",
-        },
-    ]
+    const format = (e) => {
+        return e.toFixed(1)
+    }
+
+    const [inView, setInView] = useState(false)
 
     return (
         <>
@@ -58,9 +32,113 @@ const Stats = () => {
                     We are committed to mitigating
                 </h1>
                 <div className="card-grid">
-                    {sData.map((group, id) => {
-                        return <Scard key={id} data={group} />
-                    })}
+                    <div className="scard">
+                        <ScrollTrigger
+                            onEnter={() => setInView(true)}
+                            onExit={() => setInView(false)}
+                        >
+                            <img className="scard-img" alt="" src={stats1} />
+                            {inView ? (
+                                <h1 className="scard-header-title">
+                                    <AnimatedNumber
+                                        value={0.5}
+                                        formatValue={format}
+                                    />{" "}
+                                    -{" "}
+                                    <AnimatedNumber
+                                        value={1}
+                                        formatValue={format}
+                                    />{" "}
+                                    m
+                                </h1>
+                            ) : (
+                                <h1 className="scard-header-title">
+                                    0.5 - 1 m
+                                </h1>
+                            )}
+                        </ScrollTrigger>
+                        <p className="scard-header-val">
+                            Rise in global sea level
+                        </p>
+                    </div>{" "}
+                    <div className="scard">
+                        <img className="scard-img" alt="" src={stats2} />
+                        {inView ? (
+                            <h1 className="scard-header-title">
+                                $
+                                <AnimatedNumber
+                                    value={1.6}
+                                    formatValue={format}
+                                />{" "}
+                                trillion
+                            </h1>
+                        ) : (
+                            <h1 className="scard-header-title">
+                                $1.6 trillion
+                            </h1>
+                        )}
+
+                        <p className="scard-header-val">
+                            Damage by river flooding
+                        </p>
+                    </div>{" "}
+                    <div className="scard">
+                        <img className="scard-img" alt="" src={stats3} />
+                        {inView ? (
+                            <h1 className="scard-header-title">
+                                <AnimatedNumber
+                                    value={50}
+                                    formatValue={(e) => e.toFixed(0)}
+                                />
+                                %
+                            </h1>
+                        ) : (
+                            <h1 className="scard-header-title">50%</h1>
+                        )}
+                        <p className="scard-header-val">
+                            Increase in CO2 emissions
+                        </p>
+                    </div>{" "}
+                    <div className="scard">
+                        <img className="scard-img" alt="" src={stats4} />
+                        {inView ? (
+                            <h1 className="scard-header-title">
+                                <AnimatedNumber
+                                    value={15}
+                                    formatValue={(e) => e.toFixed(0)}
+                                />
+                                x
+                            </h1>
+                        ) : (
+                            <h1 className="scard-header-title">15x</h1>
+                        )}
+                        <p className="scard-header-val">
+                            Increase in death rate due to extreme weather events
+                        </p>
+                    </div>{" "}
+                    <div className="scard">
+                        <img className="scard-img" alt="" src={stats5} />
+                        {inView ? (
+                            <h1 className="scard-header-title">
+                                {" "}
+                                <AnimatedNumber
+                                    value={1.5}
+                                    formatValue={format}
+                                />
+                                -{" "}
+                                <AnimatedNumber
+                                    value={2}
+                                    formatValue={format}
+                                />{" "}
+                                °C
+                            </h1>
+                        ) : (
+                            <h1 className="scard-header-title">1.5 - 2.0°C</h1>
+                        )}
+                        <p className="scard-header-val">
+                            Rise in temperature as early as 2030
+                        </p>
+                    </div>
                 </div>
             </div>
         </>
