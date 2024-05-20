@@ -110,6 +110,8 @@
         width: 100%;
         padding: 2vh 5vw;
         z-index: 2;
+        backdrop-filter: blur(10px);
+        background: rgba(0 0 0 / 0.3);
     }
 
     .nav-slider {
