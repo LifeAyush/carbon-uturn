@@ -67,13 +67,22 @@
     transform: translate(50%, -50%) rotateZ(180deg);
 }
 .teamcard {
-    width: 380px;
-    height: 540px;
+    width: 25vw;
+    height: 70vh;
     flex-shrink: 0;
     padding: 2px;
     /* background: linear-gradient(#626060, #fff); */
     overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    border-radius: 80px 8px 80px 8px;
+    transition: 0.2s;
 }
+
+.teamcard:hover {
+    box-shadow: 3px 8px 15px 0 rgba(0 0 0 / 0.2);
+}
+
 .team-card-main {
     width: 100%;
     border-radius: 80px 8px 80px 8px;
@@ -82,11 +91,11 @@
     background-position: center center !important;
     display: flex;
     align-items: flex-end;
-    padding: 8px;
+    overflow: none;
+    pointer-events: none;
 }
 .team-card-flex {
     border-radius: 0px 0px 76px 4px;
-    border: 1px solid var(--white, #fbfcf8);
     background: rgba(185, 176, 176, 0.4);
     backdrop-filter: blur(12px);
     display: flex;
@@ -94,7 +103,7 @@
     gap: 12px;
     align-items: center;
     justify-content: center;
-    padding: 20px 0px;
+    padding: 10px 0px 0px 0px;
     width: 100%;
 }
 .team-card-title {
@@ -123,6 +132,7 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
+    pointer-events: all;
 }
 .team-card-sub-title {
     color: var(--white, #fbfcf8);
@@ -133,8 +143,37 @@
     font-weight: 400;
     line-height: normal;
 }
+.teamcard-click {
+    position: absolute;
+    top: 0;
+    border-radius: 80px 8px 80px 8px;
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+    transform: translateY(calc(100% + 5px));
+    transition: 0.4s ease-in-out;
+    pointer-events: none;
+}
+.team-card-para {
+    color: white;
+    font-size: 1rem;
+    text-align: justify;
+    margin-top: 15px;
+}
+
+.toggle-translate {
+    transform: translateY(0);
+}
+
+.toggle-visibility {
+    visibility: hidden;
+}
 
 @media screen and (max-width: 768px) {
+    .team-card-links {
+        transform: translateY(0);
+        opacity: 1;
+    }
     .our-team {
         padding: 5vh 7vw;
     }
@@ -157,5 +196,8 @@
     }
     .team-card-title {
         font-size: 1.5rem;
+    }
+    .about-arrow {
+        display: none;
     }
 }

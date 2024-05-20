@@ -27,13 +27,15 @@ export default function Blogs() {
 
             <div className="blogs-scroll">
                 {width > 768
-                    ? posts?.dataMedium?.map((blog) => (
-                          <BlogCards
-                              title={blog.title}
-                              img={blog.image}
-                              link={blog.link}
-                          />
-                      ))
+                    ? posts?.dataMedium
+                          ?.slice(0, 5)
+                          .map((blog) => (
+                              <BlogCards
+                                  title={blog.title}
+                                  img={blog.image}
+                                  link={blog.link}
+                              />
+                          ))
                     : posts?.dataMedium?.map(
                           (blog, index) =>
                               index < 3 && (
