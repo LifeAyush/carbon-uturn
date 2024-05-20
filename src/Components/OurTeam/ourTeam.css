@@ -157,7 +157,7 @@
 .team-card-para {
     color: white;
     font-size: 1rem;
-    text-align: justify;
+    text-align: left;
     margin-top: 15px;
 }
 
@@ -202,5 +202,8 @@
     }
     .about-arrow {
         display: none;
+    }
+    .team-card-para {
+        font-size: 0.8rem;
     }
 }

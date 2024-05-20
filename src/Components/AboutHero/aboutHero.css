@@ -63,10 +63,20 @@
     .about-hero {
         gap: 0px;
         padding: 0;
+        height: 80vh;
     }
     .about-hero-main {
         flex-basis: 0%;
         border-radius: 0px;
+    }
+    .about-hero-main-title {
+        font-size: 3rem;
+    }
+    .about-hero-text {
+        bottom: 40px;
+    }
+    .about-hero-main-subtitle {
+        font-size: 1.2rem;
     }
     .active-panel {
         flex-basis: 100%;
