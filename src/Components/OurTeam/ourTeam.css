@@ -169,7 +169,7 @@
     visibility: hidden;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     .team-card-links {
         transform: translateY(0);
         opacity: 1;

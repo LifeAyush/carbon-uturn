@@ -41,7 +41,7 @@
     transform: rotate(-45deg);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     .resources-blogs-heading {
         font-size: 3rem;
         padding: 0 7vw;

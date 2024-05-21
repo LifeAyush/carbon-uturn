@@ -21,7 +21,7 @@
     padding: 5vh 0;
     row-gap: 5vh;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     .heading-stats {
         font-size: 2rem;
     }
@@ -45,7 +45,7 @@
     grid-column: 2 / span 2;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     .scard {
         grid-column: span 3;
         width: 90%;

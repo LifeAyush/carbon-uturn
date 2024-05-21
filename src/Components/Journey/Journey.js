@@ -23,7 +23,7 @@ const Journey = () => {
                 let calculate =
                     (window.innerWidth - coords.x) / window.innerHeight + 0.2
 
-                if (window.innerWidth < 768) {
+                if (window.innerWidth < 900) {
                     calculate =
                         (window.innerWidth - coords.x) / window.innerHeight +
                         0.6
@@ -31,7 +31,7 @@ const Journey = () => {
                 e.style.scale = calculate > 1 ? 1 : calculate
             })
             slider.style.transform = `translate3d(${-percentage + 40}vw, 0, 0)`
-            if (window.innerWidth <= 768) {
+            if (window.innerWidth <= 900) {
                 slider.style.transform = `translate3d(${
                     -percentage + 150
                 }vw, 0, 0)`

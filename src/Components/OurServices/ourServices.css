@@ -159,7 +159,7 @@
     line-height: 120%;
     padding: 0px 24px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     .our-services {
         padding: 5vh 0;
     }

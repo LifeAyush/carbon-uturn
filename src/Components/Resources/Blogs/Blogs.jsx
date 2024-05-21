@@ -49,7 +49,13 @@ export default function Blogs() {
             </div>
 
             <button className="blogs-btn">
-                Read More <img src={Arrow} alt="" />
+                <a
+                    href="https://medium.com/@manish.yadav_39731"
+                    target="__blank"
+                    style={{ textDecoration: "none", color: "white" }}
+                >
+                    Read More <img src={Arrow} alt="" />
+                </a>
             </button>
         </section>
     )

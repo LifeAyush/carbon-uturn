@@ -73,7 +73,7 @@
     line-height: normal;
     cursor: pointer;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     .hero {
         background-image: url("../../Assets/Images/hero-bg-mobile.png");
     }
@@ -86,6 +86,12 @@
     }
     .hero-para {
         width: unset;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-para {
         font-size: 1rem;
     }
 }

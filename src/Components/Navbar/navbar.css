@@ -95,7 +95,13 @@
     display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1100px) {
+    .nav {
+        padding: 16px 40px;
+    }
+}
+
+@media screen and (max-width: 900px) {
     .nav,
     .nav-inv {
         display: none;

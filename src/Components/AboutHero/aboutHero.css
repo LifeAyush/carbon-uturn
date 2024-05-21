@@ -15,12 +15,80 @@
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    transition: 0.5s;
-}
-.active-panel {
-    flex-basis: 70%;
     position: relative;
 }
+
+.about-hero-main-1 {
+    animation: aboutHero 16s ease-in-out 0s infinite;
+}
+
+.about-hero-main-2 {
+    animation: aboutHero 16s ease-in-out 4s infinite;
+}
+
+.about-hero-main-3 {
+    animation: aboutHero 16s ease-in-out 8s infinite;
+}
+
+.about-hero-main-4 {
+    animation: aboutHero 16s ease-in-out 12s infinite;
+}
+
+.about-hero-text-1 {
+    animation: aboutHeroText 16s ease-in-out 0s infinite;
+}
+
+.about-hero-text-2 {
+    animation: aboutHeroText 16s ease-in-out 4s infinite;
+}
+
+.about-hero-text-3 {
+    animation: aboutHeroText 16s ease-in-out 8s infinite;
+}
+
+.about-hero-text-4 {
+    animation: aboutHeroText 16s ease-in-out 12s infinite;
+}
+
+@keyframes aboutHero {
+    0% {
+        flex-basis: 10%;
+    }
+    2% {
+        flex-basis: 70%;
+    }
+    23% {
+        flex-basis: 70%;
+    }
+    25% {
+        flex-basis: 10%;
+    }
+    100% {
+        flex-basis: 10%;
+    }
+}
+
+@keyframes aboutHeroText {
+    0% {
+        opacity: 0;
+    }
+    2% {
+        opacity: 0;
+    }
+    2.5% {
+        opacity: 1;
+    }
+    22.5% {
+        opacity: 1;
+    }
+    23% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 .about-hero-text {
     position: absolute;
     opacity: 0;
@@ -28,10 +96,6 @@
     left: 20px;
     bottom: 20px;
     width: 80%;
-}
-.active-panel > .about-hero-text {
-    opacity: 1;
-    transition: 0.5s 0.5s;
 }
 .about-hero-main-title {
     color: var(--white, #fbfcf8);
@@ -59,11 +123,30 @@
     line-height: normal;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
+    @keyframes aboutHero {
+        0% {
+            flex-basis: 0%;
+        }
+        2% {
+            flex-basis: 100%;
+        }
+        23% {
+            flex-basis: 100%;
+        }
+        25% {
+            flex-basis: 0%;
+        }
+        100% {
+            flex-basis: 0%;
+        }
+    }
     .about-hero {
         gap: 0px;
         padding: 0;
         height: 80vh;
+        width: 100vw;
+        overflow-x: hidden;
     }
     .about-hero-main {
         flex-basis: 0%;

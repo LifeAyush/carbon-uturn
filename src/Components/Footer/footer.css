@@ -1,133 +1,133 @@
 .footer {
-  display: flex;
-  flex-direction: row;
-  height: 23rem;
-  color: #faf9f9;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    height: 23rem;
+    color: #faf9f9;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .footerlogoaddress {
-  width: 35%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 4%;
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4%;
 }
 .footercontent {
-  margin-top: 2%;
-  gap: 16%;
-  display: flex;
+    margin-top: 2%;
+    gap: 16%;
+    display: flex;
 
-  align-items: center;
-  flex-direction: column;
+    align-items: center;
+    flex-direction: column;
 }
 .footercontent .footerheading {
-  font-size: 1.75rem;
-  font-family: "Milliard";
-  font-weight: 600;
+    font-size: 1.75rem;
+    font-family: "Milliard";
+    font-weight: 600;
 }
 
 .footeraddress {
-  font-size: 1rem;
-  font-family: "Milliard";
-  font-weight: 100;
-  margin-left: 8%;
-  opacity: 80%;
+    font-size: 1rem;
+    font-family: "Milliard";
+    font-weight: 100;
+    margin-left: 8%;
+    opacity: 80%;
 }
 
 .footerlogo {
-  width: 25%;
-  height: 30%;
-  margin-left: 8%;
+    width: 25%;
+    height: 30%;
+    margin-left: 8%;
 }
 
 .footerfirstline {
-  display: flex;
-  flex-direction: row;
-  width: 50vw;
-  justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+    justify-content: space-between;
 }
 
 .footeremail {
-  width: 20vw;
-  background: rgba(255, 255, 255, 0.21);
-  border: none;
-  border-radius: 7px;
-  color: #fff;
-  font-size: 1.1rem;
-  font-family: "Milliard";
-  font-weight: "400";
-  padding: 8px;
+    width: 20vw;
+    background: rgba(255, 255, 255, 0.21);
+    border: none;
+    border-radius: 7px;
+    color: #fff;
+    font-size: 1.1rem;
+    font-family: "Milliard";
+    font-weight: "400";
+    padding: 8px;
 }
 .footeremail::placeholder {
-  color: rgba(240.96, 240.96, 240.96, 0.45);
+    color: rgba(240.96, 240.96, 240.96, 0.45);
 }
 
 .footersecondline {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
 
-  width: 50vw;
-  justify-content: space-between;
+    width: 50vw;
+    justify-content: space-between;
 }
 .footersecondline h2 {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 
-  font-family: "Milliard";
+    font-family: "Milliard";
 
-  font-weight: 600;
-  position: relative;
-  margin-bottom: 8%;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 8%;
 }
 li {
-  list-style: none;
-  font-size: 1rem;
-  font-family: "Milliard";
-  font-weight: 400;
-  opacity: 80%;
+    list-style: none;
+    font-size: 1rem;
+    font-family: "Milliard";
+    font-weight: 400;
+    opacity: 80%;
 }
 .footersecondline h2::after {
-  content: "";
-  position: absolute;
-  width: 12rem;
-  height: 0.5px;
-  background-color: white;
-  bottom: -8%;
-  opacity: 0.5;
-  left: 0;
+    content: "";
+    position: absolute;
+    width: 12rem;
+    height: 0.5px;
+    background-color: white;
+    bottom: -8%;
+    opacity: 0.5;
+    left: 0;
 
-  /*width: '100%', height: '100%', opacity: 0.50, border: '0.50px white solid'*/
+    /*width: '100%', height: '100%', opacity: 0.50, border: '0.50px white solid'*/
 }
-@media screen and (max-width: 768px) {
-  .footer {
-    background-position: unset;
-    flex-direction: column;
-    padding: 5vh 5vw;
-    height: unset;
-  }
-  .footerlogoaddress {
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
-  }
-  .footerlogo {
-    height: unset;
-    margin: 0;
-  }
-  .footeraddress {
-    margin: 0;
-    text-align: right;
-  }
-  .footersecondline {
-    flex-direction: column;
-    align-items: unset;
-    gap: 5vh;
-    width: 100%;
-    margin-top: 5vh;
-  }
-  .footer {
-    width: 100%;
-  }
+@media screen and (max-width: 900px) {
+    .footer {
+        background-position: unset;
+        flex-direction: column;
+        padding: 5vh 5vw;
+        height: unset;
+    }
+    .footerlogoaddress {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .footerlogo {
+        height: unset;
+        margin: 0;
+    }
+    .footeraddress {
+        margin: 0;
+        text-align: right;
+    }
+    .footersecondline {
+        flex-direction: column;
+        align-items: unset;
+        gap: 5vh;
+        width: 100%;
+        margin-top: 5vh;
+    }
+    .footer {
+        width: 100%;
+    }
 }
