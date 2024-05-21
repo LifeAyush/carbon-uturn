@@ -29,9 +29,19 @@ const Partners = () => {
             <section className="partners-cards-container">
                 <h1>All Partners</h1>
                 <div className="partners-cards">
-                    {partnersData.map((e) => (
-                        <PartnersCards id={e.id} img={e.img} />
-                    ))}
+                    {window.innerWidth < 900
+                        ? partnersData.map(
+                              (partner) =>
+                                  partner.name && (
+                                      <PartnersCards
+                                          id={partner.id}
+                                          img={partner.img}
+                                      />
+                                  )
+                          )
+                        : partnersData.map((e) => (
+                              <PartnersCards id={e.id} img={e.img} />
+                          ))}
                 </div>
             </section>
             <Footer />
