@@ -17,7 +17,7 @@ export const data = [
     },
     {
         id: "03",
-        head: "Professional Advisiory",
+        head: "Professional Advisory",
         smallContent: "Navigate your sustainability journey with us",
         content:
             "Our expert advisory services provide the guidance and data you need to navigate your sustainability journey. Our team of experienced professionals offers comprehensive assessments and personalized recommendations to help you achieve measurable results. We becomes your trusted partner, providing a clear roadmap to achieving your sustainability goals with confidence.",
