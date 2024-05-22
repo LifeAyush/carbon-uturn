@@ -11,6 +11,14 @@
     );
 }
 
+.services-cards-para {
+    color: #02353c;
+    font-size: 2.75rem;
+    font-family: MilliardBold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 .services-card-container {
     position: relative;
     display: flex;
@@ -80,7 +88,7 @@
 .services-card-head {
     font-family: MilliardBold;
     font-size: 3.5rem;
-    color: #02353c;
+    color: #046a78;
 }
 
 .services-card-para {
@@ -113,5 +121,31 @@
     }
     .services-card-para {
         font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .services-card-num {
+        display: none;
+    }
+    .services-card {
+        flex-direction: column;
+        padding: 0;
+        gap: 0;
+    }
+    .services-card img {
+        width: 100%;
+    }
+    .services-card-content {
+        width: 100%;
+        padding: 2vh 5vw;
+    }
+    .services-card-head {
+        font-family: MilliardBold;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .services-card-para {
+        text-align: center;
     }
 }

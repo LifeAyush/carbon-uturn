@@ -15,7 +15,11 @@ export default function Card({ index, obj }) {
                     <img src={obj.img} alt="" />
                     <div className="services-card-content">
                         <h1 className="services-card-head">{obj.head}</h1>
-                        <p className="services-card-para">{obj.content}</p>
+                        <p className="services-card-para">
+                            {window.innerWidth < 900
+                                ? obj.smallContent
+                                : obj.content}
+                        </p>
                     </div>
                 </section>
             </div>

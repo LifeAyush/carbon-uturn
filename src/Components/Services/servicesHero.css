@@ -35,3 +35,25 @@
 .services-hero span {
     font-family: MilliardBold;
 }
+
+@media screen and (max-width: 900px) {
+    .services-hero {
+        padding: 0 5vw;
+    }
+    .services-hero .content {
+        align-items: center;
+        gap: 2vh;
+        width: 90vw;
+    }
+    .services-hero h1 {
+        font-size: 2.75rem;
+        text-align: center;
+    }
+    .services-hero hr {
+        border-top: 4px solid #e3fbf7;
+    }
+    .services-hero p {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
