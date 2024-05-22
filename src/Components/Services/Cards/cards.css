@@ -132,6 +132,12 @@
         flex-direction: column;
         padding: 0;
         gap: 0;
+        max-height: 50vh;
+        transition: max-height 0.2s ease-in-out;
+        overflow: hidden;
+    }
+    .expanded-services-card {
+        max-height: 100vh;
     }
     .services-card img {
         width: 100%;
@@ -147,5 +153,17 @@
     }
     .services-card-para {
         text-align: center;
+    }
+    .coverBlack {
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.6);
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+    .increase-z-index {
+        z-index: 50;
     }
 }
