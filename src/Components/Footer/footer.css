@@ -8,6 +8,10 @@
     background-repeat: no-repeat;
 }
 
+.footer a {
+    color: white;
+}
+
 .footerlogoaddress {
     width: 35%;
     display: flex;

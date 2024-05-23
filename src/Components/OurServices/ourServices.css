@@ -119,12 +119,12 @@
 .our-services-card-text {
     color: #fdfdfd;
     text-align: center;
-    font-family: "Florencesans-Black";
+    font-family: "MilliardBold";
     font-size: 1.75rem;
     font-style: normal;
     font-weight: 400;
     line-height: 126.029%;
-    text-transform: uppercase;
+    text-transform: capitalize;
     position: absolute;
     width: 100%;
     bottom: 36px;
@@ -147,7 +147,9 @@
     height: 100%;
     position: absolute;
     z-index: 3;
-    top: 35%;
+    top: 50%;
+    transform: translateY(-50%);
+    height: min-content;
     left: 0;
     border-radius: 12px;
     color: #fdfdfd;

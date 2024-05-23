@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import "./stats.css"
 import stats2 from "../../Assets/Images/stats-2.svg"
 import stats1 from "../../Assets/Images/stats-1.svg"
@@ -37,15 +37,23 @@ const Stats = () => {
                             onEnter={() => setInView(true)}
                             onExit={() => setInView(false)}
                         >
-                            <img className="scard-img" alt="" src={stats1} />
+                            <img
+                                className={`scard-img ${
+                                    inView && "full-opacity"
+                                }`}
+                                alt=""
+                                src={stats1}
+                            />
                             {inView ? (
                                 <h1 className="scard-header-title">
                                     <AnimatedNumber
+                                        delay={300}
                                         value={0.5}
                                         formatValue={format}
                                     />{" "}
                                     -{" "}
                                     <AnimatedNumber
+                                        delay={300}
                                         value={1}
                                         formatValue={format}
                                     />{" "}
@@ -62,11 +70,16 @@ const Stats = () => {
                         </p>
                     </div>{" "}
                     <div className="scard">
-                        <img className="scard-img" alt="" src={stats2} />
+                        <img
+                            className={`scard-img ${inView && "full-opacity"}`}
+                            alt=""
+                            src={stats2}
+                        />
                         {inView ? (
                             <h1 className="scard-header-title">
                                 $
                                 <AnimatedNumber
+                                    delay={300}
                                     value={1.6}
                                     formatValue={format}
                                 />{" "}
@@ -83,10 +96,15 @@ const Stats = () => {
                         </p>
                     </div>{" "}
                     <div className="scard">
-                        <img className="scard-img" alt="" src={stats3} />
+                        <img
+                            className={`scard-img ${inView && "full-opacity"}`}
+                            alt=""
+                            src={stats3}
+                        />
                         {inView ? (
                             <h1 className="scard-header-title">
                                 <AnimatedNumber
+                                    delay={300}
                                     value={50}
                                     formatValue={(e) => e.toFixed(0)}
                                 />
@@ -100,10 +118,15 @@ const Stats = () => {
                         </p>
                     </div>{" "}
                     <div className="scard">
-                        <img className="scard-img" alt="" src={stats4} />
+                        <img
+                            className={`scard-img ${inView && "full-opacity"}`}
+                            alt=""
+                            src={stats4}
+                        />
                         {inView ? (
                             <h1 className="scard-header-title">
                                 <AnimatedNumber
+                                    delay={300}
                                     value={15}
                                     formatValue={(e) => e.toFixed(0)}
                                 />
@@ -117,16 +140,22 @@ const Stats = () => {
                         </p>
                     </div>{" "}
                     <div className="scard">
-                        <img className="scard-img" alt="" src={stats5} />
+                        <img
+                            className={`scard-img ${inView && "full-opacity"}`}
+                            alt=""
+                            src={stats5}
+                        />
                         {inView ? (
                             <h1 className="scard-header-title">
                                 {" "}
                                 <AnimatedNumber
+                                    delay={300}
                                     value={1.5}
                                     formatValue={format}
                                 />
                                 -{" "}
                                 <AnimatedNumber
+                                    delay={300}
                                     value={2}
                                     formatValue={format}
                                 />{" "}

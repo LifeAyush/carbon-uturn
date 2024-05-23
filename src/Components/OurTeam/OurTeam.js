@@ -37,7 +37,7 @@ const OurTeam = () => {
             vertical: "Governance and Policy",
             para: "He is a former top-ranking civil servant with over 44 years of service. With expertise in Energy, Infrastructure, Transport, Urban Development, and Finance, he served as India's Cabinet Secretary and held key positions in the Power and Oil & Gas Ministries. He also Chairs the Indian Advisory Board of Global Energy Alliance for People And Planet As an Independent Director, he brings extensive corporate governance experience, having served on the boards of major Public Sector Undertakings such as ONGC, IOCL, HPCL, BPCL, and Bharti Airtel Ltd.",
             links: {
-                mail: "pk@carbon-ut.com",
+                mail: "mailto:pk@carbon-ut.com",
             },
         },
         {
