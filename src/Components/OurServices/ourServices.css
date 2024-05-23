@@ -187,10 +187,13 @@
     .our-services-content {
         align-items: center;
     }
-    .service-card:hover .our-services-card {
+    .our-services-card-backtext {
+        font-size: 0.9rem;
+    }
+    /* .service-card:hover .our-services-card {
         transform: none;
     }
     .service-card:hover .our-services-card-back {
         display: none;
-    }
+    } */
 }

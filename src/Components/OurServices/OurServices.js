@@ -37,9 +37,9 @@ const OurServices = () => {
     return (
         <div className="our-services">
             <div className="our-services-content">
-                <a href="/services">
+                <Link to="/services">
                     <h1 className="our-sevices-title">Our Services</h1>
-                </a>
+                </Link>
                 <div className="our-services-cards">
                     {cardData.map((item) => {
                         return <OurServicesCard data={item} key={item.id} />
