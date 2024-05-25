@@ -1,11 +1,15 @@
 import React from "react"
 import "../Mission/mission.css"
 import visionImg from "../../Assets/Images/visionImg.png"
+import servicesBg from "../../Assets/Images/services-cards-bg.svg"
 
 const Vision = () => {
     return (
         <div className="vision">
-            <img src={visionImg} alt="Earth" className="vision-img" />
+            <img src={servicesBg} alt="" />
+            <div className="vision-img-container">
+                <img src={visionImg} alt="Earth" className="vision-img" />
+            </div>
             <div className="mission-flex">
                 <div className="mission-title">OUR vision</div>
                 <div className="mission-hr" />

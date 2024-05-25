@@ -2,36 +2,56 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url(../../Assets/Images/aboutMissionBg.png);
     background-size: cover;
     background-position: center center;
     gap: 100px;
     padding: 5vh 5vw 15vh 5vw;
+    position: relative;
 }
 .vision {
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
     justify-content: center;
-    background: url(../../Assets/Images/visionBg.png);
     background-size: cover;
     background-position: center center;
     gap: 100px;
     padding: 5vh 5vw 15vh 5vw;
+    position: relative;
 }
+
+.mission > img,
+.vision > img {
+    top: 0;
+    right: 0;
+    position: absolute;
+    height: 50%;
+    z-index: 2;
+    opacity: 50%;
+}
+
+.vision > img {
+    left: 0;
+    right: unset;
+    transform: rotate(180deg);
+}
+
 .mission-img,
 .vision-img {
     width: 30vw;
     object-fit: cover;
+    position: relative;
+    z-index: 5;
 }
 .mission-flex {
     display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 48px;
+    position: relative;
+    z-index: 5;
     /* width: 800px; */
     /* border: 1px solid red; */
-    margin-top: 14em;
 }
 .mission-title {
     color: rgba(1, 30, 34, 0.93);
@@ -56,6 +76,31 @@
     line-height: normal;
     letter-spacing: 0.56px;
     width: 100%;
+}
+
+.mission-img-container,
+.vision-img-container {
+    position: relative;
+}
+
+.mission-img-container::before,
+.vision-img-container::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    display: block;
+    background: white;
+    position: absolute;
+    bottom: 0;
+    border-radius: 500%;
+    z-index: 2;
+    transform: translate(25%, -25%);
+    box-shadow: 0px 4px 10px rgba(0 0 0 / 0.2), 0px 6px 10px rgba(0 0 0/ 0.2);
+    filter: blur(4px);
+}
+
+.vision-img-container::after {
+    right: 0;
 }
 
 @media screen and (max-width: 900px) {
@@ -100,5 +145,12 @@
         width: 90vw;
         margin-right: 30vw;
         margin-bottom: 5vh;
+    }
+
+    .mission > img,
+    .vision > img,
+    .mission-img-container::before,
+    .vision-img-container::after {
+        display: none;
     }
 }

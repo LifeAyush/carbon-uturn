@@ -1,13 +1,9 @@
 .resources-hero {
-    margin: 10vh 5vw;
     padding: 2vh;
     background: url("../../../Assets/Images/resources-hero.png");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 90vw;
-    height: 80vh;
-    border-radius: 25px;
-
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
