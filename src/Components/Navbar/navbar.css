@@ -125,11 +125,12 @@
 
     .nav-slider {
         position: fixed;
+        left: 0;
         top: 0;
-        width: 60vw;
-        transition: 0.5s ease-in-out;
+        width: 100vw;
+        transition: 0.7s ease-in-out;
         background-color: rgba(0, 0, 0);
-        height: 100vh;
+        /* height: 100vh; */
         padding: 2vh 5vw;
         color: white;
     }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import "./navbar.css"
 import logo from "../../Assets/Images/logo.svg"
+import close from "../../Assets/Images/close.png"
 import hamburg from "../../Assets/Images/hamburg.png"
 import { NavLink, Link, useLocation } from "react-router-dom"
 
@@ -66,24 +67,40 @@ const Navbar = () => {
         <>
             <div className="mobile-view">
                 <img
-                    src={hamburg}
-                    alt="mobile-nav-icon"
-                    onClick={() => setMobileNav(true)}
-                />
-                <img
                     src={logo}
                     alt="mobile-company-logo"
                     style={{ width: "30vw" }}
                 />
+                <img
+                    src={hamburg}
+                    alt="mobile-nav-icon"
+                    onClick={() => setMobileNav(true)}
+                />
+
                 <section
                     className="nav-slider"
-                    style={{ left: `${mobileNav ? "0" : "-60vw"}` }}
+                    style={{ top: `${mobileNav ? "0" : "-100vh"}` }}
                 >
-                    <img
-                        src={hamburg}
-                        alt="mobile-nav-icon"
-                        onClick={() => setMobileNav(false)}
-                    />
+                    <div
+                        style={{
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "space-between",
+                        }}
+                    >
+                        <img
+                            src={logo}
+                            alt="mobile-company-logo"
+                            style={{ width: "30vw" }}
+                        />
+                        <img
+                            src={close}
+                            alt="mobile-nav-icon"
+                            style={{ width: "32px" }}
+                            onClick={() => setMobileNav(false)}
+                        />
+                    </div>
+
                     <div className="mobile-nav-links">
                         {navItems.map((item) => {
                             return (
