@@ -14,7 +14,11 @@ const AboutUs = () => {
             <Navbar />
             <div>
                 <AboutHero />
-                <section style={{ background: `url(${bgimg})` }}>
+                <section
+                    style={{
+                        background: `linear-gradient(rgb(255,255,255,0.5) , rgb(255,255,255,0.5)), url(${bgimg})`,
+                    }}
+                >
                     <Mission />
                     <Vision />
                 </section>

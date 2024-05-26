@@ -9,6 +9,7 @@
         #fff 49.4%,
         #dffdfc 96.4%
     );
+    overflow: hidden;
 }
 
 .services-cards-para {
