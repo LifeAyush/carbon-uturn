@@ -9,7 +9,7 @@ import globe from "../../../Assets/Images/globe.png"
 export default function PartnerID() {
     const params = useParams()
     const data = partnersData.find((e) => e.id === params.id)
-    console.log(data)
+    // console.log(data)
     return (
         <>
             <Navbar />

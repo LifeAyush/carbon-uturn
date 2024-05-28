@@ -16,8 +16,7 @@ const Journey = () => {
             //console.log(offset);
             let percentage =
                 ((window.scrollY - offset) / window.innerHeight) * 100
-            let coord = cards[0].getBoundingClientRect()
-            console.log((window.innerWidth - coord.x) / window.innerHeight)
+            // console.log((window.innerWidth - coord.x) / window.innerHeight)
             cards.forEach((e) => {
                 let coords = e.getBoundingClientRect()
                 let calculate =

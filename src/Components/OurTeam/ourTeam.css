@@ -169,6 +169,16 @@
     visibility: hidden;
 }
 
+.team-card-para {
+    height: 80%;
+    overflow: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+.team-card-para::-webkit-scrollbar {
+    display: none;
+}
+
 @media screen and (max-width: 900px) {
     .team-card-links {
         transform: translateY(0);
@@ -201,15 +211,6 @@
         font-size: 1.5rem;
     }
     .about-arrow {
-        display: none;
-    }
-    .team-card-para {
-        height: 80%;
-        overflow: scroll;
-        -ms-overflow-style: none; /* IE and Edge */
-        scrollbar-width: none; /* Firefox */
-    }
-    .team-card-para::-webkit-scrollbar {
         display: none;
     }
 }

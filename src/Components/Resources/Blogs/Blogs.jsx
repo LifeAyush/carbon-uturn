@@ -1,5 +1,4 @@
 import BlogCards from "./BlogCards/BlogCards"
-import blogs from "./blogsList.js"
 import Arrow from "../../../Assets/Images/Arrow.svg"
 import "./blogs.css"
 import { useEffect } from "react"
@@ -15,7 +14,7 @@ export default function Blogs() {
         const dataMedium = fetchMedium("manish.yadav_39731")
         dataMedium.then((res) => setPosts(res))
     }, [])
-    console.log(posts)
+    // console.log(posts)
 
     return (
         <section className="resources-blogs">
