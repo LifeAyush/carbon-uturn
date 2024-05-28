@@ -7,8 +7,12 @@ import bg from "../../Assets/Images/teamCardContentBG.png"
 
 const TeamCard = ({ data }) => {
     const handleClick = (e) => {
-        const backDetails = e.target.querySelector(".teamcard-click")
-        const frontDetails = e.target.querySelector(".team-card-flex")
+        let curr = e.target
+        while (curr.className !== "teamcard") {
+            curr = curr.parentNode
+        }
+        const backDetails = curr.querySelector(".teamcard-click")
+        const frontDetails = curr.querySelector(".team-card-flex")
         frontDetails?.classList.toggle("toggle-visibility")
         backDetails?.classList.toggle("toggle-translate")
     }

@@ -92,7 +92,7 @@
     display: flex;
     align-items: flex-end;
     overflow: none;
-    pointer-events: none;
+    /* pointer-events: none; */
 }
 .team-card-flex {
     border-radius: 0px 0px 76px 4px;
@@ -152,7 +152,7 @@
     padding: 10%;
     transform: translateY(calc(100% + 5px));
     transition: 0.4s ease-in-out;
-    pointer-events: none;
+    /* pointer-events: none; */
 }
 .team-card-para {
     color: white;
@@ -187,7 +187,7 @@
         font-size: 1rem;
     }
     .teamcard {
-        width: 70vw;
+        width: min(70vw, 400px);
         height: 50vh;
     }
     .team-flex {
@@ -204,6 +204,12 @@
         display: none;
     }
     .team-card-para {
-        font-size: 0.8rem;
+        height: 80%;
+        overflow: scroll;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+    .team-card-para::-webkit-scrollbar {
+        display: none;
     }
 }
