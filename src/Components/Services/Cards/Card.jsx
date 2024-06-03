@@ -16,6 +16,7 @@ export default function Card({ index, obj }) {
                     index % 2 === 1 && "cont-opp"
                 } ${isExpanded && "increase-z-index"}`}
                 id={obj.head.split(" ")[0]}
+                data-aos="fade-up"
             >
                 <div>
                     <p className="services-card-num">{obj.id}</p>

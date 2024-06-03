@@ -9,8 +9,11 @@ import Partners from "./Pages/Partners/Partners"
 import ComingSoon from "./Pages/ComingSoon/ComingSoon"
 import PartnerID from "./Pages/Partners/PartnerID/PartnerID"
 import { useEffect } from "react"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 function App() {
+    AOS.init()
     const location = useLocation()
     useEffect(() => {
         window.scrollTo(0, 0)

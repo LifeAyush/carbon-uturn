@@ -18,8 +18,10 @@ export default function Blogs() {
 
     return (
         <section className="resources-blogs">
-            <h1 className="resources-blogs-heading">Blogs</h1>
-            <p className="resources-blogs-subheading">
+            <h1 className="resources-blogs-heading" data-aos="fade-up">
+                Blogs
+            </h1>
+            <p className="resources-blogs-subheading" data-aos="fade-up">
                 Our blogs cut through the noise to give you the information you
                 . Get a fresh perspective with our thought-provoking blog posts.
             </p>

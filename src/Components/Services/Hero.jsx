@@ -3,7 +3,7 @@ import "./servicesHero.css"
 export default function Hero() {
     return (
         <section className="services-hero">
-            <div className="content">
+            <div className="content" data-aos="fade-up">
                 <h1>Our Services</h1>
                 <hr />
                 <p>

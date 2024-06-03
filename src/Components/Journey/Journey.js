@@ -45,7 +45,7 @@ const Journey = () => {
     return (
         <div className="journey" id="next-section">
             <section className="journey-slider-container" ref={cont}>
-                <div className="journey-content">
+                <div className="journey-content" data-aos="fade-up">
                     <span className="journey-content-subtitle">
                         Your U-turn to
                     </span>

@@ -10,7 +10,7 @@ const Mission = () => {
             <div className="mission-img-container">
                 <img src={missionImg} alt="Earth" className="mission-img" />
             </div>
-            <div className="mission-flex">
+            <div className="mission-flex" data-aos="fade-up">
                 <div className="mission-title">OUR Mission</div>
                 <div className="mission-hr" />
                 <div className="mission-subtitle">

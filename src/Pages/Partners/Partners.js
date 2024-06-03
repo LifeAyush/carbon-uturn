@@ -10,7 +10,7 @@ const Partners = () => {
         <>
             <Navbar />
             <section className="partners-hero">
-                <div className="partners-content">
+                <div className="partners-content" data-aos="fade-up">
                     <h1>Our Partners</h1>
                     <p>
                         Our planet needs a U-Turn. We're the engineers, the
@@ -19,7 +19,7 @@ const Partners = () => {
                     </p>
                 </div>
             </section>
-            <section className="partners-welcome">
+            <section className="partners-welcome" data-aos="fade-up">
                 <p>
                     Carbon U-turn Technology Pvt. Ltd. (CUT) welcomes
                     partnerships to build a stronger ecosystem and accelerate

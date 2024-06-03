@@ -36,7 +36,7 @@ const OurServices = () => {
     ]
     return (
         <div className="our-services">
-            <div className="our-services-content">
+            <div className="our-services-content" data-aos="fade-up">
                 <Link to="/services">
                     <h1 className="our-sevices-title">Our Services</h1>
                 </Link>

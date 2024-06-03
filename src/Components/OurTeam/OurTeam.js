@@ -83,7 +83,7 @@ const OurTeam = () => {
     ]
     return (
         <div className="our-team">
-            <div className="our-team-text-flex">
+            <div className="our-team-text-flex" data-aos="fade-up">
                 <div className="ott-title">OUR TEam</div>
                 <div className="ott-hr" />
                 <div className="ott-subtitle">
