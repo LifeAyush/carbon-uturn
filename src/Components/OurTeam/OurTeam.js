@@ -103,7 +103,7 @@ const OurTeam = () => {
                 />
                 <Swiper
                     // spaceBetween={50}
-                    slidesPerView={3}
+                    slidesPerView={window.innerWidth > 900 ? 3 : 1}
                     loop={true}
                     modules={[Navigation]}
                     navigation={{
