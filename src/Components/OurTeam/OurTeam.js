@@ -102,7 +102,7 @@ const OurTeam = () => {
                     alt=""
                 />
                 <Swiper
-                    // spaceBetween={50}
+                    spaceBetween={100}
                     slidesPerView={window.innerWidth > 900 ? 3 : 1}
                     loop={true}
                     modules={[Navigation]}

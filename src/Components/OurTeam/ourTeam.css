@@ -68,7 +68,7 @@
     transform: translate(50%, -50%) rotateZ(180deg);
 }
 .teamcard {
-    width: 25vw;
+    /* width: 25vw; */
     height: 70vh;
     flex-shrink: 0;
     padding: 2px;
@@ -196,10 +196,6 @@
     }
     .ott-subtitle {
         font-size: 1rem;
-    }
-    .teamcard {
-        width: min(70vw, 400px);
-        height: 50vh;
     }
     .team-flex {
         gap: 20px;
