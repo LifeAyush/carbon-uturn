@@ -17,7 +17,7 @@ export const data = [
     },
     {
         id: "03",
-        head: "Professional Advisory",
+        head: "Carbon accounting and dashboard",
         smallContent: "Navigate your sustainability journey with us",
         content:
             "Our expert advisory services provide the guidance and data you need to navigate your sustainability journey. Our team of experienced professionals offers comprehensive assessments and personalized recommendations to help you achieve measurable results. We becomes your trusted partner, providing a clear roadmap to achieving your sustainability goals with confidence.",
@@ -25,7 +25,7 @@ export const data = [
     },
     {
         id: "04",
-        head: "Trusted Registration",
+        head: "Enabled Registration",
         smallContent: "To help you meet necessary environmental standards",
         content:
             " Carbon Uturn ensures that your project meets the necessary standards and maximizes its environmental impact. We provide expert guidance and assist you with completing the registration process accurately and efficiently. Our team helps you navigate the requirements. This allows you to contribute to the global carbon market and create a positive environmental impact.",

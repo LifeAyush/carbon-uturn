@@ -1,19 +1,12 @@
-import React, { useRef } from "react"
+import React, { useEffect } from "react"
 import "./ourTeam.css"
 import TeamCard from "./TeamCard"
 import arrow from "../../Assets/Images/aboutArrow.png"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Navigation } from "swiper/modules"
+import "swiper/css"
 
 const OurTeam = () => {
-    const scrollContainer = useRef()
-
-    const scrollLeft = () => {
-        scrollContainer.current.scrollLeft -= "300"
-    }
-
-    const scrollRight = () => {
-        scrollContainer.current.scrollLeft += "300"
-    }
-
     const teamData = [
         {
             id: 1,
@@ -81,6 +74,14 @@ const OurTeam = () => {
             },
         },
     ]
+    useEffect(() => {
+        const btn = document.getElementById("right-btn")
+        const interval = setInterval(() => {
+            btn.click()
+        }, 3000)
+
+        return () => clearInterval(interval)
+    }, [])
     return (
         <div className="our-team">
             <div className="our-team-text-flex" data-aos="fade-up">
@@ -95,19 +96,35 @@ const OurTeam = () => {
             </div>
             <div className="team-flex-cont">
                 <img
-                    className="about-arrow about-arrow"
-                    onClick={scrollLeft}
+                    className="about-arrow about-arrow swiper-button-prev"
+                    // onClick={scrollLeft}
                     src={arrow}
                     alt=""
                 />
-                <div className="team-flex" ref={scrollContainer}>
+                <Swiper
+                    // spaceBetween={50}
+                    slidesPerView={3}
+                    loop={true}
+                    modules={[Navigation]}
+                    navigation={{
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    }}
+                >
+                    {/* <div className="team-flex" ref={scrollContainer}> */}
                     {teamData.map((data) => {
-                        return <TeamCard data={data} key={data.id} />
+                        return (
+                            <SwiperSlide>
+                                <TeamCard data={data} key={data.id} />
+                            </SwiperSlide>
+                        )
                     })}
-                </div>
+                    {/* </div> */}
+                </Swiper>
                 <img
-                    className="about-arrow right"
-                    onClick={scrollRight}
+                    className="about-arrow right swiper-button-next"
+                    id="right-btn"
+                    // onClick={scrollRight}
                     src={arrow}
                     alt=""
                 />

@@ -44,12 +44,22 @@ const Journey = () => {
     }, [])
     return (
         <div className="journey" id="next-section">
-            <section className="journey-slider-container" ref={cont}>
-                <div className="journey-content" data-aos="fade-up">
-                    <span className="journey-content-subtitle">
+            <section
+                className="journey-slider-container"
+                ref={cont}
+                id="animation-anchor"
+            >
+                <div
+                    className="journey-content"
+                    // data-aos-anchor="#animation-anchor"
+                >
+                    <span
+                        className="journey-content-subtitle"
+                        data-aos="fade-up"
+                    >
                         Your U-turn to
                     </span>
-                    <span className="journey-content-title">
+                    <span className="journey-content-title" data-aos="fade-up">
                         Net Zero Journey
                     </span>
                 </div>

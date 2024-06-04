@@ -24,13 +24,13 @@ const OurServices = () => {
         {
             id: 3,
             img: flipCard3,
-            title: "Advisory",
+            title: "Carbon accounting and dashboard",
             para: "Our dashboard tracks your carbon footprint, and our experts ensure your projects meet greenhouse standards, paving the way for lasting impact.",
         },
         {
             id: 4,
             img: flipCard4,
-            title: "Trusted Registration",
+            title: "Enabled registration",
             para: "Offer comprehensive audit and due diligence to guarantee your projects' compliance with established greenhouse gas protocols.",
         },
     ]

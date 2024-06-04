@@ -13,7 +13,9 @@ import AOS from "aos"
 import "aos/dist/aos.css"
 
 function App() {
-    AOS.init()
+    AOS.init({
+        duration: 750,
+    })
     const location = useLocation()
     useEffect(() => {
         window.scrollTo(0, 0)
