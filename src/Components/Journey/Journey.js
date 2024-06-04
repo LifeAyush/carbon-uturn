@@ -56,10 +56,15 @@ const Journey = () => {
                     <span
                         className="journey-content-subtitle"
                         data-aos="fade-up"
+                        data-aos-anchor="#next-section"
                     >
                         Your U-turn to
                     </span>
-                    <span className="journey-content-title" data-aos="fade-up">
+                    <span
+                        className="journey-content-title"
+                        data-aos="fade-up"
+                        data-aos-anchor="#next-section"
+                    >
                         Net Zero Journey
                     </span>
                 </div>
