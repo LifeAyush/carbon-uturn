@@ -24,7 +24,7 @@ const OurServices = () => {
         {
             id: 3,
             img: flipCard3,
-            title: "Carbon accounting and dashboard",
+            title: "Carbon Accounting & Dashboard",
             para: "Our dashboard tracks your carbon footprint, and our experts ensure your projects meet greenhouse standards, paving the way for lasting impact.",
         },
         {
