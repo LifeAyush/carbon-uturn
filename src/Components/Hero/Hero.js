@@ -4,7 +4,11 @@ import "./hero.css"
 const Hero = () => {
     return (
         <div className="hero">
-            <div className="hero-main-flex" data-aos="fade-right">
+            <div
+                className="hero-main-flex"
+                data-aos="fade-up"
+                data-aos-duration={1000}
+            >
                 <h1 className="hero-head">
                     <strong
                         style={{
