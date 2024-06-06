@@ -11,6 +11,7 @@ import PartnerID from "./Pages/Partners/PartnerID/PartnerID"
 import { useEffect } from "react"
 import AOS from "aos"
 import "aos/dist/aos.css"
+import Graph from "./Components/Graph/Graph"
 
 function App() {
     AOS.init({
@@ -30,6 +31,7 @@ function App() {
                 <Route exact path="/partners" element={<Partners />} />
                 <Route exact path="/partners/:id" element={<PartnerID />} />
                 <Route exact path="/careers" element={<ComingSoon />} />
+                <Route exact path="/graph" element={<Graph />} />
             </Routes>
         </div>
     )

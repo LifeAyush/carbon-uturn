@@ -11,7 +11,7 @@ export default function Blogs() {
 
     useEffect(() => {
         setWidth(window.innerWidth)
-        const dataMedium = fetchMedium("manish.yadav_39731")
+        const dataMedium = fetchMedium("Carbon-ut.com")
         dataMedium.then((res) => setPosts(res))
     }, [])
     // console.log(posts)
@@ -51,7 +51,7 @@ export default function Blogs() {
 
             <button className="blogs-btn">
                 <a
-                    href="https://medium.com/@manish.yadav_39731"
+                    href="https://medium.com/@Carbon-ut.com"
                     target="__blank"
                     style={{ textDecoration: "none", color: "white" }}
                 >
