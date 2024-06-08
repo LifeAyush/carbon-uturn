@@ -1,0 +1,147 @@
+.getStarted-overlay {
+    background: rgb(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+
+.getStarted-container {
+    background-color: white;
+    width: 80vw;
+    height: 70vh;
+    position: fixed;
+    z-index: 5;
+    top: 20vh;
+    left: 10vw;
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+}
+
+.getStarted-left {
+    background: linear-gradient(
+        90deg,
+        #014d4a 3.48%,
+        #027671 35.71%,
+        #2eaf7d 91.13%
+    );
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3%;
+    color: white;
+    gap: 5vh;
+}
+
+.getStarted-left h1 {
+    text-transform: capitalize;
+    font-family: Milliard;
+    font-size: 3rem;
+    letter-spacing: -0.02rem;
+    line-height: 3.5rem;
+}
+
+.getStarted-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3%;
+    width: 60%;
+}
+
+.getStarted-form-flex {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 5vw;
+}
+
+.getStarted-form-field input,
+.getStarted-form-field textarea {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #b0b0b0;
+    padding: 5px;
+    font-family: Milliard;
+    background: #eee;
+    resize: none;
+}
+
+.getStarted-form-field input::placeholder,
+.getStarted-form-field textarea::placeholder {
+    color: #adaaaa;
+}
+
+.getStarted-form-field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.getStarted-form button {
+    background-color: #2eaf7d;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+.getStarted-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+    .getStarted-close {
+        font-size: 1.5rem;
+    }
+    .getStarted-container {
+        flex-direction: column;
+        width: 100%;
+        left: 0;
+        height: 90vh;
+        top: 10vh;
+        padding: 5vh 5vw;
+        background: linear-gradient(
+            90deg,
+            #014d4a 3.48%,
+            #027671 35.71%,
+            #2eaf7d 91.13%
+        );
+        border-radius: 0;
+        color: white;
+    }
+    .getStarted-left {
+        background: transparent;
+        width: 100%;
+        height: max-content;
+        padding: 0;
+        gap: 1vh;
+        font-size: 0.8rem;
+    }
+
+    .getStarted-left h1 {
+        font-size: 2rem;
+        line-height: unset;
+    }
+    .getStarted-form {
+        width: 100%;
+        color: white;
+        padding: 0;
+        gap: 2vh;
+        padding-top: 3vh;
+    }
+    .getStarted-form-flex {
+        flex-direction: column;
+    }
+}

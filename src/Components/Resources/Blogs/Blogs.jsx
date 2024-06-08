@@ -14,7 +14,6 @@ export default function Blogs() {
         const dataMedium = fetchMedium("Carbon-ut.com")
         dataMedium.then((res) => setPosts(res))
     }, [])
-    // console.log(posts)
 
     return (
         <section className="resources-blogs">

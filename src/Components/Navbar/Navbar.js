@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useContext } from "react"
 import "./navbar.css"
 import logo from "../../Assets/Images/logo.svg"
 import close from "../../Assets/Images/close.png"
 import hamburg from "../../Assets/Images/hamburg.png"
 import { NavLink, Link, useLocation } from "react-router-dom"
+import GetStartedForm from "../GetStartedForm/GetStartedForm"
+import { GetStartedFormContext } from "../../store/GetStartedFormContext"
 
 const Navbar = () => {
     const [active, setActive] = useState("Home")
@@ -13,7 +15,9 @@ const Navbar = () => {
     const location = useLocation()
     useEffect(() => {
         setActive(location.pathname)
-    }, [])
+    }, [location.pathname])
+
+    const { getForm, setForm } = useContext(GetStartedFormContext)
 
     const handleScroll = () => {
         const currentScrollPos = window.pageYOffset
@@ -121,6 +125,8 @@ const Navbar = () => {
                 </section>
             </div>
 
+            {getForm && <GetStartedForm />}
+
             <div className={visible ? "nav" : "nav-inv"}>
                 <Link to="/">
                     <img src={logo} alt="Carbon UTurn" className="nav-logo" />
@@ -143,9 +149,11 @@ const Navbar = () => {
                     })}
                 </div>
                 <div className="balancing-div">
-                    <a href="#next-section">
-                        <div className="nav-cta">Get Started</div>
-                    </a>
+                    {/* <a href="#next-section"> */}
+                    <div onClick={() => setForm(true)} className="nav-cta">
+                        Get Started
+                    </div>
+                    {/* </a> */}
                 </div>
             </div>
         </>
