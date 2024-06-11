@@ -5,16 +5,42 @@ import mail from "../../Assets/Images/mail.svg"
 import twitter from "../../Assets/Images/twitter.svg"
 import bg from "../../Assets/Images/teamCardContentBG.png"
 
-const TeamCard = ({ data }) => {
+const TeamCard = ({ data, state }) => {
     const handleClick = (e) => {
+        console.log("clicked")
+
         let curr = e.target
         while (curr.className !== "teamcard") {
             curr = curr.parentNode
         }
+
         const backDetails = curr.querySelector(".teamcard-click")
         const frontDetails = curr.querySelector(".team-card-flex")
+
+        console.log("front and backdetails defined")
+
+        if (frontDetails.classList.contains(".toggle-visibility")) {
+            const arr = document.querySelectorAll(".teamcard")
+            arr.forEach(e => {
+                const front = e.querySelector(".team-card-flex")
+                const back = e.querySelector(".teamcard-click")
+                front.classList.remove("toggle-visibility")
+                back.classList.remove("toggle-translate")
+
+            })
+            console.log("classes removed from all")
+        }
+
         frontDetails?.classList.toggle("toggle-visibility")
         backDetails?.classList.toggle("toggle-translate")
+
+        console.log("Toggle complete")
+
+        if (backDetails?.classList.contains("toggle-translate")) {
+            state(false)
+        } else {
+            state(true)
+        }
     }
     return (
         <div className="teamcard" onClick={handleClick}>

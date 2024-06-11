@@ -3,7 +3,7 @@
     width: 100vw;
     height: 100vh;
     position: fixed;
-    z-index: 2;
+    z-index: 70;
     top: 0;
     left: 0;
 }
@@ -13,7 +13,7 @@
     width: 80vw;
     height: 70vh;
     position: fixed;
-    z-index: 5;
+    z-index: 80;
     top: 20vh;
     left: 10vw;
     border-radius: 10px;
@@ -103,7 +103,7 @@
 
 @media screen and (max-width: 900px) {
     .getStarted-close {
-        font-size: 1.5rem;
+        width: 5vw;
     }
     .getStarted-container {
         flex-direction: column;

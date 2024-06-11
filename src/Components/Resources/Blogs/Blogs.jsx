@@ -17,10 +17,10 @@ export default function Blogs() {
 
     return (
         <section className="resources-blogs">
-            <h1 className="resources-blogs-heading" data-aos="fade-up">
+            <h1 className="resources-blogs-heading">
                 Blogs
             </h1>
-            <p className="resources-blogs-subheading" data-aos="fade-up">
+            <p className="resources-blogs-subheading">
                 Our blogs cut through the noise to give you the information you
                 . Get a fresh perspective with our thought-provoking blog posts.
             </p>
@@ -28,24 +28,24 @@ export default function Blogs() {
             <div className="blogs-scroll">
                 {width > 768
                     ? posts?.dataMedium
-                          ?.slice(0, 5)
-                          .map((blog) => (
-                              <BlogCards
-                                  title={blog.title}
-                                  img={blog.image}
-                                  link={blog.link}
-                              />
-                          ))
+                        ?.slice(0, 5)
+                        .map((blog) => (
+                            <BlogCards
+                                title={blog.title}
+                                img={blog.image}
+                                link={blog.link}
+                            />
+                        ))
                     : posts?.dataMedium?.map(
-                          (blog, index) =>
-                              index < 3 && (
-                                  <BlogCards
-                                      title={blog.title}
-                                      img={blog.image}
-                                      link={blog.link}
-                                  />
-                              )
-                      )}
+                        (blog, index) =>
+                            index < 3 && (
+                                <BlogCards
+                                    title={blog.title}
+                                    img={blog.image}
+                                    link={blog.link}
+                                />
+                            )
+                    )}
             </div>
 
             <button className="blogs-btn">

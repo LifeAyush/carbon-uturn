@@ -121,6 +121,9 @@ const Navbar = () => {
                                 </Link>
                             )
                         })}
+                        <div onClick={() => { setForm(true); setMobileNav(false) }} className="nav-cta">
+                            Get Started
+                        </div>
                     </div>
                 </section>
             </div>

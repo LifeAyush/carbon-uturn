@@ -19,7 +19,7 @@
     justify-content: center;
 }
 .our-sevices-title {
-    color: var(--second-green, #014d4a);
+    color: #2eaf7d;
     text-shadow: 0px 4px 4px rgba(1, 51, 19, 0.3);
     -webkit-text-stroke-width: 1;
     -webkit-text-stroke-color: var(--second-green);

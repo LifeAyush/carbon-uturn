@@ -1,12 +1,15 @@
-.hero {
-    height: 100vh;
-    position: relative;
-    background-image: url(../../Assets/Images/heroB4.png);
+.hero::before {
+    content: "";
+    background: linear-gradient(0deg, rgb(0, 0, 0, 0.75), rgb(0, 0, 0, 0) 50%),
+        url(../../Assets/Images/birds.gif);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    /* animation: changeBg 2.5s linear 1 forwards; */
-    /* filter: grayscale(1); */
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    filter: grayscale(1);
+    animation: changeBg 3.5s linear 1s forwards;
 }
 @keyframes changeBg {
     0% {
@@ -15,6 +18,10 @@
     100% {
         filter: grayscale(0);
     }
+}
+.hero {
+    height: 100vh;
+    position: relative;
 }
 .hero-main-flex {
     display: flex;

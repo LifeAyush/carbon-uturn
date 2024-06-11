@@ -1,0 +1,103 @@
+.career-text-content {
+    background: white url("../../Assets/Images/aboutMissionBg.png");
+    padding: 15vh 10vw 10vh;
+    display: flex;
+    flex-direction: column;
+    gap: 7vh;
+}
+
+.career-text-content div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    color: #101010;
+    font-family: "Milliard";
+    font-size: 1.2rem;
+}
+
+.career-vision h1 {
+    font-family: "Florencesans-Black";
+    color: #2eaf7d;
+    font-size: 4rem;
+}
+
+.career-mission h1 {
+    font-family: "Florencesans-Black";
+    color: #6d6a6a;
+    font-size: 4rem;
+}
+
+.career-form {
+    background: #014d4a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10vh 10vw;
+    gap: 5vh;
+    text-align: center;
+}
+
+.career-form p {
+    color: #f5f5f5;
+    font-size: 1.2rem;
+}
+
+.career-form h1 {
+    color: #dbfbff;
+    font-family: "Florencesans-Black";
+    font-size: 4rem;
+}
+
+.career-form-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 5vw;
+    margin-bottom: 5vh;
+}
+
+.career-form-section > .career-form-input-section {
+    margin-bottom: 5vh;
+}
+
+.career-form-section {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: left;
+    width: 60vw;
+}
+
+.career-form-section h3 {
+    font-size: 2rem;
+    color: #fafafa;
+}
+
+.career-form-section label {
+    font-size: 1.25rem;
+    display: block;
+}
+
+.career-form-input-section {
+    flex: 1;
+}
+
+.career-radio-buttons {
+    display: flex;
+}
+
+.career-radio-buttons span {
+    background-color: white;
+    width: max-content;
+    display: flex;
+    color: #6c6c6c;
+}
+
+.career-form-section input,
+.career-form-section textarea,
+.career-form-section select {
+    width: 100%;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+}

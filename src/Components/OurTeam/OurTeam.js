@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import "./ourTeam.css"
 import TeamCard from "./TeamCard"
 import arrow from "../../Assets/Images/aboutArrow.png"
@@ -7,6 +7,9 @@ import { Navigation } from "swiper/modules"
 import "swiper/css"
 
 const OurTeam = () => {
+
+    const [loopAnimation, setLoopAnimation] = useState(true)
+
     const teamData = [
         {
             id: 1,
@@ -74,14 +77,20 @@ const OurTeam = () => {
             },
         },
     ]
+
     useEffect(() => {
         const btn = document.getElementById("right-btn")
         const interval = setInterval(() => {
             btn.click()
         }, 3000)
 
+        if (!loopAnimation) {
+            clearInterval(interval)
+        }
+
+
         return () => clearInterval(interval)
-    }, [])
+    }, [loopAnimation])
     return (
         <div className="our-team">
             <div className="our-team-text-flex" data-aos="fade-up">
@@ -115,7 +124,7 @@ const OurTeam = () => {
                     {teamData.map((data) => {
                         return (
                             <SwiperSlide>
-                                <TeamCard data={data} key={data.id} />
+                                <TeamCard data={data} key={data.id} state={setLoopAnimation} />
                             </SwiperSlide>
                         )
                     })}

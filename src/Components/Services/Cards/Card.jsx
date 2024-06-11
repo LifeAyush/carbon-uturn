@@ -12,23 +12,18 @@ export default function Card({ index, obj }) {
                 ></div>
             )}
             <section
-                className={`services-card-container ${
-                    index % 2 === 1 && "cont-opp"
-                } ${isExpanded && "increase-z-index"}`}
+                className={`services-card-container ${index % 2 === 1 && "cont-opp"
+                    } ${isExpanded && "increase-z-index"}`}
                 id={obj.head.split(" ")[0]}
             >
                 <div>
                     <p className="services-card-num">{obj.id}</p>
                     <section
-                        className={`services-card ${
-                            index % 2 === 1 && "flex-opp"
-                        } ${isExpanded && "expanded-services-card"}`}
-                        onClick={() =>
-                            isExpanded
-                                ? setIsExpanded(false)
-                                : setIsExpanded(true)
+                        className={`services-card ${index % 2 === 1 && "flex-opp"
+                            } ${isExpanded && "expanded-services-card"}`}
+                        onClick={() => window.innerWidth < 900 && setIsExpanded(prevValue => !prevValue)
                         }
-                        data-aos="fade-up"
+                        
                     >
                         <img src={obj.img} alt="" />
                         <div className="services-card-content">

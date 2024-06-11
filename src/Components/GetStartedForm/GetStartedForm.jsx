@@ -1,17 +1,30 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import "./getStartedForm.css"
 import { GetStartedFormContext } from "../../store/GetStartedFormContext"
+import blackClose from "../../Assets/Images/close-black.svg"
+import whiteClose from "../../Assets/Images/close.png"
 
 export default function GetStartedForm() {
-    const handleSubmit = () => {}
-    const { setForm } = useContext(GetStartedFormContext)
+    const handleSubmit = () => { }
+    const { getForm, setForm } = useContext(GetStartedFormContext)
+
+    useEffect(() => {
+        if (getForm) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+
+        // Cleanup
+        return () => {
+            document.body.style.overflow = 'auto';
+        };
+    }, [getForm])
 
     return (
         <main className="getStarted-overlay">
             <section className="getStarted-container">
-                <p className="getStarted-close" onClick={() => setForm(false)}>
-                    X
-                </p>
+                <img src={window.innerWidth > 900 ? blackClose : whiteClose} alt="" className="getStarted-close" onClick={() => setForm(false)} />
                 <section className="getStarted-left">
                     <h1>Contact our sustainability experts</h1>
                     <p>

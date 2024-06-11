@@ -18,9 +18,9 @@
     width: max-content;
 }
 .journey-content-subtitle {
-    color: #2eaf7d;
+    color: #858585;
     -webkit-text-stroke-width: 0.5;
-    -webkit-text-stroke-color: #2eaf7d;
+    -webkit-text-stroke-color: #858585;
     font-family: "Milliard";
     font-size: 2rem;
     font-style: normal;
@@ -28,7 +28,7 @@
     line-height: normal;
 }
 .journey-content-title {
-    color: var(--second-green, #014d4a);
+    color: #2eaf7d;
     text-shadow: 0px 4px 4px rgba(1, 51, 19, 0.3);
     font-family: "Florencesans-Black";
     font-size: 6.25rem;
