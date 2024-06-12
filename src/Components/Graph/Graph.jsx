@@ -1,5 +1,5 @@
 import * as d3 from "d3"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import "./graph.css"
 import { sliderBottom } from 'd3-simple-slider'
 
@@ -289,6 +289,8 @@ export default function Graph({
         { year: 2022, value: 37149786000 },
     ]
 
+    const [increase, setIncrease] = useState(`${((data[data.length - 1].value - data[0].value) / 1000000000).toFixed(2)} Billion tons`)
+
     useEffect(() => {
         const vw = window.innerWidth / 100
         const vh = window.innerHeight / 100
@@ -381,6 +383,7 @@ export default function Graph({
         const circle = svg.append("circle")
             .attr("r", 0)
             .attr("fill", "steelblue")
+            .attr("class", "tooltip-circle")
             .style("stroke", "white")
             .attr("opacity", .70)
             .style("pointer-events", "none");
@@ -388,7 +391,8 @@ export default function Graph({
 
         const listeningRect = svg.append("rect")
             .attr("width", width * vw)
-            .attr("height", height * vh);
+            .attr("height", height * vh)
+            .attr("class", "listeningRect");
 
         // create the mouse move function
 
@@ -398,7 +402,7 @@ export default function Graph({
             const x0 = x.invert(xCoord);
             const i = bisectDate(data, x0, 1);
             const d0 = data[i - 1];
-            const d1 = data[i];
+            const d1 = data[i] || { value: 0, year: 0 };
             const d = x0 - d0.year > d1.year - x0 ? d1 : d0;
             const xPos = x(d.year);
             const yPos = y(d.value);
@@ -433,58 +437,25 @@ export default function Graph({
             tooltip.style("display", "none");
         });
 
-        const sliderRange = sliderBottom()
-            .min(d3.min(data, d => d.year))
-            .max(d3.max(data, d => d.year))
-            .width(300)
-            .ticks(3)
-            .default([d3.min(data, d => d.year), d3.max(data, d => d.year)])
-            .fill('#85bb65');
-
-        sliderRange.on('onchange', val => {
-            // Set new domain for x scale
-            x.domain(val);
-
-            // Filter data based on slider values
-            const filteredData = data.filter(d => d.year >= val[0] && d.year <= val[1]);
-            // Update the line and area to new domain
-            svg.select(".line").attr("d", line(filteredData));
-            // Set new domain for y scale based on new data
-            y.domain([0, d3.max(filteredData, d => d.value)]);
+        // const sliderRange = sliderBottom()
+        //     .min(d3.min(data, d => d.year))
+        //     .max(d3.max(data, d => d.year))
+        //     .width(300)
+        //     .ticks(3)
+        //     .default([d3.min(data, d => d.year), d3.max(data, d => d.year)])
+        //     .fill('#85bb65');
 
 
-            // Update the x-axis with new domain
-            svg.select(".x-axis")
-                .transition()
-                .duration(300) // transition duration in ms
-                .call(d3.axisBottom(x))
-                .style("stroke-opacity", 0)
+        // // Add the slider to the DOM
+        // const gRange = d3
+        //     .select('#slider-range')
+        //     .append('svg')
+        //     .attr('width', 500)
+        //     .attr('height', 100)
+        //     .append('g')
+        //     .attr('transform', 'translate(90,30)');
 
-
-            // Update the y-axis with new domain
-
-            svg.select(".y-axis")
-                .transition()
-                .duration(300) // transition duration in ms
-                .call(d3
-                    .axisLeft(y)
-                    .tickFormat((val) => `${val / 1000000000}b`)
-                    .tickSize(0)
-                    .tickPadding(10))
-                .style("stroke-opacity", 0)
-
-        });
-
-        // Add the slider to the DOM
-        const gRange = d3
-            .select('#slider-range')
-            .append('svg')
-            .attr('width', 500)
-            .attr('height', 100)
-            .append('g')
-            .attr('transform', 'translate(90,30)');
-
-        gRange.call(sliderRange);
+        // gRange.call(sliderRange);
 
         const line = d3
             .line()
@@ -498,12 +469,107 @@ export default function Graph({
             .attr("stroke-width", 1)
             .attr("class", "line")
             .attr("d", line)
+
+
     }, [])
+
+    const handleChange = () => {
+
+        const val = [document.getElementById("num1").value, document.getElementById("num2").value]
+        const vw = window.innerWidth / 100
+        const vh = window.innerHeight / 100
+
+        const svg = d3
+            .select("#graph-container svg")
+
+        const x = d3.scaleLinear().range([0, width * vw])
+        const y = d3.scaleLinear().range([height * vh, 0])
+
+        const line = d3
+            .line()
+            .x((d) => x(d.year))
+            .y((d) => y(d.value))
+        // Set new domain for x scale
+        x.domain(val);
+
+        // Filter data based on slider values
+        const filteredData = data.filter(d => d.year >= val[0] && d.year <= val[1]);
+        // Update the line and area to new domain
+        // Set new domain for y scale based on new data
+        y.domain([0, d3.max(filteredData, d => d.value)]);
+
+
+        // Update the x-axis with new domain
+        svg.select(".x-axis")
+            .transition()
+            .duration(300) // transition duration in ms
+            .call(d3.axisBottom(x))
+            .style("stroke-opacity", 0)
+
+
+        // Update the y-axis with new domain
+
+        svg.select(".line").attr("d", line(filteredData))
+
+        svg.select(".y-axis")
+            .transition()
+            .duration(300) // transition duration in ms
+            .call(d3
+                .axisLeft(y)
+                .tickFormat((val) => `${val / 1000000000}b`)
+                .tickSize(0)
+                .tickPadding(10))
+            .style("stroke-opacity", 0)
+
+
+        const listeningRect = d3.select(".listeningRect")
+        const circle = d3.select(".tooltip-circle")
+        const tooltip = d3.select(".tooltip")
+
+        listeningRect.on("mousemove", function (event) {
+            const [xCoord] = d3.pointer(event, this);
+            const bisectDate = d3.bisector(d => d.year).left;
+            const x0 = x.invert(xCoord);
+            const i = bisectDate(filteredData, x0, 1);
+            const d0 = filteredData[i - 1];
+            const d1 = filteredData[i] || { value: 0, year: 0 };
+            const d = x0 - d0.year > d1.year - x0 ? d1 : d0;
+            const xPos = x(d.year);
+            const yPos = y(d.value);
+
+
+            // Update the circle position
+
+            circle.attr("cx", xPos)
+                .attr("cy", yPos);
+
+            // Add transition for the circle radius
+
+            circle.transition()
+                .duration(50)
+                .attr("r", 5);
+
+            // add in  our tooltip
+
+            tooltip
+                .style("display", "block")
+                .style("left", `${xPos + 100}px`)
+                .style("top", `${yPos + 50}px`)
+                .html(`<strong>Year:</strong> ${d.year}<br><strong>Carbon Emission:</strong> ${d.value !== undefined ? (d.value / 1000000000).toFixed(0) + 'B tons' : 'N/A'}`)
+        });
+
+        setIncrease(`${((filteredData[filteredData.length - 1].value - filteredData[0].value) / 1000000000).toFixed(2)} Billion tons`)
+
+    };
 
     return (
         <>
             <section id="graph-container"></section>
             <div id="slider-range"></div>
+            <input type="number" id="num1" />
+            <input type="number" id="num2" />
+            <button onClick={handleChange}>Submit</button>
+            <p>{increase}</p>
         </>
     )
 }
