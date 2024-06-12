@@ -45,7 +45,7 @@
 
 .career-form h1 {
     color: #dbfbff;
-    font-family: "Florencesans-Black";
+    font-family: "MilliardBold";
     font-size: 4rem;
 }
 
@@ -84,20 +84,53 @@
 
 .career-radio-buttons {
     display: flex;
+    gap: 20px;
 }
 
 .career-radio-buttons span {
     background-color: white;
     width: max-content;
     display: flex;
-    color: #6c6c6c;
+    padding: 5px 10px;
+    color: #000;
+    border-radius: 5px;
 }
 
 .career-form-section input,
 .career-form-section textarea,
-.career-form-section select {
+.career-form-section select,
+.career-form-section option {
     width: 100%;
     padding: 5px 10px;
     border: none;
     border-radius: 5px;
+    font-family: "Milliard";
+    font-size: 1rem;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+.career-form-section textarea {
+    height: 20vh;
+}
+
+@media screen and (max-width: 768px) {
+    .career-form-flex {
+        flex-direction: column;
+        gap: 5vh;
+    }
+    .career-form h1 {
+        font-size: 3rem;
+    }
+    .career-form {
+        padding: 10vh 5vw;
+    }
+    .career-form-section {
+        width: 80vw;
+    }
+    .career-form-section label {
+        font-size: 1rem;
+    }
 }
