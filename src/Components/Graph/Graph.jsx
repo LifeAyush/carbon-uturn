@@ -1,5 +1,7 @@
 import * as d3 from "d3"
 import { useEffect, useRef } from "react"
+import "./graph.css"
+import { sliderBottom } from 'd3-simple-slider'
 
 export default function Graph({
     width = 80,
@@ -309,6 +311,7 @@ export default function Graph({
 
         svg.append("g")
             .call(d3.axisBottom(x))
+            .attr("class", "x-axis")
             .attr("transform", `translate(0, ${height * vh})`)
             .attr("font-size", "1rem")
             .call((g) => g.select(".domain").remove())
@@ -323,12 +326,164 @@ export default function Graph({
                     .tickSize(0)
                     .tickPadding(10)
             )
+            .attr("class", "y-axis")
             .attr("font-size", "1rem")
             .call((g) => g.select(".domain").remove())
             .selectAll(".tick line")
             .style("stroke-opacity", 0)
 
         svg.selectAll(".tick text").attr("fill", "#555")
+
+        svg.selectAll("xGrid")
+            .data(x.ticks().slice(1))
+            .join("line")
+            .attr("x1", d => x(d))
+            .attr("x2", d => x(d))
+            .attr("y1", 0)
+            .attr("y2", height * vh)
+            .attr("stroke", "#c8c8c8")
+            .attr("stroke-width", .5)
+
+        svg.selectAll("yGrid")
+            .data(y.ticks(d3.max(data, d => d.value) / 5000000000).slice(1))
+            .join("line")
+            .attr("x1", 0)
+            .attr("x2", width * vw)
+            .attr("y1", d => y(d))
+            .attr("y2", d => y(d))
+            .attr("stroke", "#c8c8c8")
+            .attr("stroke-width", .5)
+
+        // svg.append("text")
+        //     .attr("transform", "rotate(-90)")
+        //     .attr("y", 0 - marginX * vw / 2)
+        //     .attr("x", - height * vh / 2)
+        //     .attr("dy", "1em")
+        //     .style("text-anchor", "middle")
+        //     .style("Font-size", "16px")
+        //     .style("fill", "#000")
+        //     .style("font-family", "Milliard")
+        //     .text("Total Carbon Dioxide Emissions (in tons)")
+
+        // svg.append("text")
+        //     .attr("y", (height + marginY / 2) * vh)
+        //     .attr("x", width * vw / 2)
+        //     .attr("dy", "1em")
+        //     .style("text-anchor", "middle")
+        //     .style("Font-size", "16px")
+        //     .style("fill", "#000")
+        //     .style("font-family", "Milliard")
+        //     .text("Year")
+
+        const tooltip = d3.select("body")
+            .append("div")
+            .attr("class", "tooltip");
+
+        const circle = svg.append("circle")
+            .attr("r", 0)
+            .attr("fill", "steelblue")
+            .style("stroke", "white")
+            .attr("opacity", .70)
+            .style("pointer-events", "none");
+        // create a listening rectangle
+
+        const listeningRect = svg.append("rect")
+            .attr("width", width * vw)
+            .attr("height", height * vh);
+
+        // create the mouse move function
+
+        listeningRect.on("mousemove", function (event) {
+            const [xCoord] = d3.pointer(event, this);
+            const bisectDate = d3.bisector(d => d.year).left;
+            const x0 = x.invert(xCoord);
+            const i = bisectDate(data, x0, 1);
+            const d0 = data[i - 1];
+            const d1 = data[i];
+            const d = x0 - d0.year > d1.year - x0 ? d1 : d0;
+            const xPos = x(d.year);
+            const yPos = y(d.value);
+
+
+            // Update the circle position
+
+            circle.attr("cx", xPos)
+                .attr("cy", yPos);
+
+            // Add transition for the circle radius
+
+            circle.transition()
+                .duration(50)
+                .attr("r", 5);
+
+            // add in  our tooltip
+
+            tooltip
+                .style("display", "block")
+                .style("left", `${xPos + 100}px`)
+                .style("top", `${yPos + 50}px`)
+                .html(`<strong>Year:</strong> ${d.year}<br><strong>Carbon Emission (in tons):</strong> ${d.value !== undefined ? (d.value / 1000000000).toFixed(0) + 'B' : 'N/A'}`)
+        });
+        // listening rectangle mouse leave function
+
+        listeningRect.on("mouseleave", function () {
+            circle.transition()
+                .duration(50)
+                .attr("r", 0);
+
+            tooltip.style("display", "none");
+        });
+
+        const sliderRange = sliderBottom()
+            .min(d3.min(data, d => d.year))
+            .max(d3.max(data, d => d.year))
+            .width(300)
+            .ticks(3)
+            .default([d3.min(data, d => d.year), d3.max(data, d => d.year)])
+            .fill('#85bb65');
+
+        sliderRange.on('onchange', val => {
+            // Set new domain for x scale
+            x.domain(val);
+
+            // Filter data based on slider values
+            const filteredData = data.filter(d => d.year >= val[0] && d.year <= val[1]);
+            // Update the line and area to new domain
+            svg.select(".line").attr("d", line(filteredData));
+            // Set new domain for y scale based on new data
+            y.domain([0, d3.max(filteredData, d => d.value)]);
+
+
+            // Update the x-axis with new domain
+            svg.select(".x-axis")
+                .transition()
+                .duration(300) // transition duration in ms
+                .call(d3.axisBottom(x));
+
+            // Update the y-axis with new domain
+
+            svg.select(".y-axis")
+                .transition()
+                .duration(300) // transition duration in ms
+                .call(d3
+                    .axisLeft(y)
+                    .tickFormat((val) => `${val / 1000000000}b`)
+                    .tickSize(0)
+                    .tickPadding(10));
+
+        });
+
+        // Add the slider to the DOM
+        const gRange = d3
+            .select('#slider-range')
+            .append('svg')
+            .attr('width', 500)
+            .attr('height', 100)
+            .append('g')
+            .attr('transform', 'translate(90,30)');
+
+        gRange.call(sliderRange);
+
         const line = d3
             .line()
             .x((d) => x(d.year))
@@ -339,8 +494,14 @@ export default function Graph({
             .attr("fill", "none")
             .attr("stroke", "green")
             .attr("stroke-width", 1)
+            .attr("class", "line")
             .attr("d", line)
     }, [])
 
-    return <section id="graph-container"></section>
+    return (
+        <>
+            <section id="graph-container"></section>
+            <div id="slider-range"></div>
+        </>
+    )
 }
