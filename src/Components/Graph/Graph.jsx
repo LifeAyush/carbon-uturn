@@ -1,5 +1,5 @@
 import * as d3 from "d3"
-import { useEffect, useRef } from "react"
+import { useEffect } from "react"
 import "./graph.css"
 import { sliderBottom } from 'd3-simple-slider'
 
@@ -9,7 +9,6 @@ export default function Graph({
     marginX = 10,
     marginY = 10,
 }) {
-    const elem = useRef()
     //using d3 for the first time, might be good to optimize
     //data from https://ourworldindata.org/grapher/annual-co2-emissions-per-country
     //converted from csv to js array
@@ -422,7 +421,7 @@ export default function Graph({
                 .style("display", "block")
                 .style("left", `${xPos + 100}px`)
                 .style("top", `${yPos + 50}px`)
-                .html(`<strong>Year:</strong> ${d.year}<br><strong>Carbon Emission (in tons):</strong> ${d.value !== undefined ? (d.value / 1000000000).toFixed(0) + 'B' : 'N/A'}`)
+                .html(`<strong>Year:</strong> ${d.year}<br><strong>Carbon Emission:</strong> ${d.value !== undefined ? (d.value / 1000000000).toFixed(0) + 'B tons' : 'N/A'}`)
         });
         // listening rectangle mouse leave function
 
@@ -458,7 +457,9 @@ export default function Graph({
             svg.select(".x-axis")
                 .transition()
                 .duration(300) // transition duration in ms
-                .call(d3.axisBottom(x));
+                .call(d3.axisBottom(x))
+                .style("stroke-opacity", 0)
+
 
             // Update the y-axis with new domain
 
@@ -469,7 +470,8 @@ export default function Graph({
                     .axisLeft(y)
                     .tickFormat((val) => `${val / 1000000000}b`)
                     .tickSize(0)
-                    .tickPadding(10));
+                    .tickPadding(10))
+                .style("stroke-opacity", 0)
 
         });
 
