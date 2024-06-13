@@ -6,6 +6,7 @@ import Footer from "../../Components/Footer/Footer";
 import Hero from "../../Components/Hero/Hero";
 import OurServices from "../../Components/OurServices/OurServices";
 import Journey from "../../Components/Journey/Journey";
+import Graph from "../../Components/Graph/Graph";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
         <Hero />
         <Journey />
         <Stats />
+        <Graph width={80} height={50} marginX={7} marginY={7} />
         <OurServices />
         <Footer />
       </div>

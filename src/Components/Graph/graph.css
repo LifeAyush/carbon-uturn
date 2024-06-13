@@ -5,6 +5,28 @@ rect {
     z-index: 1;
 }
 
+.graph-component {
+    background: linear-gradient(
+        120.36deg,
+        #e7fffb 0%,
+        #ffffff 54.27%,
+        #ceffd6 107.35%,
+        #fcfcfc 115.73%
+    );
+    padding: 10vh 10vw;
+}
+
+#graph-container {
+    position: relative;
+    transform: translateX(-7vw);
+}
+
+.graph-component h1 {
+    font-size: 3rem;
+    color: #2eaf7d;
+    font-family: "Florencesans-Black";
+}
+
 .tooltip {
     position: absolute;
     padding: 10px;
@@ -15,4 +37,38 @@ rect {
     display: none;
     opacity: 0.75;
     pointer-events: none;
+}
+
+.graph-user-interaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.graph-inputs {
+    display: flex;
+    gap: 5vw;
+}
+
+.graph-user-interaction button {
+    padding: 10px 20px;
+    background-color: #2eaf7d;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+#num1,
+#num2 {
+    padding: 5px 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #e0e5dc;
+    background-color: white;
+}
+
+.graph-increased {
+    margin: 3vh;
+    text-align: center;
 }

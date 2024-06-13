@@ -376,7 +376,7 @@ export default function Graph({
         //     .style("font-family", "Milliard")
         //     .text("Year")
 
-        const tooltip = d3.select("body")
+        const tooltip = d3.select("#graph-container")
             .append("div")
             .attr("class", "tooltip");
 
@@ -421,11 +421,13 @@ export default function Graph({
 
             // add in  our tooltip
 
+            const tooltipContent = d.value === undefined ? "N/A" :
+                (d.value / 1000000000).toFixed(2) === 0 ? `${d.value} tons` : `${(d.value / 1000000000).toFixed(2)} B tons`
             tooltip
                 .style("display", "block")
                 .style("left", `${xPos + 100}px`)
                 .style("top", `${yPos + 50}px`)
-                .html(`<strong>Year:</strong> ${d.year}<br><strong>Carbon Emission:</strong> ${d.value !== undefined ? (d.value / 1000000000).toFixed(0) + 'B tons' : 'N/A'}`)
+                .html(`<strong>Year:</strong> ${d.year}<br><strong>Carbon Emission:</strong> ${tooltipContent}`)
         });
         // listening rectangle mouse leave function
 
@@ -551,11 +553,13 @@ export default function Graph({
 
             // add in  our tooltip
 
+            const tooltipContent = d.value === undefined ? "N/A" :
+                (d.value / 1000000000).toFixed(2) === 0 ? `${d.value} tons` : `${(d.value / 1000000000).toFixed(2)} B tons`
             tooltip
                 .style("display", "block")
                 .style("left", `${xPos + 100}px`)
                 .style("top", `${yPos + 50}px`)
-                .html(`<strong>Year:</strong> ${d.year}<br><strong>Carbon Emission:</strong> ${d.value !== undefined ? (d.value / 1000000000).toFixed(0) + 'B tons' : 'N/A'}`)
+                .html(`<strong>Year:</strong> ${d.year}<br><strong>Carbon Emission:</strong> ${tooltipContent}`)
         });
 
         setIncrease(`${((filteredData[filteredData.length - 1].value - filteredData[0].value) / 1000000000).toFixed(2)} Billion tons`)
@@ -563,13 +567,20 @@ export default function Graph({
     };
 
     return (
-        <>
+        <section className="graph-component">
+            <h1>Global Mean Carbon Dioxide Emissions</h1>
             <section id="graph-container"></section>
             <div id="slider-range"></div>
-            <input type="number" id="num1" />
-            <input type="number" id="num2" />
-            <button onClick={handleChange}>Submit</button>
-            <p>{increase}</p>
-        </>
+
+            <div className="graph-user-interaction">
+                <div className="graph-inputs">
+                    <input type="number" id="num1" />
+                    <input type="number" id="num2" />
+                </div>
+                <button onClick={handleChange}>Submit</button>
+            </div>
+
+            <p className="graph-increased">Between the years {document.getElementById("num1")?.value || 1750} - {document.getElementById("num2")?.value || 2022} the Carbon Dioxide emissions have increased by {increase}</p>
+        </section>
     )
 }
