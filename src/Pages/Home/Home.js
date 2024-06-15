@@ -16,7 +16,10 @@ const Home = () => {
         <Hero />
         <Journey />
         <Stats />
-        <Graph width={80} height={50} marginX={7} marginY={7} />
+        {window.innerWidth > 900 ?
+          <Graph width={80} height={50} marginX={7} marginY={7} />
+          : <Graph width={79} height={50} marginX={17} marginY={7} />
+        }
         <OurServices />
         <Footer />
       </div>

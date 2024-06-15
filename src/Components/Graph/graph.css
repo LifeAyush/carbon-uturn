@@ -42,12 +42,22 @@ rect {
 .graph-user-interaction {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .graph-inputs {
     display: flex;
     gap: 5vw;
+}
+
+.graph-input-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.graph-input-box label {
+    color: #2eaf7d;
+    font-size: 1.2rem;
 }
 
 .graph-user-interaction button {
@@ -71,4 +81,20 @@ rect {
 .graph-increased {
     margin: 3vh;
     text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+    .graph-component {
+        padding: 5vh 5vw;
+    }
+
+    .graph-inputs {
+        flex-direction: column;
+    }
+
+    .graph-user-interaction {
+        flex-direction: column;
+        align-items: unset;
+        gap: 20px;
+    }
 }

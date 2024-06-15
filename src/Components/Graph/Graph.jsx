@@ -298,40 +298,63 @@ export default function Graph({
         const svg = d3
             .select("#graph-container")
             .append("svg")
-            .attr("width", (width + 2 * marginY) * vw)
-            .attr("height", (height + 2 * marginX) * vh)
+            .attr("width", (width + 2 * marginX) * vw)
+            .attr("height", (height + 2 * marginY) * vh)
             .append("g")
             .attr("transform", `translate(${marginX * vw}, ${marginY * vh})`)
 
         const x = d3.scaleLinear().range([0, width * vw])
         const y = d3.scaleLinear().range([height * vh, 0])
 
-        console.log(d3.max(data, (iter) => iter.value))
         x.domain(d3.extent(data, (iter) => iter.year))
         y.domain([0, d3.max(data, (iter) => iter.value)])
 
-        svg.append("g")
-            .call(d3.axisBottom(x))
-            .attr("class", "x-axis")
-            .attr("transform", `translate(0, ${height * vh})`)
-            .attr("font-size", "1rem")
-            .call((g) => g.select(".domain").remove())
-            .selectAll(".tick line")
-            .style("stroke-opacity", 0)
+        window.innerWidth < 900 ?
+            svg.append("g")
+                .call(d3.axisBottom(x).ticks(5))
+                .attr("class", "x-axis")
+                .attr("transform", `translate(0, ${height * vh})`)
+                .attr("font-size", "0.75rem")
+                .call((g) => g.select(".domain").remove())
+                .selectAll(".tick line")
+                .style("stroke-opacity", 0)
+            :
+            svg.append("g")
+                .call(d3.axisBottom(x))
+                .attr("class", "x-axis")
+                .attr("transform", `translate(0, ${height * vh})`)
+                .attr("font-size", "1rem")
+                .call((g) => g.select(".domain").remove())
+                .selectAll(".tick line")
+                .style("stroke-opacity", 0)
 
-        svg.append("g")
-            .call(
-                d3
-                    .axisLeft(y)
-                    .tickFormat((val) => `${val / 1000000000}b`)
-                    .tickSize(0)
-                    .tickPadding(10)
-            )
-            .attr("class", "y-axis")
-            .attr("font-size", "1rem")
-            .call((g) => g.select(".domain").remove())
-            .selectAll(".tick line")
-            .style("stroke-opacity", 0)
+        window.innerWidth > 900 ?
+            svg.append("g")
+                .call(
+                    d3
+                        .axisLeft(y)
+                        .tickFormat((val) => `${val / 1000000000}b`)
+                        .tickSize(0)
+                        .tickPadding(10)
+                )
+                .attr("class", "y-axis")
+                .attr("font-size", "1rem")
+                .call((g) => g.select(".domain").remove())
+                .selectAll(".tick line")
+                .style("stroke-opacity", 0)
+            : svg.append("g")
+                .call(
+                    d3
+                        .axisLeft(y)
+                        .tickFormat((val) => `${val / 1000000000}b`)
+                        .tickSize(0)
+                        .tickPadding(10)
+                )
+                .attr("class", "y-axis")
+                .attr("font-size", "0.75rem")
+                .call((g) => g.select(".domain").remove())
+                .selectAll(".tick line")
+                .style("stroke-opacity", 0)
 
         svg.selectAll(".tick text").attr("fill", "#555")
 
@@ -502,11 +525,19 @@ export default function Graph({
 
 
         // Update the x-axis with new domain
-        svg.select(".x-axis")
-            .transition()
-            .duration(300) // transition duration in ms
-            .call(d3.axisBottom(x))
-            .style("stroke-opacity", 0)
+
+        window.innerWidth > 900 ?
+            svg.select(".x-axis")
+                .transition()
+                .duration(300) // transition duration in ms
+                .call(d3.axisBottom(x))
+                .style("stroke-opacity", 0)
+
+            : svg.select(".x-axis")
+                .transition()
+                .duration(300) // transition duration in ms
+                .call(d3.axisBottom(x).ticks(5))
+                .style("stroke-opacity", 0)
 
 
         // Update the y-axis with new domain
@@ -522,6 +553,7 @@ export default function Graph({
                 .tickSize(0)
                 .tickPadding(10))
             .style("stroke-opacity", 0)
+
 
 
         const listeningRect = d3.select(".listeningRect")
@@ -574,8 +606,14 @@ export default function Graph({
 
             <div className="graph-user-interaction">
                 <div className="graph-inputs">
-                    <input type="number" id="num1" />
-                    <input type="number" id="num2" />
+                    <div className="graph-input-box">
+                        <label>Base Year</label>
+                        <input type="number" id="num1" placeholder="1750" />
+                    </div>
+                    <div className="graph-input-box">
+                        <label>Final Year</label>
+                        <input type="number" id="num2" placeholder="2022" />
+                    </div>
                 </div>
                 <button onClick={handleChange}>Submit</button>
             </div>
