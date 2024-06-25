@@ -13,6 +13,180 @@ export default function Graph({
     //data from https://ourworldindata.org/grapher/annual-co2-emissions-per-country
     //converted from csv to js array
 
+    const temp = [
+        { year: 1851, value: 0.0018314128 },
+        { year: 1852, value: 0.0036884283 },
+        { year: 1853, value: 0.0055778543 },
+        { year: 1854, value: 0.0075114216 },
+        { year: 1855, value: 0.009451285 },
+        { year: 1856, value: 0.011404636 },
+        { year: 1857, value: 0.013375946 },
+        { year: 1858, value: 0.015355136 },
+        { year: 1859, value: 0.017368155 },
+        { year: 1860, value: 0.01933133 },
+        { year: 1861, value: 0.021259334 },
+        { year: 1862, value: 0.023178479 },
+        { year: 1863, value: 0.025112143 },
+        { year: 1864, value: 0.027054338 },
+        { year: 1865, value: 0.02899049 },
+        { year: 1866, value: 0.030950887 },
+        { year: 1867, value: 0.032930553 },
+        { year: 1868, value: 0.034906715 },
+        { year: 1869, value: 0.03689542 },
+        { year: 1870, value: 0.038989626 },
+        { year: 1871, value: 0.041164286 },
+        { year: 1872, value: 0.0434164 },
+        { year: 1873, value: 0.045736518 },
+        { year: 1874, value: 0.048053976 },
+        { year: 1875, value: 0.050430708 },
+        { year: 1876, value: 0.052835703 },
+        { year: 1877, value: 0.0552899 },
+        { year: 1878, value: 0.05778677 },
+        { year: 1879, value: 0.06033757 },
+        { year: 1880, value: 0.06297748 },
+        { year: 1881, value: 0.065636106 },
+        { year: 1882, value: 0.068372294 },
+        { year: 1883, value: 0.071186505 },
+        { year: 1884, value: 0.07401393 },
+        { year: 1885, value: 0.07684813 },
+        { year: 1886, value: 0.07971877 },
+        { year: 1887, value: 0.0826616 },
+        { year: 1888, value: 0.08569946 },
+        { year: 1889, value: 0.08874032 },
+        { year: 1890, value: 0.09199192 },
+        { year: 1891, value: 0.0953336 },
+        { year: 1892, value: 0.09869133 },
+        { year: 1893, value: 0.10206372 },
+        { year: 1894, value: 0.10550645 },
+        { year: 1895, value: 0.10902286 },
+        { year: 1896, value: 0.11259529 },
+        { year: 1897, value: 0.11623 },
+        { year: 1898, value: 0.11994625 },
+        { year: 1899, value: 0.123795874 },
+        { year: 1900, value: 0.12773943 },
+        { year: 1901, value: 0.13174058 },
+        { year: 1902, value: 0.13579857 },
+        { year: 1903, value: 0.13998029 },
+        { year: 1904, value: 0.14422375 },
+        { year: 1905, value: 0.14857244 },
+        { year: 1906, value: 0.15302485 },
+        { year: 1907, value: 0.15772648 },
+        { year: 1908, value: 0.16234927 },
+        { year: 1909, value: 0.16708013 },
+        { year: 1910, value: 0.1718384 },
+        { year: 1911, value: 0.17661344 },
+        { year: 1912, value: 0.18146127 },
+        { year: 1913, value: 0.18650202 },
+        { year: 1914, value: 0.19130865 },
+        { year: 1915, value: 0.19605435 },
+        { year: 1916, value: 0.20095135 },
+        { year: 1917, value: 0.20594001 },
+        { year: 1918, value: 0.21086405 },
+        { year: 1919, value: 0.21543984 },
+        { year: 1920, value: 0.22041166 },
+        { year: 1921, value: 0.22511943 },
+        { year: 1922, value: 0.22999354 },
+        { year: 1923, value: 0.23516008 },
+        { year: 1924, value: 0.24037065 },
+        { year: 1925, value: 0.24563053 },
+        { year: 1926, value: 0.25080988 },
+        { year: 1927, value: 0.25619805 },
+        { year: 1928, value: 0.26161817 },
+        { year: 1929, value: 0.26724157 },
+        { year: 1930, value: 0.2727015 },
+        { year: 1931, value: 0.27793375 },
+        { year: 1932, value: 0.2829807 },
+        { year: 1933, value: 0.2881221 },
+        { year: 1934, value: 0.2936023 },
+        { year: 1935, value: 0.2992494 },
+        { year: 1936, value: 0.30515504 },
+        { year: 1937, value: 0.3112529 },
+        { year: 1938, value: 0.31727418 },
+        { year: 1939, value: 0.32358527 },
+        { year: 1940, value: 0.33015275 },
+        { year: 1941, value: 0.33704424 },
+        { year: 1942, value: 0.34394217 },
+        { year: 1943, value: 0.35087314 },
+        { year: 1944, value: 0.35790756 },
+        { year: 1945, value: 0.3644617 },
+        { year: 1946, value: 0.37140456 },
+        { year: 1947, value: 0.37867865 },
+        { year: 1948, value: 0.38615373 },
+        { year: 1949, value: 0.39350387 },
+        { year: 1950, value: 0.40167087 },
+        { year: 1951, value: 0.4103632 },
+        { year: 1952, value: 0.41935006 },
+        { year: 1953, value: 0.42859462 },
+        { year: 1954, value: 0.43808112 },
+        { year: 1955, value: 0.4482803 },
+        { year: 1956, value: 0.4589317 },
+        { year: 1957, value: 0.46995032 },
+        { year: 1958, value: 0.48138395 },
+        { year: 1959, value: 0.49352536 },
+        { year: 1960, value: 0.5056624 },
+        { year: 1961, value: 0.5177196 },
+        { year: 1962, value: 0.5298462 },
+        { year: 1963, value: 0.54229563 },
+        { year: 1964, value: 0.5550955 },
+        { year: 1965, value: 0.5682767 },
+        { year: 1966, value: 0.58189815 },
+        { year: 1967, value: 0.59571266 },
+        { year: 1968, value: 0.60998076 },
+        { year: 1969, value: 0.62480897 },
+        { year: 1970, value: 0.64041144 },
+        { year: 1971, value: 0.65593904 },
+        { year: 1972, value: 0.67191297 },
+        { year: 1973, value: 0.68837404 },
+        { year: 1974, value: 0.7046171 },
+        { year: 1975, value: 0.72076964 },
+        { year: 1976, value: 0.7372944 },
+        { year: 1977, value: 0.75398517 },
+        { year: 1978, value: 0.7707776 },
+        { year: 1979, value: 0.7876942 },
+        { year: 1980, value: 0.8042903 },
+        { year: 1981, value: 0.820348 },
+        { year: 1982, value: 0.8363935 },
+        { year: 1983, value: 0.8524997 },
+        { year: 1984, value: 0.8692645 },
+        { year: 1985, value: 0.88604414 },
+        { year: 1986, value: 0.90283 },
+        { year: 1987, value: 0.9197935 },
+        { year: 1988, value: 0.9370849 },
+        { year: 1989, value: 0.95446503 },
+        { year: 1990, value: 0.9717413 },
+        { year: 1991, value: 0.98903286 },
+        { year: 1992, value: 1.0058793 },
+        { year: 1993, value: 1.0225055 },
+        { year: 1994, value: 1.0396204 },
+        { year: 1995, value: 1.0569528 },
+        { year: 1996, value: 1.0747546 },
+        { year: 1997, value: 1.0930924 },
+        { year: 1998, value: 1.1105824 },
+        { year: 1999, value: 1.1279652 },
+        { year: 2000, value: 1.145743 },
+        { year: 2001, value: 1.1637536 },
+        { year: 2002, value: 1.1819981 },
+        { year: 2003, value: 1.2015043 },
+        { year: 2004, value: 1.2214278 },
+        { year: 2005, value: 1.2416629 },
+        { year: 2006, value: 1.2626654 },
+        { year: 2007, value: 1.2837812 },
+        { year: 2008, value: 1.3051788 },
+        { year: 2009, value: 1.3261223 },
+        { year: 2010, value: 1.3481517 },
+        { year: 2011, value: 1.3713498 },
+        { year: 2012, value: 1.3950663 },
+        { year: 2013, value: 1.4185915 },
+        { year: 2014, value: 1.4424351 },
+        { year: 2015, value: 1.466253 },
+        { year: 2016, value: 1.489489 },
+        { year: 2017, value: 1.5132885 },
+        { year: 2018, value: 1.5377011 },
+        { year: 2019, value: 1.562421 },
+        { year: 2020, value: 1.5857543 },
+        { year: 2021, value: 1.6102432 },
+        { year: 2022, value: 1.6352426 }]
+
     const data = [
         { year: 1750, value: 9305937 },
         { year: 1751, value: 9407229 },
@@ -311,7 +485,7 @@ export default function Graph({
 
         window.innerWidth < 900 ?
             svg.append("g")
-                .call(d3.axisBottom(x).ticks(5))
+                .call(d3.axisBottom(x).ticks(5).tickFormat(val => val))
                 .attr("class", "x-axis")
                 .attr("transform", `translate(0, ${height * vh})`)
                 .attr("font-size", "0.75rem")
@@ -320,7 +494,7 @@ export default function Graph({
                 .style("stroke-opacity", 0)
             :
             svg.append("g")
-                .call(d3.axisBottom(x))
+                .call(d3.axisBottom(x).tickFormat(val => val))
                 .attr("class", "x-axis")
                 .attr("transform", `translate(0, ${height * vh})`)
                 .attr("font-size", "1rem")
@@ -492,8 +666,17 @@ export default function Graph({
             .attr("fill", "none")
             .attr("stroke", "green")
             .attr("stroke-width", 1)
-            .attr("class", "line")
+            .attr("class", "line-CO")
             .attr("d", line)
+
+        // const lineTemp = d3.line().x((d => x(d.year))).y(d => y(d.value))
+        // svg.append("path")
+        //     .datum(temp)
+        //     .attr("fill", "none")
+        //     .attr("stroke", "red")
+        //     .attr("stroke-width", 1)
+        //     .attr("class", "line-temp")
+        //     .attr("d", lineTemp)
 
 
     }, [])
@@ -530,19 +713,19 @@ export default function Graph({
             svg.select(".x-axis")
                 .transition()
                 .duration(300) // transition duration in ms
-                .call(d3.axisBottom(x))
+                .call(d3.axisBottom(x).tickFormat(val => val))
                 .style("stroke-opacity", 0)
 
             : svg.select(".x-axis")
                 .transition()
                 .duration(300) // transition duration in ms
-                .call(d3.axisBottom(x).ticks(5))
+                .call(d3.axisBottom(x).ticks(5).tickFormat(val => val))
                 .style("stroke-opacity", 0)
 
 
         // Update the y-axis with new domain
 
-        svg.select(".line").attr("d", line(filteredData))
+        svg.select(".line-CO").attr("d", line(filteredData))
 
         svg.select(".y-axis")
             .transition()
@@ -618,7 +801,7 @@ export default function Graph({
                 <button onClick={handleChange}>Submit</button>
             </div>
 
-            <p className="graph-increased">Between the years {document.getElementById("num1")?.value || 1750} - {document.getElementById("num2")?.value || 2022} the Carbon Dioxide emissions have increased by {increase}</p>
+            <p className="graph-increased">Between the years {document.getElementById("num1")?.value || 1750} - {document.getElementById("num2")?.value || 2022} the Carbon Dioxide emissions have increased by <strong>{increase}</strong></p>
         </section>
     )
 }

@@ -18,19 +18,19 @@ export default function JourneySlider() {
   return (
     <section className="journey-slider">
       <Card
-        text="We fuel green initiatives for individuals and businesses, accelerating their path to Net Zero."
+        text="We empower clients through customized E-Learning modules, covering sustainable practices and carbon reduction strategies."
         image="/Images/Journey/journey1.png"
       />
       <Card
-        text="Our reliable solutions are built on sound data, guiding you with confidence on your sustainable journey."
+        text="Our carbon accounting dashboard provides real-time tracking and reporting for Enterprise, MSMEs, and Retail/Individuals, enabling accurate measurement and valuable insights."
         image="/Images/Journey/journey2.png"
       />
       <Card
-        text="Let CUT chart your Net Zero course, unlocking viable solutions that fuel profitability and secure a greener future for your brand."
+        text="Our approach to Certified Emission Reductions (CERs) emphasizes transparency and efficiency, streamlining project registration, conducting rigorous audits, and promptly issuing impact-validating certificates."
         image="/Images/Journey/journey3.png"
       />
       <Card
-        text="We facilitate a seamless integration of carbon credit solutions into your sustainability strategy and operational frameworks."
+        text="Our marketplace promotes carbon credit trading, fosters community development, and actively supports carbon neutrality."
         image="/Images/Journey/journey4.png"
       />
     </section>

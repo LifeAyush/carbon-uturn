@@ -64,7 +64,7 @@ const Career = () => {
                     <div className="career-form-section">
                         <h3>Relocation</h3>
                         <div className="career-form-input-section">
-                            <label>Are you willing to relocate to Gurgoan?</label>
+                            <label>Are you willing to relocate to Gurugram (Gurgaon)?</label>
                             <div className="career-radio-buttons">
                                 <span><input type="radio" name="relocation" id="" value="yes" />Yes</span>
                                 <span><input type="radio" name="relocation" id="" value="no" />No</span>

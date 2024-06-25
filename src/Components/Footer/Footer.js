@@ -72,10 +72,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="footerlist">
-                        <h2>Legal</h2>
-                        <ul>
-                            <li>Terms</li>
-                        </ul>
+                        <h2><Link to="/careers">Careers</Link></h2>
                     </div>
                 </div>
             </div>

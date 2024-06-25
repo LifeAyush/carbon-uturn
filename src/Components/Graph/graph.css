@@ -81,9 +81,14 @@ rect {
 .graph-increased {
     margin: 3vh;
     text-align: center;
+    font-size: 1.2rem;
 }
 
 @media screen and (max-width: 900px) {
+    .tooltip {
+        display: none !important;
+    }
+
     .graph-component {
         padding: 5vh 5vw;
     }
@@ -96,5 +101,10 @@ rect {
         flex-direction: column;
         align-items: unset;
         gap: 20px;
+    }
+
+    .graph-component h1 {
+        font-size: 2.5rem;
+        font-family: "MilliardBold";
     }
 }

@@ -122,7 +122,7 @@ const Navbar = () => {
                             )
                         })}
                         <div onClick={() => { setForm(true); setMobileNav(false) }} className="nav-cta">
-                            Get Started
+                            Contact Us
                         </div>
                     </div>
                 </section>
@@ -154,7 +154,7 @@ const Navbar = () => {
                 <div className="balancing-div">
                     {/* <a href="#next-section"> */}
                     <div onClick={() => setForm(true)} className="nav-cta">
-                        Get Started
+                        Contact Us
                     </div>
                     {/* </a> */}
                 </div>
