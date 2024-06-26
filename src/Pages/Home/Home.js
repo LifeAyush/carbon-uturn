@@ -1,7 +1,6 @@
 import React from "react";
 import "./home.css";
 import Navbar from "../../Components/Navbar/Navbar";
-import Stats from "../../Components/Stats/Stats";
 import Footer from "../../Components/Footer/Footer";
 import Hero from "../../Components/Hero/Hero";
 import OurServices from "../../Components/OurServices/OurServices";
@@ -15,10 +14,9 @@ const Home = () => {
       <div className="home-content">
         <Hero />
         <Journey />
-        <Stats />
         {window.innerWidth > 900 ?
-          <Graph width={80} height={50} marginX={7} marginY={7} />
-          : <Graph width={79} height={50} marginX={17} marginY={7} />
+          <Graph width={80} height={50} marginX={10} marginY={7} />
+          : <Graph width={70} height={50} marginX={15} marginY={7} />
         }
         <OurServices />
         <Footer />

@@ -18,7 +18,7 @@ rect {
 
 #graph-container {
     position: relative;
-    transform: translateX(-7vw);
+    transform: translateX(-10vw);
 }
 
 .graph-component h1 {
@@ -88,7 +88,12 @@ rect {
     .tooltip {
         display: none !important;
     }
-
+    #graph-container {
+        transform: translateX(-5vw);
+    }
+    .axis-label {
+        display: none;
+    }
     .graph-component {
         padding: 5vh 5vw;
     }

@@ -19,35 +19,35 @@
 }
 
 .about-hero-main-1 {
-    animation: aboutHero 16s ease-in-out 0s infinite;
+    animation: aboutHero 24s ease-in-out 0s infinite;
 }
 
 .about-hero-main-2 {
-    animation: aboutHero 16s ease-in-out 4s infinite;
+    animation: aboutHero 24s ease-in-out 6s infinite;
 }
 
 .about-hero-main-3 {
-    animation: aboutHero 16s ease-in-out 8s infinite;
+    animation: aboutHero 24s ease-in-out 12s infinite;
 }
 
 .about-hero-main-4 {
-    animation: aboutHero 16s ease-in-out 12s infinite;
+    animation: aboutHero 24s ease-in-out 18s infinite;
 }
 
 .about-hero-text-1 {
-    animation: aboutHeroText 16s ease-in-out 0s infinite;
+    animation: aboutHeroText 24s ease-in-out 0s infinite;
 }
 
 .about-hero-text-2 {
-    animation: aboutHeroText 16s ease-in-out 4s infinite;
+    animation: aboutHeroText 24s ease-in-out 6s infinite;
 }
 
 .about-hero-text-3 {
-    animation: aboutHeroText 16s ease-in-out 8s infinite;
+    animation: aboutHeroText 24s ease-in-out 12s infinite;
 }
 
 .about-hero-text-4 {
-    animation: aboutHeroText 16s ease-in-out 12s infinite;
+    animation: aboutHeroText 24s ease-in-out 18s infinite;
 }
 
 @keyframes aboutHero {

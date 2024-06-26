@@ -1,7 +1,6 @@
 import * as d3 from "d3"
 import { useEffect, useState } from "react"
 import "./graph.css"
-import { sliderBottom } from 'd3-simple-slider'
 
 export default function Graph({
     width = 80,
@@ -188,107 +187,6 @@ export default function Graph({
         { year: 2022, value: 1.6352426 }]
 
     const data = [
-        { year: 1750, value: 9305937 },
-        { year: 1751, value: 9407229 },
-        { year: 1752, value: 9505168 },
-        { year: 1753, value: 9610490 },
-        { year: 1754, value: 9733580 },
-        { year: 1755, value: 9793468 },
-        { year: 1756, value: 9909914 },
-        { year: 1757, value: 10093936 },
-        { year: 1758, value: 10216358 },
-        { year: 1759, value: 10338854 },
-        { year: 1760, value: 10514331 },
-        { year: 1761, value: 10747885 },
-        { year: 1762, value: 10952198 },
-        { year: 1763, value: 11191592 },
-        { year: 1764, value: 11396982 },
-        { year: 1765, value: 11643486 },
-        { year: 1766, value: 11876080 },
-        { year: 1767, value: 12152509 },
-        { year: 1768, value: 12466936 },
-        { year: 1769, value: 12780074 },
-        { year: 1770, value: 13097216 },
-        { year: 1771, value: 13369488 },
-        { year: 1772, value: 13623507 },
-        { year: 1773, value: 13808138 },
-        { year: 1774, value: 14012415 },
-        { year: 1775, value: 14338920 },
-        { year: 1776, value: 14654124 },
-        { year: 1777, value: 14959537 },
-        { year: 1778, value: 15243483 },
-        { year: 1779, value: 15535235 },
-        { year: 1780, value: 15878726 },
-        { year: 1781, value: 16234383 },
-        { year: 1782, value: 16580954 },
-        { year: 1783, value: 17062752 },
-        { year: 1784, value: 17471092 },
-        { year: 1785, value: 17965128 },
-        { year: 1786, value: 18447496 },
-        { year: 1787, value: 18859130 },
-        { year: 1788, value: 19286228 },
-        { year: 1789, value: 19863424 },
-        { year: 1790, value: 20398094 },
-        { year: 1791, value: 20931750 },
-        { year: 1792, value: 21929214 },
-        { year: 1793, value: 22297260 },
-        { year: 1794, value: 22519656 },
-        { year: 1795, value: 22315246 },
-        { year: 1796, value: 22121374 },
-        { year: 1797, value: 22090078 },
-        { year: 1798, value: 23105928 },
-        { year: 1799, value: 27485206 },
-        { year: 1800, value: 32798352 },
-        { year: 1801, value: 31986050 },
-        { year: 1802, value: 40310476 },
-        { year: 1803, value: 29538506 },
-        { year: 1804, value: 31769176 },
-        { year: 1805, value: 31251818 },
-        { year: 1806, value: 32704620 },
-        { year: 1807, value: 36200652 },
-        { year: 1808, value: 35497788 },
-        { year: 1809, value: 36333812 },
-        { year: 1810, value: 39492310 },
-        { year: 1811, value: 40176680 },
-        { year: 1812, value: 40814520 },
-        { year: 1813, value: 41206140 },
-        { year: 1814, value: 42226650 },
-        { year: 1815, value: 43587264 },
-        { year: 1816, value: 45496580 },
-        { year: 1817, value: 49275920 },
-        { year: 1818, value: 51392010 },
-        { year: 1819, value: 50930170 },
-        { year: 1820, value: 50733076 },
-        { year: 1821, value: 52059348 },
-        { year: 1822, value: 54021710 },
-        { year: 1823, value: 56357760 },
-        { year: 1824, value: 57583636 },
-        { year: 1825, value: 60730864 },
-        { year: 1826, value: 61382130 },
-        { year: 1827, value: 65738572 },
-        { year: 1828, value: 66681790 },
-        { year: 1829, value: 66307412 },
-        { year: 1830, value: 88988260 },
-        { year: 1831, value: 83250616 },
-        { year: 1832, value: 82091560 },
-        { year: 1833, value: 83248700 },
-        { year: 1834, value: 88763100 },
-        { year: 1835, value: 97399600 },
-        { year: 1836, value: 106894500 },
-        { year: 1837, value: 106199420 },
-        { year: 1838, value: 105845260 },
-        { year: 1839, value: 109653030 },
-        { year: 1840, value: 118808510 },
-        { year: 1841, value: 122165550 },
-        { year: 1842, value: 129388790 },
-        { year: 1843, value: 132369384 },
-        { year: 1844, value: 141942270 },
-        { year: 1845, value: 155037360 },
-        { year: 1846, value: 157656130 },
-        { year: 1847, value: 170740910 },
-        { year: 1848, value: 173579870 },
-        { year: 1849, value: 184931980 },
-        { year: 1850, value: 196751970 },
         { year: 1851, value: 198668110 },
         { year: 1852, value: 207414200 },
         { year: 1853, value: 217120430 },
@@ -479,9 +377,11 @@ export default function Graph({
 
         const x = d3.scaleLinear().range([0, width * vw])
         const y = d3.scaleLinear().range([height * vh, 0])
+        const yRight = d3.scaleLinear().range([height * vh, 0])
 
         x.domain(d3.extent(data, (iter) => iter.year))
         y.domain([0, d3.max(data, (iter) => iter.value)])
+        yRight.domain([0, d3.max(temp, iter => iter.value)])
 
         window.innerWidth < 900 ?
             svg.append("g")
@@ -502,7 +402,7 @@ export default function Graph({
                 .selectAll(".tick line")
                 .style("stroke-opacity", 0)
 
-        window.innerWidth > 900 ?
+        if (window.innerWidth > 900) {
             svg.append("g")
                 .call(
                     d3
@@ -515,8 +415,25 @@ export default function Graph({
                 .attr("font-size", "1rem")
                 .call((g) => g.select(".domain").remove())
                 .selectAll(".tick line")
-                .style("stroke-opacity", 0)
-            : svg.append("g")
+                .style("stroke-opacity", 0);
+
+            svg.append("g")
+                .call(
+                    d3
+                        .axisRight(yRight)
+                        .tickFormat((val) => val.toFixed(3))
+                        .tickSize(0)
+                        .tickPadding(10)
+                )
+                .attr("class", "y-axis-right")
+                .attr("transform", `translate(${width * vw}, 0)`)
+                .attr("font-size", "0.75rem")
+                .call((g) => g.select(".domain").remove())
+                .selectAll(".tick line")
+                .style("stroke-opacity", 0);
+        }
+        else {
+            svg.append("g")
                 .call(
                     d3
                         .axisLeft(y)
@@ -529,6 +446,23 @@ export default function Graph({
                 .call((g) => g.select(".domain").remove())
                 .selectAll(".tick line")
                 .style("stroke-opacity", 0)
+
+            svg.append("g")
+                .call(
+                    d3
+                        .axisRight(yRight)
+                        .tickFormat((val) => val.toFixed(3))
+                        .tickSize(0)
+                        .tickPadding(10)
+                )
+                .attr("class", "y-axis-right")
+                .attr("transform", `translate(${width * vw}, 0)`)
+                .attr("font-size", "0.75rem")
+                .call((g) => g.select(".domain").remove())
+                .selectAll(".tick line")
+                .style("stroke-opacity", 0);
+
+        }
 
         svg.selectAll(".tick text").attr("fill", "#555")
 
@@ -552,16 +486,29 @@ export default function Graph({
             .attr("stroke", "#c8c8c8")
             .attr("stroke-width", .5)
 
-        // svg.append("text")
-        //     .attr("transform", "rotate(-90)")
-        //     .attr("y", 0 - marginX * vw / 2)
-        //     .attr("x", - height * vh / 2)
-        //     .attr("dy", "1em")
-        //     .style("text-anchor", "middle")
-        //     .style("Font-size", "16px")
-        //     .style("fill", "#000")
-        //     .style("font-family", "Milliard")
-        //     .text("Total Carbon Dioxide Emissions (in tons)")
+        svg.append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", -15 - marginX * vw / 2)
+            .attr("x", 0 - height * vh / 2)
+            .attr("class", "axis-label")
+            .attr("dy", "1em")
+            .style("text-anchor", "middle")
+            .style("Font-size", "16px")
+            .style("fill", "#555")
+            .style("font-family", "Milliard")
+            .text("Total Carbon Dioxide Emissions (in tons)")
+
+        svg.append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", 15 + (width * vw) + (marginX * vw / 2))
+            .attr("x", - height * vh / 2)
+            .attr("class", "axis-label")
+            .attr("dy", "1em")
+            .style("text-anchor", "middle")
+            .style("Font-size", "16px")
+            .style("fill", "#555")
+            .style("font-family", "Milliard")
+            .text("Temperature Increase (in C)")
 
         // svg.append("text")
         //     .attr("y", (height + marginY / 2) * vh)
@@ -624,7 +571,7 @@ export default function Graph({
                 .style("display", "block")
                 .style("left", `${xPos + 100}px`)
                 .style("top", `${yPos + 50}px`)
-                .html(`<strong>Year:</strong> ${d.year}<br><strong>Carbon Emission:</strong> ${tooltipContent}`)
+                .html(`<strong>Year:</strong> ${d.year}<br><strong>Carbon Emission:</strong> ${tooltipContent}<br><strong>Temperature Rise: </strong>${temp.find(obj => obj.year === d.year).value.toFixed(3)}&deg;C`)
         });
         // listening rectangle mouse leave function
 
@@ -669,21 +616,21 @@ export default function Graph({
             .attr("class", "line-CO")
             .attr("d", line)
 
-        // const lineTemp = d3.line().x((d => x(d.year))).y(d => y(d.value))
-        // svg.append("path")
-        //     .datum(temp)
-        //     .attr("fill", "none")
-        //     .attr("stroke", "red")
-        //     .attr("stroke-width", 1)
-        //     .attr("class", "line-temp")
-        //     .attr("d", lineTemp)
+        const lineTemp = d3.line().x((d => x(d.year))).y(d => yRight(d.value))
+        svg.append("path")
+            .datum(temp)
+            .attr("fill", "none")
+            .attr("stroke", "red")
+            .attr("stroke-width", 1)
+            .attr("class", "line-temp")
+            .attr("d", lineTemp)
 
 
     }, [])
 
     const handleChange = () => {
 
-        const val = [document.getElementById("num1").value, document.getElementById("num2").value]
+        const val = [document.getElementById("num1")?.value || 1851, document.getElementById("num2")?.value || 2022]
         const vw = window.innerWidth / 100
         const vh = window.innerHeight / 100
 
@@ -692,19 +639,25 @@ export default function Graph({
 
         const x = d3.scaleLinear().range([0, width * vw])
         const y = d3.scaleLinear().range([height * vh, 0])
+        const yRight = d3.scaleLinear().range([height * vh, 0])
 
         const line = d3
             .line()
             .x((d) => x(d.year))
             .y((d) => y(d.value))
+
+        const lineTemp = d3.line().x(d => x(d.year)).y(d => yRight(d.value))
+
         // Set new domain for x scale
         x.domain(val);
 
         // Filter data based on slider values
         const filteredData = data.filter(d => d.year >= val[0] && d.year <= val[1]);
+        const filteredTemp = temp.filter(d => d.year >= val[0] && d.year <= val[1]);
         // Update the line and area to new domain
         // Set new domain for y scale based on new data
         y.domain([0, d3.max(filteredData, d => d.value)]);
+        yRight.domain([0, d3.max(filteredTemp, d => d.value)])
 
 
         // Update the x-axis with new domain
@@ -726,6 +679,7 @@ export default function Graph({
         // Update the y-axis with new domain
 
         svg.select(".line-CO").attr("d", line(filteredData))
+        svg.select(".line-temp").attr("d", lineTemp(filteredTemp))
 
         svg.select(".y-axis")
             .transition()
@@ -733,6 +687,16 @@ export default function Graph({
             .call(d3
                 .axisLeft(y)
                 .tickFormat((val) => `${val / 1000000000}b`)
+                .tickSize(0)
+                .tickPadding(10))
+            .style("stroke-opacity", 0)
+
+        svg.select(".y-axis-right")
+            .transition()
+            .duration(300) // transition duration in ms
+            .call(d3
+                .axisRight(yRight)
+                .tickFormat((val) => val.toFixed(3))
                 .tickSize(0)
                 .tickPadding(10))
             .style("stroke-opacity", 0)
@@ -774,7 +738,7 @@ export default function Graph({
                 .style("display", "block")
                 .style("left", `${xPos + 100}px`)
                 .style("top", `${yPos + 50}px`)
-                .html(`<strong>Year:</strong> ${d.year}<br><strong>Carbon Emission:</strong> ${tooltipContent}`)
+                .html(`<strong>Year:</strong> ${d.year}<br><strong>Carbon Emission:</strong> ${tooltipContent}<br><strong>Temperature Rise: </strong>${temp.find(obj => obj.year === d.year).value.toFixed(3)}&deg;C`)
         });
 
         setIncrease(`${((filteredData[filteredData.length - 1].value - filteredData[0].value) / 1000000000).toFixed(2)} Billion tons`)
@@ -783,15 +747,15 @@ export default function Graph({
 
     return (
         <section className="graph-component">
-            <h1>Global Mean Carbon Dioxide Emissions</h1>
+            <h1>GLOBAL MEAN STATISTICS</h1>
             <section id="graph-container"></section>
-            <div id="slider-range"></div>
+            <p style={{ opacity: "0.7", margin: "0 0 30px" }}>LEGEND: - &nbsp;<span style={{ color: "green" }}>Carbon Dioxide</span> &nbsp;&nbsp; <span style={{ color: "red" }}>Temperature</span></p>
 
             <div className="graph-user-interaction">
                 <div className="graph-inputs">
                     <div className="graph-input-box">
                         <label>Base Year</label>
-                        <input type="number" id="num1" placeholder="1750" />
+                        <input type="number" id="num1" placeholder="1851" />
                     </div>
                     <div className="graph-input-box">
                         <label>Final Year</label>
@@ -801,7 +765,7 @@ export default function Graph({
                 <button onClick={handleChange}>Submit</button>
             </div>
 
-            <p className="graph-increased">Between the years {document.getElementById("num1")?.value || 1750} - {document.getElementById("num2")?.value || 2022} the Carbon Dioxide emissions have increased by <strong>{increase}</strong></p>
+            <p className="graph-increased">Between the years {document.getElementById("num1")?.value || 1851} - {document.getElementById("num2")?.value || 2022} the Carbon Dioxide emissions have increased by <strong>{increase}</strong></p>
         </section>
     )
 }

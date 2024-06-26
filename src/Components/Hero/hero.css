@@ -23,7 +23,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #13340e;
+    background: linear-gradient(#0b8225, #000);
     mix-blend-mode: hard-light;
 }
 

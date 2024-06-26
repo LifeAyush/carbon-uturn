@@ -9,7 +9,6 @@ import PartnerID from "./Pages/Partners/PartnerID/PartnerID"
 import { useEffect, useState } from "react"
 import AOS from "aos"
 import "aos/dist/aos.css"
-import Graph from "./Components/Graph/Graph"
 import { GetStartedFormContext } from "./store/GetStartedFormContext"
 import Career from "./Pages/Career/Career"
 import emailjs from "@emailjs/browser"
@@ -50,7 +49,6 @@ function App() {
                     <Route exact path="/partners" element={<Partners />} />
                     <Route exact path="/partners/:id" element={<PartnerID />} />
                     <Route exact path="/careers" element={<Career />} />
-                    <Route exact path="/graph" element={<Graph />} />
                 </Routes>
             </GetStartedFormContext.Provider>
         </div>
