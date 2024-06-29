@@ -135,6 +135,9 @@
     gap: 20px;
     pointer-events: all;
 }
+.team-card-sub-title:first-of-type {
+    font-size: 20px;
+}
 .team-card-sub-title {
     color: var(--white, #fbfcf8);
     text-align: center;

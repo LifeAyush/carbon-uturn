@@ -1,13 +1,56 @@
-import React from "react"
+import React, { useState } from "react"
 import "./career.css"
 import Navbar from "../../Components/Navbar/Navbar"
+import { send } from "@emailjs/browser"
 
 const Career = () => {
+
+    const [data, setData] = useState({
+        experience: "",
+        degree: "",
+        relocation: "",
+        firstName: "",
+        lastName: "",
+        contact: "",
+        email: "",
+        coverLetter: ""
+
+    })
     const handleSubmit = (e) => {
         e.preventDefault()
+        console.log(data)
+
+        const { experience, degree, relocation, firstName, lastName, contact, email, coverLetter } = data
+        if (experience.trim().length === 0 || degree.trim().length === 0 || relocation.trim().length === 0 || firstName.trim().length === 0 || contact.trim().length === 0 || email.trim().length === 0 || coverLetter.trim().length === 0) {
+            alert("Kindly fill all the details")
+            return
+        }
+        send(
+            "service_sdsp8em",
+            "template_p9vyz6h",
+            {
+                experience: experience,
+                degree: degree,
+                relocation: relocation,
+                contact: contact,
+                from_email: email,
+                coverLetter: coverLetter,
+                from_name: `${firstName} ${lastName}`,
+            }
+        ).then(res => {
+            if (res.status === 200) {
+                alert("Will get back to you!")
+            } else {
+                throw new Error("Something went wrong")
+            }
+        }).catch(err => {
+            alert("Something went wrong")
+            console.log(err)
+        })
+
     }
     const handleChange = (e) => {
-
+        setData({ ...data, [e.target.name]: e.target.value })
     }
     return (
         <>
@@ -16,11 +59,11 @@ const Career = () => {
                 <section className="career-text-content">
                     <div className="career-vision">
                         <h1>Our Vision</h1>
-                        <p>Building a greener future isn't a solitary climb it's a global ascent. Carbon U Turn provides sturdy footing for  companies, communities, and individuals on their upward journey. Together, we spark the flame of responsibility and igniting a collective movement towards a flourishing planet where all life can thrive.</p>
+                        <p>Building a greener future isn't a solitary climb it's a global ascent. Carbon U Turn provides sturdy footing for companies, communities, and individuals on their upward journey. Together, we spark the flame of responsibility and igniting a collective movement towards a flourishing planet where all life can thrive.</p>
                     </div>
                     <div className="career-mission">
                         <h1>Our Mission</h1>
-                        <p>Building a greener future isn't a solitary climb it's a global ascent. Carbon U Turn provides sturdy footing for  companies, communities, and individuals on their upward journey. Together, we spark the flame of responsibility and igniting a collective movement towards a flourishing planet where all life can thrive.</p>
+                        <p>CUT empowers everyone, from corporations chasing compliance to individuals driven by passion, to achieve Net Zero through seamless, reliable digital solutions. We make sustainability easy, efficient, and failsafe, so you can accelerate responsible action and build a thriving future for people and planet.</p>
                     </div>
                 </section>
 
@@ -34,7 +77,7 @@ const Career = () => {
                         <h3>Experience</h3>
                         <div className="career-form-input-section">
                             <label>How many years of experience do you have in this particular field of work?</label>
-                            <select name="experience" id="">
+                            <select name="experience" id="" onChange={handleChange}>
                                 <option value="" selected disabled>Select a range</option>
                                 <option value="less than 1yr">Less than 1 year</option>
                                 <option value="1-2 yrs">1 - 2 years</option>
@@ -50,7 +93,7 @@ const Career = () => {
                         <h3>Academic Degree</h3>
                         <div className="career-form-input-section">
                             <label>What is your latest academic degree?</label>
-                            <select name="degree" id="">
+                            <select name="degree" id="" onChange={handleChange}>
                                 <option value="" selected disabled>Select a degree option</option>
                                 <option value="Bachelors">Bachelors</option>
                                 <option value="Masters">Masters</option>
@@ -66,8 +109,8 @@ const Career = () => {
                         <div className="career-form-input-section">
                             <label>Are you willing to relocate to Gurugram (Gurgaon)?</label>
                             <div className="career-radio-buttons">
-                                <span><input type="radio" name="relocation" id="" value="yes" />Yes</span>
-                                <span><input type="radio" name="relocation" id="" value="no" />No</span>
+                                <span><input type="radio" name="relocation" onChange={handleChange} value="yes" />Yes</span>
+                                <span><input type="radio" name="relocation" onChange={handleChange} value="no" />No</span>
                             </div>
                         </div>
                     </div>
@@ -78,12 +121,12 @@ const Career = () => {
                         <div className="career-form-flex">
                             <div className="career-form-input-section">
                                 <label>First Name</label>
-                                <input type="text" name="firstName" placeholder="Enter your first name" />
+                                <input type="text" name="firstName" onChange={handleChange} placeholder="Enter your first name" />
                             </div>
 
                             <div className="career-form-input-section">
                                 <label>Last Name</label>
-                                <input type="text" name="lastName" placeholder="Enter your last name" />
+                                <input type="text" name="lastName" onChange={handleChange} placeholder="Enter your last name" />
                             </div>
                         </div>
 
@@ -91,12 +134,12 @@ const Career = () => {
 
                             <div className="career-form-input-section">
                                 <label>Contact Number</label>
-                                <input type="number" name="phone" placeholder="Enter your contact number" />
+                                <input type="number" name="contact" onChange={handleChange} placeholder="Enter your contact number" />
                             </div>
 
                             <div className="career-form-input-section">
                                 <label>Email Address</label>
-                                <input type="email" name="email" placeholder="Enter your email address" />
+                                <input type="email" name="email" onChange={handleChange} placeholder="Enter your email address" />
                             </div>
 
                         </div>
@@ -108,7 +151,7 @@ const Career = () => {
 
                         <div className="career-form-input-section">
                             <label>Cover Letter</label>
-                            <textarea name="coverLetter" placeholder="Tell us about yourself" />
+                            <textarea name="coverLetter" onChange={handleChange} placeholder="Tell us about yourself" />
                         </div>
 
                     </div>

@@ -12,6 +12,7 @@ import "aos/dist/aos.css"
 import { GetStartedFormContext } from "./store/GetStartedFormContext"
 import Career from "./Pages/Career/Career"
 import emailjs from "@emailjs/browser"
+import Modal from "./Components/Modal/Modal"
 
 function App() {
     AOS.init({
@@ -37,10 +38,11 @@ function App() {
 
 
     const [getForm, setForm] = useState(false)
+    const [firstVisit, setFirstVisit] = useState(true)
 
     return (
         <div className="App">
-            <GetStartedFormContext.Provider value={{ getForm, setForm }}>
+            <GetStartedFormContext.Provider value={{ getForm, setForm, firstVisit, setFirstVisit }}>
                 <Routes>
                     <Route exact path="/" element={<Home />} />
                     <Route exact path="/services" element={<Services />} />
@@ -50,6 +52,7 @@ function App() {
                     <Route exact path="/partners/:id" element={<PartnerID />} />
                     <Route exact path="/careers" element={<Career />} />
                 </Routes>
+                <Modal />
             </GetStartedFormContext.Provider>
         </div>
     )

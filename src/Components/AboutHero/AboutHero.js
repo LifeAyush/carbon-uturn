@@ -18,9 +18,7 @@ const AboutHero = () => {
                     <div className="about-hero-text about-hero-text-1">
                         <div className="about-hero-main-title">ABOUT US</div>
                         <div className="about-hero-main-subtitle">
-                            Our planet needs a U-Turn. We're the engineers, the
-                            navigators, making that shift, a reality with
-                            data-driven solutions.
+                            At Carbon Uturn, our passion drives us to create positive environmental impact. We’re committed to addressing climate challenges.
                         </div>
                     </div>
                 </div>
@@ -33,8 +31,7 @@ const AboutHero = () => {
                     <div className="about-hero-text about-hero-text-2">
                         <div className="about-hero-main-title">ABOUT US</div>
                         <div className="about-hero-main-subtitle">
-                            With us, environmental action becomes a breeze –
-                            like switching on a lightbulb, but for the planet.
+                            Our platform seamlessly combines carbon credit marketplace, e-learning modules, and GHG emissions calculations. It’s a one-stop solution for achieving net zero.
                         </div>
                     </div>
                 </div>
@@ -47,8 +44,7 @@ const AboutHero = () => {
                     <div className="about-hero-text about-hero-text-3">
                         <div className="about-hero-main-title">ABOUT US</div>
                         <div className="about-hero-main-subtitle">
-                            Carbon Uturn: Where our founders’ vision is as
-                            renewable as the energy we champion
+                            Carbon Uturn pioneers token generation for renewable projects using blockchain technology. Transparency and accountability are our hallmarks.
                         </div>
                     </div>
                 </div>
@@ -61,8 +57,7 @@ const AboutHero = () => {
                     <div className="about-hero-text about-hero-text-4">
                         <div className="about-hero-main-title">ABOUT US</div>
                         <div className="about-hero-main-subtitle">
-                            Join the movement. Together, let's make a positive
-                            impact. Your U-Turn starts here.
+                            Join us in our mission! By choosing Carbon Uturn, you’re part of a global effort toward a greener, more sustainable future.
                         </div>
                     </div>
                 </div>

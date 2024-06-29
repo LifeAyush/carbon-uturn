@@ -745,11 +745,27 @@ export default function Graph({
 
     };
 
+    const btnstyle = {
+        display: "flex",
+        alignItems: "center",
+        gap: "5px",
+        background: "white",
+        border: "1px solid var(--customcolor)",
+        borderRadius: "3px",
+        color: "var(--customcolor)",
+        padding: "2px",
+        fontSize: "0.75rem",
+        flex: 1
+    }
+
     return (
         <section className="graph-component">
             <h1>GLOBAL MEAN STATISTICS</h1>
             <section id="graph-container"></section>
-            <p style={{ opacity: "0.7", margin: "0 0 30px" }}>LEGEND: - &nbsp;<span style={{ color: "green" }}>Carbon Dioxide</span> &nbsp;&nbsp; <span style={{ color: "red" }}>Temperature</span></p>
+            <div style={{ display: "flex", alignItems: "center ", gap: "15px", margin: "10px 0" }}>
+                <div style={{ "--customcolor": "#FD4C4B", ...btnstyle }}><img style={{ height: "max(30px, 5vh)" }} src="/Images/co2.png" alt="" />Carbon Dioxide Emissions</div>
+                <div style={{ "--customcolor": "#2EAF7D", ...btnstyle }}><img style={{ height: "max(30px, 5vh)" }} src="/Images/temp.png" alt="" />Temperature Rise</div>
+            </div>
 
             <div className="graph-user-interaction">
                 <div className="graph-inputs">
