@@ -53,7 +53,7 @@ const Hero = () => {
                         Planet WIns
                     </h1>
                     <p className="hero-para" style={design === 2 ? { width: "100%" } : {}}>
-                        One-stop-solution for Accelerating your Net-Zero Journey
+                        One-Stop Solution for Accelerating your Net-Zero Journey
                     </p>
                 </div>
             </div> : <></>

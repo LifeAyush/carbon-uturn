@@ -361,7 +361,8 @@ export default function Graph({
         { year: 2022, value: 37149786000 },
     ]
 
-    const [increase, setIncrease] = useState(`${((data[data.length - 1].value - data[0].value) / 1000000000).toFixed(2)} Billion tons`)
+    const [carbonIncrease, setCarbonIncrease] = useState(`${((data[data.length - 1].value - data[0].value) / 1000000000).toFixed(2)} Billion tons`)
+    const [tempIncrease, setTempIncrease] = useState(`${((temp[temp.length - 1].value - temp[0].value)).toFixed(3)} °C`)
 
     useEffect(() => {
         const vw = window.innerWidth / 100
@@ -738,10 +739,11 @@ export default function Graph({
                 .style("display", "block")
                 .style("left", `${xPos + 100}px`)
                 .style("top", `${yPos + 50}px`)
-                .html(`<strong>Year:</strong> ${d.year}<br><strong>Carbon Emission:</strong> ${tooltipContent}<br><strong>Temperature Rise: </strong>${temp.find(obj => obj.year === d.year).value.toFixed(3)}&deg;C`)
+                .html(`<strong>Year:</strong> ${d.year}<br><strong>Carbon Emission:</strong> ${tooltipContent}<br><strong>Temperature Rise: </strong>${temp.find(obj => obj.year === d.year).value.toFixed(3)} °C`)
         });
 
-        setIncrease(`${((filteredData[filteredData.length - 1].value - filteredData[0].value) / 1000000000).toFixed(2)} Billion tons`)
+        setCarbonIncrease(`${((filteredData[filteredData.length - 1].value - filteredData[0].value) / 1000000000).toFixed(2)} Billion tons`)
+        setTempIncrease(`${((filteredTemp[filteredTemp.length - 1].value - filteredTemp[0].value)).toFixed(3)} °C`)
 
     };
 
@@ -781,7 +783,8 @@ export default function Graph({
                 <button onClick={handleChange}>Submit</button>
             </div>
 
-            <p className="graph-increased">Between the years {document.getElementById("num1")?.value || 1851} - {document.getElementById("num2")?.value || 2022} the Carbon Dioxide emissions have increased by <strong>{increase}</strong></p>
+            <p className="graph-increased">Between the years {document.getElementById("num1")?.value || 1851} - {document.getElementById("num2")?.value || 2022} the Carbon Dioxide emissions have increased by <strong>{carbonIncrease}</strong></p>
+            <p className="graph-increased">Between the years {document.getElementById("num1")?.value || 1851} - {document.getElementById("num2")?.value || 2022} the Average Temperature has increased by <strong>{tempIncrease}</strong></p>
         </section>
     )
 }
