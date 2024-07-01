@@ -13,15 +13,15 @@ const Career = () => {
         lastName: "",
         contact: "",
         email: "",
-        coverLetter: ""
-
+        coverLetter: "",
+        role: "",
+        resume: ""
     })
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(data)
 
-        const { experience, degree, relocation, firstName, lastName, contact, email, coverLetter } = data
-        if (experience.trim().length === 0 || degree.trim().length === 0 || relocation.trim().length === 0 || firstName.trim().length === 0 || contact.trim().length === 0 || email.trim().length === 0 || coverLetter.trim().length === 0) {
+        const { experience, degree, relocation, firstName, lastName, contact, email, coverLetter, role, resume } = data
+        if (experience.trim().length === 0 || degree.trim().length === 0 || relocation.trim().length === 0 || firstName.trim().length === 0 || contact.trim().length === 0 || email.trim().length === 0 || coverLetter.trim().length === 0 || role.trim().length === 0 || resume.trim().length === 0) {
             alert("Kindly fill all the details")
             return
         }
@@ -36,6 +36,8 @@ const Career = () => {
                 from_email: email,
                 coverLetter: coverLetter,
                 from_name: `${firstName} ${lastName}`,
+                role: role,
+                resume: resume
             }
         ).then(res => {
             if (res.status === 200) {
@@ -59,11 +61,11 @@ const Career = () => {
                 <section className="career-text-content">
                     <div className="career-vision">
                         <h1>Our Vision</h1>
-                        <p>Building a greener future isn't a solitary climb it's a global ascent. Carbon U Turn provides sturdy footing for companies, communities, and individuals on their upward journey. Together, we spark the flame of responsibility and igniting a collective movement towards a flourishing planet where all life can thrive.</p>
+                        <p>CUT empowers everyone, from corporations chasing compliance to individuals driven by passion, to achieve Net Zero through seamless, reliable digital solutions. We make sustainability easy, efficient, and failsafe, so you can accelerate responsible action and build a thriving future for people and planet.</p>
                     </div>
                     <div className="career-mission">
                         <h1>Our Mission</h1>
-                        <p>CUT empowers everyone, from corporations chasing compliance to individuals driven by passion, to achieve Net Zero through seamless, reliable digital solutions. We make sustainability easy, efficient, and failsafe, so you can accelerate responsible action and build a thriving future for people and planet.</p>
+                        <p>Building a greener future isn't a solitary climb it's a global ascent. Carbon U Turn provides sturdy footing for companies, communities, and individuals on their upward journey. Together, we spark the flame of responsibility and igniting a collective movement towards a flourishing planet where all life can thrive.</p>
                     </div>
                 </section>
 
@@ -75,6 +77,10 @@ const Career = () => {
 
                     <div className="career-form-section">
                         <h3>Experience</h3>
+                        <div className="career-form-input-section">
+                            <label>Which role are you applying for?</label>
+                            <input type="text" name="role" onChange={handleChange} placeholder="Enter the role you are applying for." />
+                        </div>
                         <div className="career-form-input-section">
                             <label>How many years of experience do you have in this particular field of work?</label>
                             <select name="experience" id="" onChange={handleChange}>
@@ -145,8 +151,8 @@ const Career = () => {
                         </div>
 
                         <div className="career-form-input-section">
-                            <label>Upload CV</label>
-                            <input type="file" name="cv" />
+                            <label>Link to Resume</label>
+                            <input type="text" name="resume" onChange={handleChange} placeholder="Attach link to your resume." />
                         </div>
 
                         <div className="career-form-input-section">

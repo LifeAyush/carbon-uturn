@@ -14,12 +14,12 @@ export default function Modal() {
         bottom: "5vh",
         left: "50%",
         transform: "translateX(-50%)",
-        maxWidth: "50vw",
         padding: "10px",
         display: "flex",
         gap: "5px",
         alignItems: "flex-start",
-        border: "2px solid #2EAF7D"
+        border: "2px solid #2EAF7D",
+        width: "max-content"
     }
 
     const modalspan = {
@@ -35,7 +35,7 @@ export default function Modal() {
     return (
         firstVisit ?
             <div style={modalContainer}>
-                <p>We are working on the SaaS Product & eLearning Modules. Watch out for the releases in October onwards. <span onClick={goToContact} style={modalspan}>Learn more.</span></p>
+                <p>We are working on the SaaS Product & eLearning Modules. Watch out for the releases in October onwards. <br /> <span onClick={goToContact} style={modalspan}>Learn more.</span></p>
                 <img style={{ cursor: "pointer" }} onClick={() => setFirstVisit(false)} src={close} alt="" />
             </div>
             : <></>

@@ -757,7 +757,7 @@ export default function Graph({
         color: "var(--customcolor)",
         padding: "2px",
         fontSize: "0.75rem",
-        flex: 1
+        width: "max-content"
     }
 
     return (
