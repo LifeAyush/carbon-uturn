@@ -21,8 +21,7 @@ export default function Blogs() {
                 Blogs
             </h1>
             <p className="resources-blogs-subheading">
-                Our blogs cut through the noise to give you the information you
-                . Get a fresh perspective with our thought-provoking blog posts.
+                Our blogs cut through the noise to give you the information you need. Get a fresh perspective with our thought-provoking blog posts.
             </p>
 
             <div style={{ width: "95vw", overflow: "hidden", marginLeft: "5vw" }}>
