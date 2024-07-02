@@ -630,7 +630,7 @@ export default function Graph({
                 <button onClick={handleChange}>Submit</button>
             </div>
 
-            <p className="graph-increased">Between the years {document.getElementById("num1")?.value || 1960} - {document.getElementById("num2")?.value || 2022} the Carbon Dioxide emissions have increased by <strong>{carbonIncrease}</strong></p>
+            <p className="graph-increased">Between the years {document.getElementById("num1")?.value || 1960} - {document.getElementById("num2")?.value || 2022} the average Carbon Dioxide levels in the atmosphere have increase by <strong>{carbonIncrease}</strong></p>
             <p className="graph-increased">Between the years {document.getElementById("num1")?.value || 1960} - {document.getElementById("num2")?.value || 2022} the Average Temperature has increased by <strong>{tempIncrease}</strong></p>
         </section>
     )
