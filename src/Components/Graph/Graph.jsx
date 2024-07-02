@@ -13,115 +13,7 @@ export default function Graph({
     //converted from csv to js array
 
     const temp = [
-        { year: 1851, value: 0.0018314128 },
-        { year: 1852, value: 0.0036884283 },
-        { year: 1853, value: 0.0055778543 },
-        { year: 1854, value: 0.0075114216 },
-        { year: 1855, value: 0.009451285 },
-        { year: 1856, value: 0.011404636 },
-        { year: 1857, value: 0.013375946 },
-        { year: 1858, value: 0.015355136 },
-        { year: 1859, value: 0.017368155 },
-        { year: 1860, value: 0.01933133 },
-        { year: 1861, value: 0.021259334 },
-        { year: 1862, value: 0.023178479 },
-        { year: 1863, value: 0.025112143 },
-        { year: 1864, value: 0.027054338 },
-        { year: 1865, value: 0.02899049 },
-        { year: 1866, value: 0.030950887 },
-        { year: 1867, value: 0.032930553 },
-        { year: 1868, value: 0.034906715 },
-        { year: 1869, value: 0.03689542 },
-        { year: 1870, value: 0.038989626 },
-        { year: 1871, value: 0.041164286 },
-        { year: 1872, value: 0.0434164 },
-        { year: 1873, value: 0.045736518 },
-        { year: 1874, value: 0.048053976 },
-        { year: 1875, value: 0.050430708 },
-        { year: 1876, value: 0.052835703 },
-        { year: 1877, value: 0.0552899 },
-        { year: 1878, value: 0.05778677 },
-        { year: 1879, value: 0.06033757 },
-        { year: 1880, value: 0.06297748 },
-        { year: 1881, value: 0.065636106 },
-        { year: 1882, value: 0.068372294 },
-        { year: 1883, value: 0.071186505 },
-        { year: 1884, value: 0.07401393 },
-        { year: 1885, value: 0.07684813 },
-        { year: 1886, value: 0.07971877 },
-        { year: 1887, value: 0.0826616 },
-        { year: 1888, value: 0.08569946 },
-        { year: 1889, value: 0.08874032 },
-        { year: 1890, value: 0.09199192 },
-        { year: 1891, value: 0.0953336 },
-        { year: 1892, value: 0.09869133 },
-        { year: 1893, value: 0.10206372 },
-        { year: 1894, value: 0.10550645 },
-        { year: 1895, value: 0.10902286 },
-        { year: 1896, value: 0.11259529 },
-        { year: 1897, value: 0.11623 },
-        { year: 1898, value: 0.11994625 },
-        { year: 1899, value: 0.123795874 },
-        { year: 1900, value: 0.12773943 },
-        { year: 1901, value: 0.13174058 },
-        { year: 1902, value: 0.13579857 },
-        { year: 1903, value: 0.13998029 },
-        { year: 1904, value: 0.14422375 },
-        { year: 1905, value: 0.14857244 },
-        { year: 1906, value: 0.15302485 },
-        { year: 1907, value: 0.15772648 },
-        { year: 1908, value: 0.16234927 },
-        { year: 1909, value: 0.16708013 },
-        { year: 1910, value: 0.1718384 },
-        { year: 1911, value: 0.17661344 },
-        { year: 1912, value: 0.18146127 },
-        { year: 1913, value: 0.18650202 },
-        { year: 1914, value: 0.19130865 },
-        { year: 1915, value: 0.19605435 },
-        { year: 1916, value: 0.20095135 },
-        { year: 1917, value: 0.20594001 },
-        { year: 1918, value: 0.21086405 },
-        { year: 1919, value: 0.21543984 },
-        { year: 1920, value: 0.22041166 },
-        { year: 1921, value: 0.22511943 },
-        { year: 1922, value: 0.22999354 },
-        { year: 1923, value: 0.23516008 },
-        { year: 1924, value: 0.24037065 },
-        { year: 1925, value: 0.24563053 },
-        { year: 1926, value: 0.25080988 },
-        { year: 1927, value: 0.25619805 },
-        { year: 1928, value: 0.26161817 },
-        { year: 1929, value: 0.26724157 },
-        { year: 1930, value: 0.2727015 },
-        { year: 1931, value: 0.27793375 },
-        { year: 1932, value: 0.2829807 },
-        { year: 1933, value: 0.2881221 },
-        { year: 1934, value: 0.2936023 },
-        { year: 1935, value: 0.2992494 },
-        { year: 1936, value: 0.30515504 },
-        { year: 1937, value: 0.3112529 },
-        { year: 1938, value: 0.31727418 },
-        { year: 1939, value: 0.32358527 },
-        { year: 1940, value: 0.33015275 },
-        { year: 1941, value: 0.33704424 },
-        { year: 1942, value: 0.34394217 },
-        { year: 1943, value: 0.35087314 },
-        { year: 1944, value: 0.35790756 },
-        { year: 1945, value: 0.3644617 },
-        { year: 1946, value: 0.37140456 },
-        { year: 1947, value: 0.37867865 },
-        { year: 1948, value: 0.38615373 },
-        { year: 1949, value: 0.39350387 },
-        { year: 1950, value: 0.40167087 },
-        { year: 1951, value: 0.4103632 },
-        { year: 1952, value: 0.41935006 },
-        { year: 1953, value: 0.42859462 },
-        { year: 1954, value: 0.43808112 },
-        { year: 1955, value: 0.4482803 },
-        { year: 1956, value: 0.4589317 },
-        { year: 1957, value: 0.46995032 },
-        { year: 1958, value: 0.48138395 },
-        { year: 1959, value: 0.49352536 },
+
         { year: 1960, value: 0.5056624 },
         { year: 1961, value: 0.5177196 },
         { year: 1962, value: 0.5298462 },
@@ -186,182 +78,135 @@ export default function Graph({
         { year: 2021, value: 1.6102432 },
         { year: 2022, value: 1.6352426 }]
 
-    const data = [
-        { year: 1851, value: 198668110 },
-        { year: 1852, value: 207414200 },
-        { year: 1853, value: 217120430 },
-        { year: 1854, value: 255033170 },
-        { year: 1855, value: 260104400 },
-        { year: 1856, value: 277296450 },
-        { year: 1857, value: 279932000 },
-        { year: 1858, value: 284225150 },
-        { year: 1859, value: 301481250 },
-        { year: 1860, value: 330962600 },
-        { year: 1861, value: 347785820 },
-        { year: 1862, value: 354488900 },
-        { year: 1863, value: 378180160 },
-        { year: 1864, value: 407725980 },
-        { year: 1865, value: 432859140 },
-        { year: 1866, value: 446553600 },
-        { year: 1867, value: 478160740 },
-        { year: 1868, value: 491551940 },
-        { year: 1869, value: 521954200 },
-        { year: 1870, value: 533338270 },
-        { year: 1871, value: 566891300 },
-        { year: 1872, value: 627301250 },
-        { year: 1873, value: 666481200 },
-        { year: 1874, value: 624232500 },
-        { year: 1875, value: 677113860 },
-        { year: 1876, value: 686780200 },
-        { year: 1877, value: 700404400 },
-        { year: 1878, value: 705973570 },
-        { year: 1879, value: 755990460 },
-        { year: 1880, value: 853916350 },
-        { year: 1881, value: 883544060 },
-        { year: 1882, value: 933360100 },
-        { year: 1883, value: 992753600 },
-        { year: 1884, value: 1004134100 },
-        { year: 1885, value: 1011637100 },
-        { year: 1886, value: 1027417500 },
-        { year: 1887, value: 1078746900 },
-        { year: 1888, value: 1194352600 },
-        { year: 1889, value: 1194624000 },
-        { year: 1890, value: 1300362400 },
-        { year: 1891, value: 1361750100 },
-        { year: 1892, value: 1372396500 },
-        { year: 1893, value: 1355477200 },
-        { year: 1894, value: 1403019100 },
-        { year: 1895, value: 1487432300 },
-        { year: 1896, value: 1536365600 },
-        { year: 1897, value: 1609231600 },
-        { year: 1898, value: 1697166300 },
-        { year: 1899, value: 1853709200 },
-        { year: 1900, value: 1952209500 },
-        { year: 1901, value: 2016744400 },
-        { year: 1902, value: 2067683800 },
-        { year: 1903, value: 2254100200 },
-        { year: 1904, value: 2279747300 },
-        { year: 1905, value: 2427318300 },
-        { year: 1906, value: 2534733000 },
-        { year: 1907, value: 2888318000 },
-        { year: 1908, value: 2776440800 },
-        { year: 1909, value: 2890495000 },
-        { year: 1910, value: 3034089700 },
-        { year: 1911, value: 3079502000 },
-        { year: 1912, value: 3235963600 },
-        { year: 1913, value: 3506275800 },
-        { year: 1914, value: 3180355600 },
-        { year: 1915, value: 3134854000 },
-        { year: 1916, value: 3385858300 },
-        { year: 1917, value: 3540426800 },
-        { year: 1918, value: 3493264100 },
-        { year: 1919, value: 3029006600 },
-        { year: 1920, value: 3521427500 },
-        { year: 1921, value: 3090096600 },
-        { year: 1922, value: 3240313900 },
-        { year: 1923, value: 3676233200 },
-        { year: 1924, value: 3687220200 },
-        { year: 1925, value: 3727033600 },
-        { year: 1926, value: 3661030400 },
-        { year: 1927, value: 3996128800 },
-        { year: 1928, value: 3978763300 },
-        { year: 1929, value: 4270907600 },
-        { year: 1930, value: 3938598400 },
-        { year: 1931, value: 3519903200 },
-        { year: 1932, value: 3173476400 },
-        { year: 1933, value: 3341518300 },
-        { year: 1934, value: 3634241800 },
-        { year: 1935, value: 3814798300 },
-        { year: 1936, value: 4185513700 },
-        { year: 1937, value: 4474233000 },
-        { year: 1938, value: 4206901000 },
-        { year: 1939, value: 4451247000 },
-        { year: 1940, value: 4861346000 },
-        { year: 1941, value: 4970814500 },
-        { year: 1942, value: 4959586000 },
-        { year: 1943, value: 5041694000 },
-        { year: 1944, value: 5117908500 },
-        { year: 1945, value: 4257136000 },
-        { year: 1946, value: 4646123500 },
-        { year: 1947, value: 5145782000 },
-        { year: 1948, value: 5424953000 },
-        { year: 1949, value: 5181006000 },
-        { year: 1950, value: 5929342000 },
-        { year: 1951, value: 6381405700 },
-        { year: 1952, value: 6467437000 },
-        { year: 1953, value: 6650861600 },
-        { year: 1954, value: 6789497300 },
-        { year: 1955, value: 7443861000 },
-        { year: 1956, value: 7925980700 },
-        { year: 1957, value: 8185614000 },
-        { year: 1958, value: 8417160000 },
-        { year: 1959, value: 8854662000 },
-        { year: 1960, value: 9386421000 },
-        { year: 1961, value: 9414383000 },
-        { year: 1962, value: 9746556000 },
-        { year: 1963, value: 10266046000 },
-        { year: 1964, value: 10823619000 },
-        { year: 1965, value: 11309690000 },
-        { year: 1966, value: 11861708000 },
-        { year: 1967, value: 12236328000 },
-        { year: 1968, value: 12904336000 },
-        { year: 1969, value: 13760840000 },
-        { year: 1970, value: 14898157000 },
-        { year: 1971, value: 15502787000 },
-        { year: 1972, value: 16223440000 },
-        { year: 1973, value: 17083500000 },
-        { year: 1974, value: 17009382000 },
-        { year: 1975, value: 17049979000 },
-        { year: 1976, value: 17985243000 },
-        { year: 1977, value: 18494652000 },
-        { year: 1978, value: 19063955000 },
-        { year: 1979, value: 19603001000 },
-        { year: 1980, value: 19482442000 },
-        { year: 1981, value: 19016950000 },
-        { year: 1982, value: 18865373000 },
-        { year: 1983, value: 18985900000 },
-        { year: 1984, value: 19641730000 },
-        { year: 1985, value: 20305132000 },
-        { year: 1986, value: 20607515000 },
-        { year: 1987, value: 21245784000 },
-        { year: 1988, value: 22077385000 },
-        { year: 1989, value: 22378970000 },
-        { year: 1990, value: 22752700000 },
-        { year: 1991, value: 23229475000 },
-        { year: 1992, value: 22567199000 },
-        { year: 1993, value: 22798350000 },
-        { year: 1994, value: 23034776000 },
-        { year: 1995, value: 23524491000 },
-        { year: 1996, value: 24250161000 },
-        { year: 1997, value: 24395952000 },
-        { year: 1998, value: 24330945000 },
-        { year: 1999, value: 24833495000 },
-        { year: 2000, value: 25501286000 },
-        { year: 2001, value: 25674930000 },
-        { year: 2002, value: 26248288000 },
-        { year: 2003, value: 27648650000 },
-        { year: 2004, value: 28620194000 },
-        { year: 2005, value: 29592103000 },
-        { year: 2006, value: 30605767000 },
-        { year: 2007, value: 31499735000 },
-        { year: 2008, value: 32041902000 },
-        { year: 2009, value: 31493265000 },
-        { year: 2010, value: 33306330000 },
-        { year: 2011, value: 34436470000 },
-        { year: 2012, value: 34935450000 },
-        { year: 2013, value: 35232470000 },
-        { year: 2014, value: 35466195000 },
-        { year: 2015, value: 35463213000 },
-        { year: 2016, value: 35460026000 },
-        { year: 2017, value: 36025455000 },
-        { year: 2018, value: 36766945000 },
-        { year: 2019, value: 37040103000 },
-        { year: 2020, value: 35007738000 },
-        { year: 2021, value: 36816544000 },
-        { year: 2022, value: 37149786000 },
-    ]
+    const data = [{
+        year: 1960, value: 316.91
+    }, {
+        year: 1961, value: 317.64
+    }, {
+        year: 1962, value: 318.45
+    }, {
+        year: 1963, value: 318.99
+    }, {
+        year: 1964, value: 319.62
+    }, {
+        year: 1965, value: 320.04
+    }, {
+        year: 1966, value: 321.37
+    }, {
+        year: 1967, value: 322.18
+    }, {
+        year: 1968, value: 323.05
+    }, {
+        year: 1969, value: 324.62
+    }, {
+        year: 1970, value: 325.68
+    }, {
+        year: 1971, value: 326.32
+    }, {
+        year: 1972, value: 327.46
+    }, {
+        year: 1973, value: 329.68
+    }, {
+        year: 1974, value: 330.19
+    }, {
+        year: 1975, value: 331.13
+    }, {
+        year: 1976, value: 332.03
+    }, {
+        year: 1977, value: 333.84
+    }, {
+        year: 1978, value: 335.41
+    }, {
+        year: 1979, value: 336.84
+    }, {
+        year: 1980, value: 338.76
+    }, {
+        year: 1981, value: 340.12
+    }, {
+        year: 1982, value: 341.48
+    }, {
+        year: 1983, value: 343.15
+    }, {
+        year: 1984, value: 344.87
+    }, {
+        year: 1985, value: 346.35
+    }, {
+        year: 1986, value: 347.61
+    }, {
+        year: 1987, value: 349.31
+    }, {
+        year: 1988, value: 351.69
+    }, {
+        year: 1989, value: 353.20
+    }, {
+        year: 1990, value: 354.45
+    }, {
+        year: 1991, value: 355.70
+    }, {
+        year: 1992, value: 356.54
+    }, {
+        year: 1993, value: 357.21
+    }, {
+        year: 1994, value: 358.96
+    }, {
+        year: 1995, value: 360.97
+    }, {
+        year: 1996, value: 362.74
+    }, {
+        year: 1997, value: 363.88
+    }, {
+        year: 1998, value: 366.84
+    }, {
+        year: 1999, value: 368.54
+    }, {
+        year: 2000, value: 369.71
+    }, {
+        year: 2001, value: 371.32
+    }, {
+        year: 2002, value: 373.45
+    }, {
+        year: 2003, value: 375.98
+    }, {
+        year: 2004, value: 377.70
+    }, {
+        year: 2005, value: 379.98
+    }, {
+        year: 2006, value: 382.09
+    }, {
+        year: 2007, value: 384.02
+    }, {
+        year: 2008, value: 385.83
+    }, {
+        year: 2009, value: 387.64
+    }, {
+        year: 2010, value: 390.10
+    }, {
+        year: 2011, value: 391.85
+    }, {
+        year: 2012, value: 394.06
+    }, {
+        year: 2013, value: 396.74
+    }, {
+        year: 2014, value: 398.81
+    }, {
+        year: 2015, value: 401.01
+    }, {
+        year: 2016, value: 404.41
+    }, {
+        year: 2017, value: 406.76
+    }, {
+        year: 2018, value: 408.72
+    }, {
+        year: 2019, value: 411.65
+    }, {
+        year: 2020, value: 414.21
+    }, {
+        year: 2021, value: 416.41
+    }, {
+        year: 2022, value: 418.53
+    }]
 
-    const [carbonIncrease, setCarbonIncrease] = useState(`${((data[data.length - 1].value - data[0].value) / 1000000000).toFixed(2)} Billion tons`)
+    const [carbonIncrease, setCarbonIncrease] = useState(`${((data[data.length - 1].value - data[0].value).toFixed(3))} ppm`)
     const [tempIncrease, setTempIncrease] = useState(`${((temp[temp.length - 1].value - temp[0].value)).toFixed(3)} °C`)
 
     useEffect(() => {
@@ -408,12 +253,13 @@ export default function Graph({
                 .call(
                     d3
                         .axisLeft(y)
-                        .tickFormat((val) => `${val / 1000000000}b`)
+                        .tickFormat((val) => `${val} ppm`)
                         .tickSize(0)
                         .tickPadding(10)
                 )
                 .attr("class", "y-axis")
                 .attr("font-size", "1rem")
+                .attr("font-size", "0.75rem")
                 .call((g) => g.select(".domain").remove())
                 .selectAll(".tick line")
                 .style("stroke-opacity", 0);
@@ -438,11 +284,12 @@ export default function Graph({
                 .call(
                     d3
                         .axisLeft(y)
-                        .tickFormat((val) => `${val / 1000000000}b`)
+                        .tickFormat((val) => `${val} ppm`)
                         .tickSize(0)
                         .tickPadding(10)
                 )
                 .attr("class", "y-axis")
+                .attr("font-size", "0.75rem")
                 .attr("font-size", "0.75rem")
                 .call((g) => g.select(".domain").remove())
                 .selectAll(".tick line")
@@ -478,7 +325,7 @@ export default function Graph({
             .attr("stroke-width", .5)
 
         svg.selectAll("yGrid")
-            .data(y.ticks(d3.max(data, d => d.value) / 5000000000).slice(1))
+            .data(y.ticks(d3.max(data, d => d.value) / 50).slice(1))
             .join("line")
             .attr("x1", 0)
             .attr("x2", width * vw)
@@ -567,7 +414,7 @@ export default function Graph({
             // add in  our tooltip
 
             const tooltipContent = d.value === undefined ? "N/A" :
-                (d.value / 1000000000).toFixed(2) === 0 ? `${d.value} tons` : `${(d.value / 1000000000).toFixed(2)} B tons`
+                `${(d.value)} ppm`
             tooltip
                 .style("display", "block")
                 .style("left", `${xPos + 100}px`)
@@ -612,7 +459,7 @@ export default function Graph({
         svg.append("path")
             .datum(data)
             .attr("fill", "none")
-            .attr("stroke", "green")
+            .attr("stroke", "red")
             .attr("stroke-width", 1)
             .attr("class", "line-CO")
             .attr("d", line)
@@ -621,7 +468,7 @@ export default function Graph({
         svg.append("path")
             .datum(temp)
             .attr("fill", "none")
-            .attr("stroke", "red")
+            .attr("stroke", "green")
             .attr("stroke-width", 1)
             .attr("class", "line-temp")
             .attr("d", lineTemp)
@@ -631,7 +478,7 @@ export default function Graph({
 
     const handleChange = () => {
 
-        const val = [document.getElementById("num1")?.value || 1851, document.getElementById("num2")?.value || 2022]
+        const val = [document.getElementById("num1")?.value || 1960, document.getElementById("num2")?.value || 2022]
         const vw = window.innerWidth / 100
         const vh = window.innerHeight / 100
 
@@ -687,7 +534,7 @@ export default function Graph({
             .duration(300) // transition duration in ms
             .call(d3
                 .axisLeft(y)
-                .tickFormat((val) => `${val / 1000000000}b`)
+                .tickFormat((val) => `${val} ppm`)
                 .tickSize(0)
                 .tickPadding(10))
             .style("stroke-opacity", 0)
@@ -734,7 +581,7 @@ export default function Graph({
             // add in  our tooltip
 
             const tooltipContent = d.value === undefined ? "N/A" :
-                (d.value / 1000000000).toFixed(2) === 0 ? `${d.value} tons` : `${(d.value / 1000000000).toFixed(2)} B tons`
+                `${(d.value)} ppm`
             tooltip
                 .style("display", "block")
                 .style("left", `${xPos + 100}px`)
@@ -742,7 +589,7 @@ export default function Graph({
                 .html(`<strong>Year:</strong> ${d.year}<br><strong>Carbon Emission:</strong> ${tooltipContent}<br><strong>Temperature Rise: </strong>${temp.find(obj => obj.year === d.year).value.toFixed(3)} °C`)
         });
 
-        setCarbonIncrease(`${((filteredData[filteredData.length - 1].value - filteredData[0].value) / 1000000000).toFixed(2)} Billion tons`)
+        setCarbonIncrease(`${((filteredData[filteredData.length - 1].value - filteredData[0].value).toFixed(3))} ppm`)
         setTempIncrease(`${((filteredTemp[filteredTemp.length - 1].value - filteredTemp[0].value)).toFixed(3)} °C`)
 
     };
@@ -773,7 +620,7 @@ export default function Graph({
                 <div className="graph-inputs">
                     <div className="graph-input-box">
                         <label>Base Year</label>
-                        <input type="number" id="num1" placeholder="1851" />
+                        <input type="number" id="num1" placeholder="1960" />
                     </div>
                     <div className="graph-input-box">
                         <label>Final Year</label>
@@ -783,8 +630,8 @@ export default function Graph({
                 <button onClick={handleChange}>Submit</button>
             </div>
 
-            <p className="graph-increased">Between the years {document.getElementById("num1")?.value || 1851} - {document.getElementById("num2")?.value || 2022} the Carbon Dioxide emissions have increased by <strong>{carbonIncrease}</strong></p>
-            <p className="graph-increased">Between the years {document.getElementById("num1")?.value || 1851} - {document.getElementById("num2")?.value || 2022} the Average Temperature has increased by <strong>{tempIncrease}</strong></p>
+            <p className="graph-increased">Between the years {document.getElementById("num1")?.value || 1960} - {document.getElementById("num2")?.value || 2022} the Carbon Dioxide emissions have increased by <strong>{carbonIncrease}</strong></p>
+            <p className="graph-increased">Between the years {document.getElementById("num1")?.value || 1960} - {document.getElementById("num2")?.value || 2022} the Average Temperature has increased by <strong>{tempIncrease}</strong></p>
         </section>
     )
 }
