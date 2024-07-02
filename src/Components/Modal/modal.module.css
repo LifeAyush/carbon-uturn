@@ -1,0 +1,26 @@
+.modalContainer {
+    background: white;
+    border-radius: 5px;
+    position: fixed;
+    z-index: 100;
+    bottom: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    display: flex;
+    gap: 5px;
+    align-items: flex-start;
+    border: 2px solid #2eaf7d;
+    width: max-content;
+}
+
+.modalspan {
+    color: #2eaf7d;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+    .modalContainer {
+        width: 80vw;
+    }
+}

@@ -52,7 +52,7 @@
     }
     .blogs-scroll {
         flex-direction: column;
-        padding: 0 7vw;
+        padding: 0 7vw 0 2vw;
         overflow: hidden;
         gap: 5vh;
         margin: 2vh 0;

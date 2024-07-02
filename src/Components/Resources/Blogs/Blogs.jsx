@@ -25,27 +25,29 @@ export default function Blogs() {
                 . Get a fresh perspective with our thought-provoking blog posts.
             </p>
 
-            <div className="blogs-scroll">
-                {width > 768
-                    ? posts?.dataMedium
-                        ?.slice(0, 5)
-                        .map((blog) => (
-                            <BlogCards
-                                title={blog.title}
-                                img={blog.image}
-                                link={blog.link}
-                            />
-                        ))
-                    : posts?.dataMedium?.map(
-                        (blog, index) =>
-                            index < 3 && (
+            <div style={{ width: "95vw", overflow: "hidden", marginLeft: "5vw" }}>
+                <div className="blogs-scroll">
+                    {width > 768
+                        ? posts?.dataMedium
+                            ?.slice(0, 5)
+                            .map((blog) => (
                                 <BlogCards
                                     title={blog.title}
                                     img={blog.image}
                                     link={blog.link}
                                 />
-                            )
-                    )}
+                            ))
+                        : posts?.dataMedium?.map(
+                            (blog, index) =>
+                                index < 3 && (
+                                    <BlogCards
+                                        title={blog.title}
+                                        img={blog.image}
+                                        link={blog.link}
+                                    />
+                                )
+                        )}
+                </div>
             </div>
 
             <button className="blogs-btn">
