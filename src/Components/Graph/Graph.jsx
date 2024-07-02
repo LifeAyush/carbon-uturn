@@ -344,7 +344,7 @@ export default function Graph({
             .style("Font-size", "16px")
             .style("fill", "#555")
             .style("font-family", "Milliard")
-            .text("Total Carbon Dioxide Emissions (in ppm)")
+            .text("Average Carbon Dioxide Levels (in ppm)")
 
         svg.append("text")
             .attr("transform", "rotate(-90)")
