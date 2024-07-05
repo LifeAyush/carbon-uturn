@@ -13,6 +13,7 @@ import { GetStartedFormContext } from "./store/GetStartedFormContext"
 import Career from "./Pages/Career/Career"
 import emailjs from "@emailjs/browser"
 import Modal from "./Components/Modal/Modal"
+import CareerForm from "./Pages/CareerForm/CareerForm"
 
 function App() {
     AOS.init({
@@ -51,6 +52,7 @@ function App() {
                     <Route exact path="/partners" element={<Partners />} />
                     <Route exact path="/partners/:id" element={<PartnerID />} />
                     <Route exact path="/careers" element={<Career />} />
+                    <Route path="/careers/:id" element={<CareerForm />} />
                 </Routes>
                 <Modal />
             </GetStartedFormContext.Provider>

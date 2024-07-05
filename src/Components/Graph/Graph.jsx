@@ -419,7 +419,7 @@ export default function Graph({
                 .style("display", "block")
                 .style("left", `${xPos + 100}px`)
                 .style("top", `${yPos + 50}px`)
-                .html(`<strong>Year:</strong> ${d.year}<br><strong>Carbon Emission:</strong> ${tooltipContent}<br><strong>Temperature Rise: </strong>${temp.find(obj => obj.year === d.year).value.toFixed(3)}&deg;C`)
+                .html(`<strong>Year:</strong> ${d.year}<br><strong>Carbon Dioxide Level:</strong> ${tooltipContent}<br><strong>Temperature Rise: </strong>${temp.find(obj => obj.year === d.year).value.toFixed(3)}&deg;C`)
         });
         // listening rectangle mouse leave function
 
@@ -586,7 +586,7 @@ export default function Graph({
                 .style("display", "block")
                 .style("left", `${xPos + 100}px`)
                 .style("top", `${yPos + 50}px`)
-                .html(`<strong>Year:</strong> ${d.year}<br><strong>Carbon Emission:</strong> ${tooltipContent}<br><strong>Temperature Rise: </strong>${temp.find(obj => obj.year === d.year).value.toFixed(3)} °C`)
+                .html(`<strong>Year:</strong> ${d.year}<br><strong>Carbon Dioxide Level:</strong> ${tooltipContent}<br><strong>Temperature Rise: </strong>${temp.find(obj => obj.year === d.year).value.toFixed(3)} °C`)
         });
 
         setCarbonIncrease(`${((filteredData[filteredData.length - 1].value - filteredData[0].value).toFixed(3))} ppm`)
@@ -612,7 +612,7 @@ export default function Graph({
             <h1>GLOBAL MEAN STATISTICS</h1>
             <section id="graph-container"></section>
             <div style={{ display: "flex", alignItems: "center ", gap: "15px", margin: "10px 0" }}>
-                <div style={{ "--customcolor": "#FD4C4B", ...btnstyle }}><img style={{ height: "max(30px, 5vh)" }} src="/Images/co2.png" alt="" />Carbon Dioxide Emissions</div>
+                <div style={{ "--customcolor": "#FD4C4B", ...btnstyle }}><img style={{ height: "max(30px, 5vh)" }} src="/Images/co2.png" alt="" />Carbon Dioxide Levels</div>
                 <div style={{ "--customcolor": "#2EAF7D", ...btnstyle }}><img style={{ height: "max(30px, 5vh)" }} src="/Images/temp.png" alt="" />Temperature Rise</div>
             </div>
 
@@ -630,7 +630,7 @@ export default function Graph({
                 <button onClick={handleChange}>Submit</button>
             </div>
 
-            <p className="graph-increased">Between the years {document.getElementById("num1")?.value || 1960} - {document.getElementById("num2")?.value || 2022} the average Carbon Dioxide levels in the atmosphere have increase by <strong>{carbonIncrease}</strong></p>
+            <p className="graph-increased">Between the years {document.getElementById("num1")?.value || 1960} - {document.getElementById("num2")?.value || 2022} the average Carbon Dioxide levels in the atmosphere have increased by <strong>{carbonIncrease}</strong></p>
             <p className="graph-increased">Between the years {document.getElementById("num1")?.value || 1960} - {document.getElementById("num2")?.value || 2022} the Average Temperature has increased by <strong>{tempIncrease}</strong></p>
         </section>
     )

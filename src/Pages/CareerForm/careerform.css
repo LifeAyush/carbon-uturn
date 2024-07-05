@@ -1,0 +1,140 @@
+.career-form {
+    background: #014d4a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10vh 10vw;
+    gap: 5vh;
+    text-align: center;
+    color: white;
+    text-align: justify;
+}
+
+.career-form ul {
+    padding: unset;
+    margin: unset;
+    width: 100%;
+}
+
+.career-form li {
+    list-style-type: disc;
+    text-align: left;
+    padding: unset;
+    margin: unset;
+    opacity: 90%;
+    font-size: 1.1rem;
+}
+
+.career-form h2 {
+    width: 100%;
+    text-align: left;
+    font-family: "MilliardBold";
+    font-size: 2.5rem;
+}
+
+.career-form p {
+    color: #f5f5f5;
+    font-size: 1.2rem;
+}
+
+.career-form h1 {
+    color: #dbfbff;
+    font-family: "MilliardBold";
+    font-size: 4rem;
+}
+
+.career-form-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 5vw;
+    margin-bottom: 5vh;
+}
+
+.career-form-section > .career-form-input-section {
+    margin-bottom: 5vh;
+}
+
+.career-form-section {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: left;
+    width: 60vw;
+}
+
+.career-form-section h3 {
+    font-size: 2rem;
+    color: #fafafa;
+}
+
+.career-form-section label {
+    font-size: 1.25rem;
+    display: block;
+}
+
+.career-form-input-section {
+    flex: 1;
+}
+
+.career-radio-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.career-radio-buttons span {
+    background-color: white;
+    width: max-content;
+    display: flex;
+    padding: 5px 10px;
+    color: #000;
+    border-radius: 5px;
+}
+
+.career-form-section input,
+.career-form-section textarea,
+.career-form-section select,
+.career-form-section option {
+    width: 100%;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: "Milliard";
+    font-size: 1rem;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+.career-form-section textarea {
+    height: 20vh;
+}
+
+.career-form button {
+    padding: 5px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    background: #2eaf7d;
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .career-form-flex {
+        flex-direction: column;
+        gap: 5vh;
+    }
+    .career-form h1 {
+        font-size: 3rem;
+    }
+    .career-form {
+        padding: 10vh 5vw;
+    }
+    .career-form-section {
+        width: 80vw;
+    }
+    .career-form-section label {
+        font-size: 1rem;
+    }
+}
