@@ -46,7 +46,7 @@ export default function CareerForm() {
             }
         ).then(res => {
             if (res.status === 200) {
-                alert("Will get back to you!")
+                alert("We will get back to you!")
             } else {
                 throw new Error("Something went wrong")
             }
@@ -64,39 +64,45 @@ export default function CareerForm() {
             <Navbar />
             <form className="career-form" onSubmit={handleSubmit}>
 
+
                 <h1 className="career-role-heading">{role}</h1>
                 <p className="career-job-description">{jobDescription}</p>
-                <h2>Qualifications</h2>
-                <ul>
-                    {
-                        qualifications.map(q =>
-                            (typeof q === 'object') ?
-                                <>
-                                    <li style={{ marginBottom: "20px" }}><span style={{ fontWeight: "bold" }}>{q.heading}: </span>{q.description}</li>
-                                </>
-                                : <li>{q}</li>
-                        )}
-                </ul>
+                {params.id === "unsolicited" ? <></> :
+                    <>
+                        <h2>Qualifications</h2>
+                        <ul>
+                            {
+                                qualifications?.map(q =>
+                                    (typeof q === 'object') ?
+                                        <>
+                                            <li style={{ marginBottom: "20px" }}><span style={{ fontWeight: "bold" }}>{q.heading}: </span>{q.description}</li>
+                                        </>
+                                        : <li>{q}</li>
+                                )}
+                        </ul>
 
-                <h2>Key Responsibilities</h2>
-                <ul>
-                    {
-                        responsibilities.map(q =>
-                            (typeof q === 'object') ?
-                                <>
-                                    <li style={{ marginBottom: "20px" }}>
-                                        <span style={{ fontWeight: "bold" }}>{q.heading}</span>
-                                        <ul>
-                                            {q.subPoints?.map(s => <li style={{ marginLeft: "20px" }}>{s}</li>)}
-                                        </ul>
-                                    </li>
-                                </>
-                                : <li>{q}</li>
-                        )}
-                </ul>
-                <div>
-                    <h1>Explore opportunities</h1>
-                </div>
+                        <h2>Key Responsibilities</h2>
+                        <ul>
+                            {
+                                responsibilities?.map(q =>
+                                    (typeof q === 'object') ?
+                                        <>
+                                            <li style={{ marginBottom: "20px" }}>
+                                                <span style={{ fontWeight: "bold" }}>{q.heading}</span>
+                                                <ul>
+                                                    {q.subPoints?.map(s => <li style={{ marginLeft: "20px" }}>{s}</li>)}
+                                                </ul>
+                                            </li>
+                                        </>
+                                        : <li>{q}</li>
+                                )}
+                        </ul>
+                        <div>
+                            <h1>Explore opportunities</h1>
+                        </div>
+                    </>
+                }
+
 
                 <div className="career-form-section">
                     <h3>Experience</h3>

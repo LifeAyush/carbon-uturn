@@ -121,6 +121,13 @@ export const openPositions = [
                 description: "The CPTO will be part of the core Founders team and report to the CEO."
             }
         ]
+    },
+
+    {
+        url: "unsolicited",
+        role: "Unsolicited Application",
+        location: "Gurugram, Haryana, India",
+        jobDescription: "Didn't find a role that fits you?",
     }
 
 ]

@@ -65,3 +65,13 @@
     font-size: 1rem;
     color: rgb(0, 0, 0, 0.75);
 }
+
+@media screen and (max-width: 900px) {
+    .position-role {
+        font-size: 1rem;
+    }
+    .position-location {
+        font-size: 0.75rem;
+        text-align: right;
+    }
+}

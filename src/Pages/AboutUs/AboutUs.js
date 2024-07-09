@@ -12,7 +12,7 @@ const AboutUs = () => {
     return (
         <div>
             <Navbar />
-            <div>
+            <div style={{ width: "100vw", overflowX: "hidden" }}>
                 <AboutHero />
                 <section
                     style={{

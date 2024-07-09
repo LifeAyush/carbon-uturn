@@ -37,6 +37,7 @@ const Career = () => {
                     {openPositions.map(position => <PositionCard role={position.role} location={position.location} link={position.url} />)}
                 </section>
 
+
             </section>
             <Footer />
         </>

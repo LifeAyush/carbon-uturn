@@ -14,6 +14,8 @@ rect {
         #fcfcfc 115.73%
     );
     padding: 10vh 10vw;
+    overflow-x: hidden;
+    width: 100vw;
 }
 
 #graph-container {
