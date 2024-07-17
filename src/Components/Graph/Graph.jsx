@@ -478,6 +478,10 @@ export default function Graph({
 
     const handleChange = () => {
 
+        if (document.getElementById("num1")?.value < 1960 || document.getElementById("num2")?.value > 2022) {
+            alert("Kindly keep your search between the years 1960 and 2022")
+            return
+        }
         const val = [document.getElementById("num1")?.value || 1960, document.getElementById("num2")?.value || 2022]
         const vw = window.innerWidth / 100
         const vh = window.innerHeight / 100

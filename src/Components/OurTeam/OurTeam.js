@@ -43,7 +43,7 @@ const OurTeam = () => {
             title1: "Co-Founder",
             title2: "Director",
             vertical: "Strategy & Technology",
-            para: "Rakesh Sarin is a visionary global leader having lead multiple-billion-dollar international corporations, including Wartsila Corporation as Global President - Energy Solutions & EVP on Board of Management & Suzlon Energy as CEO. He also served in pivotal roles at IndianOil and Caltex. He is currently Independent Director on Boards of Companies, including large renewable energy platform, O2 Power and successfully launched SaaS startups WellM and JOP. With 3+ years in these ventures, he is focused on CUT, bringing his distinguished expertise as an alumnus of IIT BHU and Oxford University.",
+            para: "Rakesh Sarin is a visionary global leader having lead multiple-billion-dollar international corporations, including Wartsila Corporation as Global President - Energy Solutions & EVP on Board of Management & Suzlon Energy as CEO. He also served in pivotal roles at IndianOil and Caltex. He is currently Independent Director on Boards of Companies, including large renewable energy platform, O2 Power and successfully launched SaaS startups WellM and JOP. He is a life-long wellness practitioner, passionate about cleaner and greener environment, and an alumnus of IIT BHU and Oxford University.",
             links: {
                 linkedin: "https://www.linkedin.com/in/rakeshsarin/",
                 mail: "mailto:rs@carbon-ut.com",
