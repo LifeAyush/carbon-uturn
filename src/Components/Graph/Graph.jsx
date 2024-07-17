@@ -14,69 +14,70 @@ export default function Graph({
 
     const temp = [
 
-        { year: 1960, value: 0.5056624 },
-        { year: 1961, value: 0.5177196 },
-        { year: 1962, value: 0.5298462 },
-        { year: 1963, value: 0.54229563 },
-        { year: 1964, value: 0.5550955 },
-        { year: 1965, value: 0.5682767 },
-        { year: 1966, value: 0.58189815 },
-        { year: 1967, value: 0.59571266 },
-        { year: 1968, value: 0.60998076 },
-        { year: 1969, value: 0.62480897 },
-        { year: 1970, value: 0.64041144 },
-        { year: 1971, value: 0.65593904 },
-        { year: 1972, value: 0.67191297 },
-        { year: 1973, value: 0.68837404 },
-        { year: 1974, value: 0.7046171 },
-        { year: 1975, value: 0.72076964 },
-        { year: 1976, value: 0.7372944 },
-        { year: 1977, value: 0.75398517 },
-        { year: 1978, value: 0.7707776 },
-        { year: 1979, value: 0.7876942 },
-        { year: 1980, value: 0.8042903 },
-        { year: 1981, value: 0.820348 },
-        { year: 1982, value: 0.8363935 },
-        { year: 1983, value: 0.8524997 },
-        { year: 1984, value: 0.8692645 },
-        { year: 1985, value: 0.88604414 },
-        { year: 1986, value: 0.90283 },
-        { year: 1987, value: 0.9197935 },
-        { year: 1988, value: 0.9370849 },
-        { year: 1989, value: 0.95446503 },
-        { year: 1990, value: 0.9717413 },
-        { year: 1991, value: 0.98903286 },
-        { year: 1992, value: 1.0058793 },
-        { year: 1993, value: 1.0225055 },
-        { year: 1994, value: 1.0396204 },
-        { year: 1995, value: 1.0569528 },
-        { year: 1996, value: 1.0747546 },
-        { year: 1997, value: 1.0930924 },
-        { year: 1998, value: 1.1105824 },
-        { year: 1999, value: 1.1279652 },
-        { year: 2000, value: 1.145743 },
-        { year: 2001, value: 1.1637536 },
-        { year: 2002, value: 1.1819981 },
-        { year: 2003, value: 1.2015043 },
-        { year: 2004, value: 1.2214278 },
-        { year: 2005, value: 1.2416629 },
-        { year: 2006, value: 1.2626654 },
-        { year: 2007, value: 1.2837812 },
-        { year: 2008, value: 1.3051788 },
-        { year: 2009, value: 1.3261223 },
-        { year: 2010, value: 1.3481517 },
-        { year: 2011, value: 1.3713498 },
-        { year: 2012, value: 1.3950663 },
-        { year: 2013, value: 1.4185915 },
-        { year: 2014, value: 1.4424351 },
-        { year: 2015, value: 1.466253 },
-        { year: 2016, value: 1.489489 },
-        { year: 2017, value: 1.5132885 },
-        { year: 2018, value: 1.5377011 },
-        { year: 2019, value: 1.562421 },
-        { year: 2020, value: 1.5857543 },
-        { year: 2021, value: 1.6102432 },
-        { year: 2022, value: 1.6352426 }]
+        { year: 1960, value: -0.11545958 },
+        { year: 1961, value: -0.019999769 },
+        { year: 1962, value: -0.06404272 },
+        { year: 1963, value: -0.036810614 },
+        { year: 1964, value: -0.30586153 },
+        { year: 1965, value: -0.20442048 },
+        { year: 1966, value: -0.1488976 },
+        { year: 1967, value: -0.117539294 },
+        { year: 1968, value: -0.16864756 },
+        { year: 1969, value: -0.03138624 },
+        { year: 1970, value: -0.08506408 },
+        { year: 1971, value: -0.20588905 },
+        { year: 1972, value: -0.09379131 },
+        { year: 1973, value: 0.04995016 },
+        { year: 1974, value: -0.17252657 },
+        { year: 1975, value: -0.110754214 },
+        { year: 1976, value: -0.2158369 },
+        { year: 1977, value: 0.1030885 },
+        { year: 1978, value: 0.005255972 },
+        { year: 1979, value: 0.09085814 },
+        { year: 1980, value: 0.19607204 },
+        { year: 1981, value: 0.25001204 },
+        { year: 1982, value: 0.034268282 },
+        { year: 1983, value: 0.22380984 },
+        { year: 1984, value: 0.04799352 },
+        { year: 1985, value: 0.049729742 },
+        { year: 1986, value: 0.09568698 },
+        { year: 1987, value: 0.2430264 },
+        { year: 1988, value: 0.2821517 },
+        { year: 1989, value: 0.1792503 },
+        { year: 1990, value: 0.36058238 },
+        { year: 1991, value: 0.33889654 },
+        { year: 1992, value: 0.12489683 },
+        { year: 1993, value: 0.16570719 },
+        { year: 1994, value: 0.23354979 },
+        { year: 1995, value: 0.37686613 },
+        { year: 1996, value: 0.27668938 },
+        { year: 1997, value: 0.4223085 },
+        { year: 1998, value: 0.5773417 },
+        { year: 1999, value: 0.32448497 },
+        { year: 2000, value: 0.33108476 },
+        { year: 2001, value: 0.48928034 },
+        { year: 2002, value: 0.5434665 },
+        { year: 2003, value: 0.54417014 },
+        { year: 2004, value: 0.46737072 },
+        { year: 2005, value: 0.6068625 },
+        { year: 2006, value: 0.5725527 },
+        { year: 2007, value: 0.5917013 },
+        { year: 2008, value: 0.46564984 },
+        { year: 2009, value: 0.5967816 },
+        { year: 2010, value: 0.6803714 },
+        { year: 2011, value: 0.53769773 },
+        { year: 2012, value: 0.57760704 },
+        { year: 2013, value: 0.6235753 },
+        { year: 2014, value: 0.67287165 },
+        { year: 2015, value: 0.8251144 },
+        { year: 2016, value: 0.9329271 },
+        { year: 2017, value: 0.84517425 },
+        { year: 2018, value: 0.76265407 },
+        { year: 2019, value: 0.8910726 },
+        { year: 2020, value: 0.9229205 },
+        { year: 2021, value: 0.76190555 },
+        { year: 2022, value: 0.8013053 }
+    ]
 
     const data = [{
         year: 1960, value: 316.91
@@ -206,7 +207,7 @@ export default function Graph({
         year: 2022, value: 418.53
     }]
 
-    const [carbonIncrease, setCarbonIncrease] = useState(`${((data[data.length - 1].value - data[0].value).toFixed(3))} ppm`)
+    const [carbonIncrease, setCarbonIncrease] = useState(`${((data[data.length - 1].value - data[0].value).toFixed(2))} ppm`)
     const [tempIncrease, setTempIncrease] = useState(`${((temp[temp.length - 1].value - temp[0].value)).toFixed(3)} °C`)
 
     useEffect(() => {
@@ -227,7 +228,7 @@ export default function Graph({
 
         x.domain(d3.extent(data, (iter) => iter.year))
         y.domain([0, d3.max(data, (iter) => iter.value)])
-        yRight.domain([0, d3.max(temp, iter => iter.value)])
+        yRight.domain([d3.min(temp, iter => iter.value), d3.max(temp, iter => iter.value)])
 
         window.innerWidth < 900 ?
             svg.append("g")
@@ -437,13 +438,13 @@ export default function Graph({
         //     .width(300)
         //     .ticks(3)
         //     .default([d3.min(data, d => d.year), d3.max(data, d => d.year)])
-        //     .fill('#85bb65');
+        //     .fill(#85bb65);
 
 
         // // Add the slider to the DOM
         // const gRange = d3
-        //     .select('#slider-range')
-        //     .append('svg')
+        //     .select(#slider-range)
+        //     .append(svg')
         //     .attr('width', 500)
         //     .attr('height', 100)
         //     .append('g')
@@ -593,7 +594,7 @@ export default function Graph({
                 .html(`<strong>Year:</strong> ${d.year}<br><strong>Carbon Dioxide Level:</strong> ${tooltipContent}<br><strong>Temperature Rise: </strong>${temp.find(obj => obj.year === d.year).value.toFixed(3)} °C`)
         });
 
-        setCarbonIncrease(`${((filteredData[filteredData.length - 1].value - filteredData[0].value).toFixed(3))} ppm`)
+        setCarbonIncrease(`${((filteredData[filteredData.length - 1].value - filteredData[0].value).toFixed(2))} ppm`)
         setTempIncrease(`${((filteredTemp[filteredTemp.length - 1].value - filteredTemp[0].value)).toFixed(3)} °C`)
 
     };
