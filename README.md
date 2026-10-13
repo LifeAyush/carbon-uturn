@@ -2,7 +2,7 @@
 
 This is the marketing site for Carbon Uturn. It presents the product, services, resources, partners, and careers.
 
-Prabhjot Singh led the work and Ayush Patil contributed. HUDASULTANA and Prabh74 also have commits in this repository.
+Prabhjot Singh led the work and Ayush Patil contributed. HUDASULTANA also has commits in this repository.
 
 ## Run
 
